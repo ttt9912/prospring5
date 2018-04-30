@@ -1,4 +1,4 @@
-package ch3.apps.setter_injection.with_configuration_class;
+package ch3.apps.p1_setter_injection.with_configuration_class;
 
 import ch3.beans.MessageProvider;
 import org.springframework.stereotype.Component;
