@@ -1,0 +1,16 @@
+package ch3.apps.setter_injection.with_configuration_class;
+
+import ch3.beans.MessageProvider;
+import org.springframework.stereotype.Component;
+
+/*
+ * @Component ist eine Bean Annotation und sagt Spring,
+ * dass dieses Bean injectable ist.
+ */
+
+@Component("provider")
+public class HelloWorldMessageProvider implements MessageProvider {
+    public String getMessage() {
+        return "Hello World";
+    }
+}

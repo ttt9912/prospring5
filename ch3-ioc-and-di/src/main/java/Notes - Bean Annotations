@@ -1,0 +1,28 @@
+----------------------------------------------------------------------------------------
+@Bean
+----------------------------------------------------------------------------------------
+- Methoden -
+Methoden, die mit @Bean annotiert sind, werden automatisch vom IoC Container ausgeführt,
+um die Beans zu instanziieren.
+
+- Klassen -
+
+----------------------------------------------------------------------------------------
+Bean Annotations
+----------------------------------------------------------------------------------------
+Der Component Scan sucht injectable Beans, die annotiert sind mit:
+    @Component
+    @Controller
+    @Repository
+    @Service
+http://www.baeldung.com/spring-bean-annotations
+
+----------------------------------------------------------------------------------------
+Injection Annotations
+----------------------------------------------------------------------------------------
+Für setter injection, constructor injection und field injection:
+    @Autowired  (spring)
+    @Resource   (javax)
+
+
+

@@ -1,0 +1,9 @@
+----------------------------------------------------------------------------------------
+ApplicationContext Implementation
+----------------------------------------------------------------------------------------
+- context.xml vs. @Configuration class -
+
+    context.xml     ->  ClassPathXmlApplicationContext("context.xml")
+    @Configuration  ->  AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
+
+
