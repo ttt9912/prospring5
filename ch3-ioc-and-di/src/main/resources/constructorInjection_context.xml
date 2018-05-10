@@ -5,12 +5,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="messageProvider" class="ch3.apps.p2_constructor_injection.with_context_xml.ConfigurableMessageProvider">
+    <bean id="provider" class="ch3.apps.p2_constructor_injection.with_context_xml.ConfigurableMessageProvider">
         <constructor-arg value="message injected from context xml"/> <!-- analog zu @Value -->
     </bean>
 
-    <bean id="renderer" class="ch3.apps.p2_constructor_injection.StandardOutMessageRenderer"
-          p:messageProvider-ref="messageProvider"> <!-- has-a relation -->
+    <bean id="renderer" class="ch3.apps.p2_constructor_injection.with_context_xml.StandardOutMessageRenderer"
+          p:messageProvider-ref="provider"> <!-- has-a relation -->
     </bean>
-
 </beans>

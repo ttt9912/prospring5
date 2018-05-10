@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 /*
  * @Bean Methoden werden automatisch vom IoC
  * Container aufgerufen
- *
  */
 
 //@ComponentScan("ch.ttt.prospring5.ch3")
