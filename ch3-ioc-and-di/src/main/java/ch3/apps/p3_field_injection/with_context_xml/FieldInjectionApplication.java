@@ -1,4 +1,4 @@
-package ch3.apps.p3_field_injection.with_annotations;
+package ch3.apps.p3_field_injection.with_context_xml;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -10,7 +10,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class FieldInjectionApplication {
 
-    public static void main(String... args){
+    public static void main(String... args) {
 
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("fieldInjection_context.xml");
@@ -18,7 +18,6 @@ public class FieldInjectionApplication {
 
         Singer singerBean = ctx.getBean(Singer.class);
         singerBean.sing();
-
         ctx.close();
     }
 }
