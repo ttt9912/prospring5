@@ -1,0 +1,6 @@
+Replace the logic of a method of any bean with your own implementation.
+
+HowTo:
+ - create a sublclass of the bean class dynamically
+   by implementing the MethodReplacer Inerface (spring)
+ - use CGLIB and redirect calls to the method

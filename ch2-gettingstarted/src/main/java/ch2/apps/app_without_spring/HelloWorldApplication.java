@@ -5,7 +5,7 @@ import ch2.beans.MessageProvider;
 import ch2.beans.MessageRenderer;
 import ch2.beans.StandardOutMessageRenderer;
 
-public class HelloWorldApplication {
+class HelloWorldApplication {
 
     public static void main(String[] args) {
         MessageRenderer mr = new StandardOutMessageRenderer();

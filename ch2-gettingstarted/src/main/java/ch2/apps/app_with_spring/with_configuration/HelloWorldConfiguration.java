@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-public class HelloWorldConfiguration {
+class HelloWorldConfiguration {
 
     // equivalent zu <bean id="provider" class="...">
     @Bean

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("standardLookupBean")
-public class StandardLookupDemoBean implements DemoBean{
+class StandardLookupDemoBean implements DemoBean{
 
     private Singer mySinger;
 

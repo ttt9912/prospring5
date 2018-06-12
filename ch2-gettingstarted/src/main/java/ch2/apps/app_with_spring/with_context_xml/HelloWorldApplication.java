@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Context mit XML file (alternativ: Configuration)
  */
 
-public class HelloWorldApplication {
+class HelloWorldApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("context.xml");

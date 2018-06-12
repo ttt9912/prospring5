@@ -8,7 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * Context mit Configuration (alternativ: xml file)
  */
 
-public class HelloWorldApplication {
+class HelloWorldApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);

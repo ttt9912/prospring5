@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component("singer")
 @Scope("prototype")
-public class Singer {
+class Singer {
 
     private String lyric = "Hello Goodbye";
 

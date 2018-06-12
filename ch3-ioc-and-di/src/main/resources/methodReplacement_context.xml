@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="methodReplacer"
+          class="ch3.apps.p6_method_replacement.FormatMessageReplacer"/>
+
+    <!-- no replacement -->
+    <bean name="standardTarget"
+          class="ch3.apps.p6_method_replacement.ReplacementTarget"/>
+
+    <!-- replaces method formatMessage() -->
+    <bean id="replacementTarget"
+          class="ch3.apps.p6_method_replacement.ReplacementTarget">
+        <replaced-method name="formatMessage" replacer="methodReplacer">
+            <arg-type>String</arg-type>
+        </replaced-method>
+    </bean>
+</beans>
