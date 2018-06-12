@@ -5,7 +5,7 @@ package ch3.apps.p4_parameter_injection.with_SpEL;
  * mittels SpEL ins 'tatsächliche' Bean übertragen.
  */
 
-public class InjectSimpleConfig {
+class InjectSimpleConfig {
 
     private String name = "Glenn Quagmire";
     private int age = 40;

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("provider")
-public class ConfigurableMessageProvider implements MessageProvider {
+class ConfigurableMessageProvider implements MessageProvider {
 
     private String message;
 

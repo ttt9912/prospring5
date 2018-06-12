@@ -8,7 +8,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
  *
  */
 
-public class FieldInjectionApplication {
+class FieldInjectionApplication {
 
     public static void main(String... args) {
 

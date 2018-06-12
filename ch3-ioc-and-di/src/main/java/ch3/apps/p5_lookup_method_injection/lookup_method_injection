@@ -1,0 +1,16 @@
+When a bean depends on another bean with a different lifecycle,
+e.g. a singleton depends on a non-singleton, both setter and
+constructor injection result in the singleton maintaining a
+single instance of what should be a non-singleton.
+
+-----------------------------------------------------------------
+Ziel: Pass a new instance in a method, every time it is invoked.
+-----------------------------------------------------------------
+
+Singleton      has a method parameter of                Nonsingleton
+Bean      ------------------------------------------>   Bean
+
+ - setter injection: same instance is passed every time
+ - lookup method injection: new instance is passed every time
+
+

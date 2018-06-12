@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Inspiration {
+class Inspiration {
 
     @Value("Break on thru")
     private String lyric;

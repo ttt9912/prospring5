@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 //@ComponentScan("ch.ttt.prospring5.ch3")
 @Configuration
-public class HelloWorldConfiguration {
+class HelloWorldConfiguration {
 
     @Bean
     public MessageProvider provider() {

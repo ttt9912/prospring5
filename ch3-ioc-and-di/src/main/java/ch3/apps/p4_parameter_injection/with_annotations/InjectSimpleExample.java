@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service("injectSimple")
-public class InjectSimpleExample {
+class InjectSimpleExample {
 
     @Value("Peter Griffin")
     private String name;

@@ -4,7 +4,7 @@ import ch3.beans.MessageRenderer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class HelloWorldApplication {
+class HelloWorldApplication {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);

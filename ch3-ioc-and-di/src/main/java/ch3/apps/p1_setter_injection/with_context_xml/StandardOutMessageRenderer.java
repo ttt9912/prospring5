@@ -3,7 +3,7 @@ package ch3.apps.p1_setter_injection.with_context_xml;
 import ch3.beans.MessageProvider;
 import ch3.beans.MessageRenderer;
 
-public class StandardOutMessageRenderer implements MessageRenderer{
+class StandardOutMessageRenderer implements MessageRenderer{
     private MessageProvider messageProvider;
 
 

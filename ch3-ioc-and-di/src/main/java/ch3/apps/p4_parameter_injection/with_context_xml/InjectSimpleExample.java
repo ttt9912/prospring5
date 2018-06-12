@@ -8,7 +8,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
  * Values are injected in the context xml file.
  */
 
-public class InjectSimpleExample {
+class InjectSimpleExample {
 
     private String name;
     private int age;

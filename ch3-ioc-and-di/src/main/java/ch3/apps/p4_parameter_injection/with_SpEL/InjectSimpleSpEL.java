@@ -2,7 +2,7 @@ package ch3.apps.p4_parameter_injection.with_SpEL;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-public class InjectSimpleSpEL {
+class InjectSimpleSpEL {
 
     private String name;
     private int age;
