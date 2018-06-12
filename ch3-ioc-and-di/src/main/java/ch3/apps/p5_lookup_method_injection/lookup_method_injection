@@ -14,3 +14,12 @@ Bean      ------------------------------------------>   Bean
  - lookup method injection: new instance is passed every time
 
 
+-----------------------------------------------------------------
+Code
+-----------------------------------------------------------------
+Singer = Nonsingleton Bean
+ - StandardLookupDemoBean: uses the stored Singer instance
+ - AbstractLookupDemoBean: (abstract class) abstract getMySinger()
+   is called by doSomething() to obtain a Singer instance
+
+

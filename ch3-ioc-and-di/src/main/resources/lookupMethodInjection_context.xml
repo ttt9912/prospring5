@@ -4,10 +4,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="renderer" class="ch3.apps.p1_setter_injection.with_context_xml.StandardOutMessageRenderer">
-        <property name="messageProvider" ref="provider"/>
+    <bean id="singer" class="ch3.apps.p5_lookup_method_injection.with_conext_xml.Singer"
+          scope="prototype"/>
+
+    <bean id="standardLookupBean"
+          class="ch3.apps.p5_lookup_method_injection.with_conext_xml.StandardLookupDemoBean">
+        <!-- setter injection: sets instance, which is then used for every call to doSomething() -->
+         <property name="mySinger" ref="singer"/>
     </bean>
 
-    <bean id="provider" class="ch3.apps.p1_setter_injection.with_context_xml.HelloWorldMessageProvider"/>
+    <bean id="abstractLookupBean"
+          class="ch3.apps.p5_lookup_method_injection.with_conext_xml.AbstractLookupDemoBean">
+        <!-- lookup: obtains a new Singer instance for every call to doSomething() -->
+        <lookup-method name="getMySinger" bean="singer"/>
+    </bean>
 
 </beans>

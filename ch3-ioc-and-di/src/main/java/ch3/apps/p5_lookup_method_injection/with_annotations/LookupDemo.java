@@ -1,13 +1,18 @@
-package ch3.apps.p5_lookup_method_injection.with_conext_xml;
+package ch3.apps.p5_lookup_method_injection.with_annotations;
 
-import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 class LookupDemo {
 
+    @Configuration
+    @ComponentScan("ch3.apps.p5_lookup_method_injection.with_annotations")
+    static class Config {
+    }
+
     public static void main(String[] args) {
-        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("lookupMethodInjection_context.xml");
-        ctx.refresh();
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
 
 
         System.out.println("- Setter Injection -");
@@ -18,6 +23,8 @@ class LookupDemo {
         System.out.println("- Lookup Method Injection -");
         DemoBean abstractLookupBean = ctx.getBean("abstractLookupBean", DemoBean.class);
         compareBeans("abstractLookupBean", abstractLookupBean);
+
+        ctx.close();
     }
 
     private static void compareBeans(String beanName, DemoBean standardLookupBean) {

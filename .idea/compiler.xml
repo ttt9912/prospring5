@@ -10,10 +10,10 @@
         <module name="ch3-ioc-and-di" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ch2-gettingstarted" target="1.5" />
-      <module name="ch3-ioc-and-di" target="1.5" />
-      <module name="parent" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="ch2-gettingstarted" target="1.8" />
+      <module name="ch3-ioc-and-di" target="1.8" />
+      <module name="parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
