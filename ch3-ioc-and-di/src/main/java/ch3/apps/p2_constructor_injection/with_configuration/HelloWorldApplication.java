@@ -1,4 +1,4 @@
-package ch3.apps.p2_constructor_injection.with_configuration_class;
+package ch3.apps.p2_constructor_injection.with_configuration;
 
 import ch3.beans.MessageRenderer;
 import org.springframework.context.ApplicationContext;

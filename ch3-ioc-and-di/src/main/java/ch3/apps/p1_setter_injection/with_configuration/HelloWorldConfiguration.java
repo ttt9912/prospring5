@@ -1,4 +1,4 @@
-package ch3.apps.p1_setter_injection.with_configuration_class;
+package ch3.apps.p1_setter_injection.with_configuration;
 
 import ch3.beans.MessageProvider;
 import ch3.beans.MessageRenderer;

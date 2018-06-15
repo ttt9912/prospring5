@@ -1,4 +1,4 @@
-package ch3.apps.p4_parameter_injection.with_annotations;
+package ch3.apps.p4_parameter_injection.with_configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.support.GenericXmlApplicationContext;

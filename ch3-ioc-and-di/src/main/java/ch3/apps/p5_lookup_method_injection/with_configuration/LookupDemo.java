@@ -1,4 +1,4 @@
-package ch3.apps.p5_lookup_method_injection.with_annotations;
+package ch3.apps.p5_lookup_method_injection.with_configuration;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 class LookupDemo {
 
     @Configuration
-    @ComponentScan("ch3.apps.p5_lookup_method_injection.with_annotations")
+    @ComponentScan("ch3.apps.p5_lookup_method_injection.with_configuration")
     static class Config {
     }
 

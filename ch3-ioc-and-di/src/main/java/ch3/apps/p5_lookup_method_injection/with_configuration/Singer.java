@@ -1,4 +1,4 @@
-package ch3.apps.p5_lookup_method_injection.with_annotations;
+package ch3.apps.p5_lookup_method_injection.with_configuration;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
