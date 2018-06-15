@@ -17,7 +17,7 @@ import java.util.Map;
 class BeanAliasing {
 
     @Configuration
-    @ComponentScan("ch3.apps.p7_bean_naming")
+    @ComponentScan("ch3.apps.p7_bean_naming.with_configuration")
     static class Config {
         @Bean(name = {"singer", "john", "johnny"})
         public Singer singer() {

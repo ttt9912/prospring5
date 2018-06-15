@@ -20,6 +20,8 @@ davon (@Service, @Controller, @Repository)
 
 http://www.baeldung.com/spring-bean-annotations
 
+@Lazy (auf Klassenlevel): Bean wird erst instanziiert, wenn es gebraucht wird.
+
 ----------------------------------------------------------------------------------------
 Injection Annotations
 ----------------------------------------------------------------------------------------
@@ -27,5 +29,8 @@ Für setter injection, constructor injection und field injection:
     @Autowired  (spring)
     @Resource   (javax)
 
+- Autowiring -
+    @Autowired                          byType
+    @Autowired + @Qualifier("name")     byName
 
 

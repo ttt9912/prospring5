@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        Beide Injectable beans implementieren Foo. Bei Autowiring byType kann daher Spring nicht unterscheiden.
+        Lösung bei 2 verwandten Beans: primary Attribut
+    -->
+
+    <beans>
+        <!-- Injectable beans -->
+        <bean id="fooOne" primary="true"
+              class="ch3.apps.p9_autowiring.with_context_xml.related_beans.FooOne"/>
+        <bean id="fooTwo" class="ch3.apps.p9_autowiring.with_context_xml.related_beans.FooTwo"/>
+
+        <!-- Autowiring related beans -->
+        <bean id="targetByType" autowire="byType"
+              class="ch3.apps.p9_autowiring.with_context_xml.related_beans.Target" lazy-init="true"/>
+
+    </beans>
+</beans>
