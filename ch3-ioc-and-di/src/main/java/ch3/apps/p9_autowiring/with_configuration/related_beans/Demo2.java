@@ -11,21 +11,23 @@ import org.springframework.context.annotation.Configuration;
 class Demo2 {
 
     @Configuration
-    @ComponentScan("ch3.apps.p9_autowiring.with_configuration.related_beans")
     static class Config {
 
         @Bean
         public Foo fooOne(){
+            System.out.println("@Bean fooOne called");
             return new FooOne();
         }
 
         @Bean
         public Foo fooTwo(){
+            System.out.println("@Bean fooTwo called");
             return new FooTwo();
         }
 
         @Bean
         public Target target(){
+            System.out.println("@Bean target called");
             return new Target();
         }
     }
