@@ -7,3 +7,8 @@ ApplicationContext Implementation
     @Configuration  ->  AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 
 
+----------------------------------------------------------------------------------------
+Bean Dependencies und ApplicationContextAware
+----------------------------------------------------------------------------------------
+Auf dieses feature sollte verzichtet werden. Besser die Dependencies in der Applikation
+mit setter- und constructor-injection contracts definieren.

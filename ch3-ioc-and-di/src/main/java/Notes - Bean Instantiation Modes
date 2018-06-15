@@ -1,0 +1,24 @@
+Beans haben by default den Mode 'Singleton'
+
+Implementation eines anderen Scopes für einen Component: @Scope("prototype")
+
+----------------------------------------------------------------------------------------
+Bean Scopes
+----------------------------------------------------------------------------------------
+- Singleton:    default scope
+- Prototype:    Spring instanziiert jedesmal, wenn das bean von der Application
+                nachgefragt wird, eine neue Instanz.
+- Request:      Bean wird instanziiert für jeden HTTP request
+                und nach dem Request zerstört
+                (Spring MVC for web apps)
+- Session:      Bean wird instanziiert für jede HTTP Session
+                und nach der Session zerstört
+                (Spring MVC for web apps)
+- Portlet:      (portal apps)
+- Thread:       Für jeden Thread wird eine neue Bean Instanz erzeugt.
+- Custom:       Custom interface implementieren und den custom scope in Springs
+                configuration registrieren
+----------------------------------------------------------------------------------------
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        Singer Bean (johnMayer) hat eine dependency auf Guitar (fender) Bean.
+        depends-on sagt Spring, dass auf jeden fall fender vor johnMayer instanziiert werden muss.
+    -->
+    <beans>
+        <bean id="johnMayer" class="Singer"
+              depends-on="fender"/>
+        <bean name="fender" class="Guitar"/>
+    </beans>
+
+</beans>

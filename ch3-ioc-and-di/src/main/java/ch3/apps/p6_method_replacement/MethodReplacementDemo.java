@@ -2,7 +2,7 @@ package ch3.apps.p6_method_replacement;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-public class MethodReplacementDemo {
+class MethodReplacementDemo {
 
     public static void main(String[] args) {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();

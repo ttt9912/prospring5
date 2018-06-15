@@ -5,7 +5,7 @@ import org.springframework.beans.factory.support.MethodReplacer;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-public class FormatMessageReplacer implements MethodReplacer {
+class FormatMessageReplacer implements MethodReplacer {
     @Override
     public Object reimplement(Object o, Method method, Object[] objects) throws Throwable {
 
