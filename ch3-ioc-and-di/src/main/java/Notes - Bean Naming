@@ -1,0 +1,29 @@
+Jedes Bean braucht einen eindeutigen Namen innerhalb des ApplicationContexts.
+Bean Aliasing: Mehrere Beans mit verschiedenen namen sind von derselben Klasse
+
+----------------------------------------------------------------------------------------
+XML
+----------------------------------------------------------------------------------------
+- Bean name -
+    1.) id Attribut
+    2.) name Attribut
+    3.) lowercase class name
+
+- Bean aliasing -
+<bean id="string1" class="java.lang.String"/>
+<bean id="string2" class="java.lang.String"/>
+
+----------------------------------------------------------------------------------------
+Annotation/Configuration
+----------------------------------------------------------------------------------------
+- Bean name -
+@Component("singer") singer ist der Bean name, ansonsten einfach der lowercase
+class name. @Component("singer") class Singer{} ist daher redundant.
+
+Bean name kann auch in der @Configuration innerhalb der @Bean Annotation definiert
+werden. @Bean == @Bean("singer") == @Bean(name="singer")
+
+- Bean aliasing -
+Aliases einer Klasse werden in der @Configuration definiert. Der @Bean Annotation wird
+ein String array übergeben, der erste String ist die id, die restlichen sind Aliase.
+@Bean(name = {"singer", "john", "johnny"})
