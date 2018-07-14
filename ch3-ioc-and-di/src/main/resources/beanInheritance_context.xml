@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        Two beans of the same type Singer.
+        Let a bean (child) inheirt its property settings from another bean (parent)
+    -->
+
+    <bean id="parent" class="ch3.apps.p10_bean_inheritance.Singer"
+          p:name="John Mayer" p:age="39"/>
+
+    <bean id="child" class="ch3.apps.p10_bean_inheritance.Singer"
+          parent="parent" p:age="0"/>
+</beans>
