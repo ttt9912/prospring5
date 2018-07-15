@@ -1,6 +1,6 @@
 package ch3.apps.p10_bean_inheritance;
 
-public class Singer {
+class Singer {
     private String name;
     private int age;
 

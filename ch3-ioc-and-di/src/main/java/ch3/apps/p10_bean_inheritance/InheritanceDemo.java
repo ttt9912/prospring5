@@ -11,7 +11,7 @@ package ch3.apps.p10_bean_inheritance;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-public class InheritanceDemo {
+class InheritanceDemo {
 
     public static void main(String[] args) {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        init-method/destroy-method: inititalization/destruction callback method
+        lazy-init="true": init methode wird erst ausgeführt, wenn ein bean mit ctx.getBean("singerOne") erzeugt wird.
+        Ohne lazy-init wird die init methode schon beim Laden des Context ausgeführt
+
+        Beide attribute können auch auf Ebene <beans> mit default-init-method und default-lazy-init gesetzt werden,
+        anstatt sie für jedes bean einzeln zu definieren.
+    -->
+
+    <bean id="singerOne"
+          class="ch4.p1_bean_lifecycles.with_context_xml.Singer"
+          init-method="init" lazy-init="true"
+          destroy-method="destroy"
+          p:name="John Mayer" p:age="39"/>
+
+    <bean id="singerTwo"
+          class="ch4.p1_bean_lifecycles.with_context_xml.Singer"
+          init-method="init" lazy-init="true"
+          destroy-method="destroy"
+          p:age="39"/>
+
+    <bean id="singerThree"
+          class="ch4.p1_bean_lifecycles.with_context_xml.Singer"
+          init-method="init" lazy-init="true"
+          destroy-method="destroy"
+          p:name="John Mayer"/>
+
+</beans>

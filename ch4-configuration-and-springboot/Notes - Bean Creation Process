@@ -1,0 +1,5 @@
+1. Constructor is called
+2. dependecies are injected (setters are called)
+3. @PostConstruct
+4. InitializingBean.afterPropertiesSet()
+5. init-method

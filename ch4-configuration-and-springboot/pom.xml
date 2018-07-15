@@ -11,6 +11,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ch4-configuration-and-springboot</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.4.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.1.0-RC1</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

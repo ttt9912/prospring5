@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+        <context:annotation-config/> muss eingefügt werden, da Annotations (@PostConstruct)
+        verwendet werden.
+    -->
+
+
+    <context:annotation-config/>
+
+    <bean id="singerOne"
+          class="ch4.p1_bean_lifecycles.with_context_xml.SingerWithJSR250"
+          p:name="John Mayer" p:age="39"/>
+
+    <bean id="singerTwo"
+          class="ch4.p1_bean_lifecycles.with_context_xml.SingerWithJSR250"
+          p:age="39"/>
+
+    <bean id="singerThree"
+          class="ch4.p1_bean_lifecycles.with_context_xml.SingerWithJSR250"
+          p:name="John Mayer"/>
+
+</beans>
