@@ -18,8 +18,7 @@ class BeanLifecycleCfgDemo {
         Singer singerTwo = ctx.getBean("singerTwo", Singer.class);
         Singer singerThree = ctx.getBean("singerThree", Singer.class);
 
-        ctx.getBeanFactory().destroySingletons(); // destroys singleton beans (cleanup)
-//        ctx.registerShutdownHook(); // calls destroySingletons() in a separate thread (mainly used for standalone apps)
+        ctx.getBeanFactory().destroySingletons();
 
         ctx.close();
     }
