@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   					   http://www.springframework.org/schema/util
+	   					   http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Property Values werden hier als String übergeben und dann automatisch von den PropertyEditoren in den korrenkten Typ konvertiert -->
+
+    <bean id="builtInSample"
+          class="ch4.p4_property_editors.built_in.DataBean"
+          p:trueOrFalse="true"
+          p:stringList-ref="stringList"
+          p:stringTrimmer="String need trimming"
+          p:aFloat="123.123"
+          p:character="A"
+          p:bytes="John Mayer"
+          p:date="05/03/13"
+          p:file="#{systemProperties['java.io.tmpdir']}#{systemProperties['file.separator']}test.txt"
+          p:locale="en_US"
+          p:pattern="a*b"
+          p:properties="name=Chris age=32"
+          p:url="http://spring.io/"
+          p:cls="java.lang.String"
+    />
+
+    <!-- stringList -->
+
+    <util:list id="stringList">
+        <value>String member 1</value>
+        <value>String member 2</value>
+    </util:list>
+
+    <!-- Spezialeditoren für date und stringTrimmer-->
+
+    <bean id="customEditorConfigurer"
+          class="org.springframework.beans.factory.config.CustomEditorConfigurer"
+          p:propertyEditorRegistrars-ref="propertyEditorRegistrarsList"/>
+
+    <util:list id="propertyEditorRegistrarsList">
+        <bean class="ch4.p4_property_editors.built_in.DataBean$CustomPropertyEditorRegistrar"/>
+    </util:list>
+
+</beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        Factory Bean: MessageDigestFactoryBean liefert eine Instanz von MessageDigest
+                      Spring nimmt nicht das FactoryBean als bean, sondern ruft seine
+                      getObject() Methode auf (welche eine Instanz vom Typ MessageDigest liefert)
+    -->
+
+    <bean id="defaultDigest"
+          class="ch4.p3_factory_beans.MessageDigestFactoryBean"/>
+
+    <bean id="shaDigest"
+          class="ch4.p3_factory_beans.MessageDigestFactoryBean"
+          p:algorithmName="SHA1"/>
+
+    <bean id="digester"
+          class="ch4.p3_factory_beans.MessageDigester"
+          p:digest1-ref="defaultDigest"
+          p:digest2-ref="shaDigest"/>
+
+</beans>
