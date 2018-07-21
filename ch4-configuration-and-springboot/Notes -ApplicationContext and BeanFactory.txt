@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------
+ApplicationContext Features
+----------------------------------------------------------------------------------------
+ApplicationContext extends ListableBeanFactory, HierarchicalBeanFactory, MessageSource,
+                            ApplicationEventPublisher, ResourcePatternResolver, ...
+
+- IoC (BeanFactory features)
+- Internationalization (MessageSource features)
+- Resource management and access
+- ...
+
+----------------------------------------------------------------------------------------
+BeanFactory Features
+----------------------------------------------------------------------------------------
+Wird verwendet von ApplicationContext.
+
+Verschiedene BeanFactory Implementationen sind zuständig für:
+
+- bean instantiation
+- dependency injection
+- life-cycle support
