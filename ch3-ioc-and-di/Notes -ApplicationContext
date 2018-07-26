@@ -4,6 +4,7 @@ ApplicationContext Implementation
 - context.xml vs. @Configuration class -
 
     context.xml     ->  ClassPathXmlApplicationContext("context.xml")
+                    ->  GenericXmlApplicationContext ctx...    ctx.load("context.xml")
     @Configuration  ->  AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 
 
