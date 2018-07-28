@@ -7,23 +7,24 @@ import org.springframework.context.annotation.*;
  * MixedConfiguration
  *
  * @Import: multiple @Configuration files
- *          @ComponentScan is imported from AppConfigFour
+ *          (@ComponentScan is imported from AppConfigFour)
  *
  * @ImportResource: import context.xml
+ *
  */
 
 @Configuration
 @Import(AppConfigFour.class)
-// TODO @ImportResource(...)...
+@ImportResource(value = "classpath:mixed_context.xml")
 public class AppConfigThree {
 
-    @Autowired
-    MessageProvider messageProviderService;
+    @Autowired // Componentscan is defined in AppConfigFour.class
+    MessageProvider provider; // provider is defined in context.xml
 
     @Bean(name = "messageRenderer")
     public MessageRenderer messageRenderer() {
         MessageRenderer renderer = new StandardOutMessageRenderer();
-        renderer.setMessageProvider(messageProviderService);
+        renderer.setMessageProvider(provider);
         return renderer;
     }
 }

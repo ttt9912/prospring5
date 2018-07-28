@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 class App {
 
     @Test
-    void configuration_beanInstantiation(){
+    void configuration_beanInstantiation() {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigOne.class);
 
         MessageRenderer messageRenderer = ctx.getBean("messageRenderer", MessageRenderer.class);
@@ -15,7 +15,7 @@ class App {
     }
 
     @Test
-    void configuration_autowiring(){
+    void configuration_autowiring() {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigTwo.class);
 
         MessageRenderer messageRenderer = ctx.getBean("messageRenderer", MessageRenderer.class);
@@ -23,7 +23,8 @@ class App {
     }
 
     @Test
-    void configuration_mixedConfiguration(){
+    void configuration_mixedConfiguration() {
+        // AppConfigThree importiert AppConfigFour sowie mixed_context.xml
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigThree.class);
 
         MessageRenderer messageRenderer = ctx.getBean("messageRenderer", MessageRenderer.class);
