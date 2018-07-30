@@ -8,6 +8,7 @@ class App {
 
     @Test
     void configuration_beanInstantiation() {
+        // AppconfigOne benutzt @Bean zur bean instantiation
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigOne.class);
 
         MessageRenderer messageRenderer = ctx.getBean("messageRenderer", MessageRenderer.class);
@@ -16,6 +17,7 @@ class App {
 
     @Test
     void configuration_autowiring() {
+        // AppConfigTwo benutzt Components, @ComponentScan und @Autowire zur bean instantiation
         ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigTwo.class);
 
         MessageRenderer messageRenderer = ctx.getBean("messageRenderer", MessageRenderer.class);

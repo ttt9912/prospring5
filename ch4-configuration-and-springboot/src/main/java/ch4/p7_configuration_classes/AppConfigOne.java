@@ -1,11 +1,15 @@
 package ch4.p7_configuration_classes;
 
+import ch4.p7_configuration_classes.ConfigurableMessageProvider;
+import ch4.p7_configuration_classes.MessageProvider;
+import ch4.p7_configuration_classes.MessageRenderer;
+import ch4.p7_configuration_classes.StandardOutMessageRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 
 /*
- * @PropertySource: loads properties into ApplicationCOntext
+ * @PropertySource: loads properties into ApplicationContext
  *
  * Environment: Interface representing the environment in which the current application is running.
  * Models two key aspects of the application environment: profiles and properties.
@@ -19,6 +23,7 @@ import org.springframework.core.env.Environment;
  */
 
 @Configuration
+@ComponentScan
 @PropertySource(value = "classpath:message.properties")
 public class AppConfigOne {
 

@@ -17,7 +17,7 @@ public class MessageEventPublisher implements ApplicationContextAware {
     }
 
     // publish
-    public void publish(String message) {
+    void publish(String message) {
         System.out.println("MessageEventPublisher publishing event with message: " + message);
         ctx.publishEvent(new MessageEvent(this, message));
     }
