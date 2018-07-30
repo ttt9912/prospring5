@@ -1,7 +1,7 @@
-package ch4.p8_profiles.with_context_xml.highschool;
+package ch4.p8_profiles.highschool;
 
-import ch4.p8_profiles.with_context_xml.Food;
-import ch4.p8_profiles.with_context_xml.FoodProvierService;
+import ch4.p8_profiles.Food;
+import ch4.p8_profiles.FoodProvierService;
 
 import java.util.ArrayList;
 import java.util.List;

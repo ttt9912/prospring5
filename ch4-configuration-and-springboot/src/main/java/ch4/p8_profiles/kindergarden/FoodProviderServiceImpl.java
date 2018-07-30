@@ -1,7 +1,7 @@
-package ch4.p8_profiles.with_context_xml.kindergarden;
+package ch4.p8_profiles.kindergarden;
 
-import ch4.p8_profiles.with_context_xml.Food;
-import ch4.p8_profiles.with_context_xml.FoodProvierService;
+import ch4.p8_profiles.Food;
+import ch4.p8_profiles.FoodProvierService;
 
 import java.util.ArrayList;
 import java.util.List;

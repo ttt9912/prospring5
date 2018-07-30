@@ -1,4 +1,4 @@
-package ch4.p8_profiles.with_context_xml;
+package ch4.p8_profiles;
 
 public class Food {
     private String name;

@@ -6,6 +6,6 @@
        profile="kindergarden">
 
     <bean id="foodProviderService"
-          class="ch4.p8_profiles.with_context_xml.kindergarden.FoodProviderServiceImpl"/>
+          class="ch4.p8_profiles.kindergarden.FoodProviderServiceImpl"/>
 
 </beans>
