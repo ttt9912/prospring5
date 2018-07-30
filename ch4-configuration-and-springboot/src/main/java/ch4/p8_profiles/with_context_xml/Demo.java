@@ -2,6 +2,8 @@ package ch4.p8_profiles.with_context_xml;
 
 import ch4.p8_profiles.Food;
 import ch4.p8_profiles.FoodProvierService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.util.List;
@@ -16,22 +18,30 @@ import java.util.List;
  */
 public class Demo {
 
-    // run via run configuration! ('ch4_p8_profiles_profile=highschool' or 'ch4_p8_profiles_profile=kindergarden')
+    // run via run configuration! ('ch4_p8_ctx_profile=highschool' or 'ch4_p8_ctx_profile=kindergarden')
     public static void main(String[] args){
 
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("*_food_context.xml"); // loads both
         ctx.refresh();
 
+
         final FoodProvierService foodProvierService = ctx.getBean("foodProviderService", FoodProvierService.class);
 
-
-        // profile is set in run config via VM argument
         final List<Food> foods = foodProvierService.provideLunchSet();
         foods.forEach(System.out::println);
 
+
+        // profile is set in run config via VM argument
+        System.out.println("Active profiles: " + getActiveProfiles(ctx));
+
         ctx.close();
 
+    }
+
+    private static String getActiveProfiles(final ApplicationContext ctx) {
+        String[] activeProfiles = ctx.getEnvironment().getActiveProfiles();
+        return String.join(",", activeProfiles);
     }
 
 }
