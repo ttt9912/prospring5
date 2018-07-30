@@ -1,4 +1,4 @@
-package ch4.p8_profiles;
+package ch4.p8_profiles.beans;
 
 public class Food {
     private String name;

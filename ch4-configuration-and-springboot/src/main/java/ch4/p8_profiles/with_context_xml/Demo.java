@@ -1,9 +1,8 @@
 package ch4.p8_profiles.with_context_xml;
 
-import ch4.p8_profiles.Food;
-import ch4.p8_profiles.FoodProvierService;
+import ch4.p8_profiles.beans.Food;
+import ch4.p8_profiles.beans.FoodProvierService;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.util.List;

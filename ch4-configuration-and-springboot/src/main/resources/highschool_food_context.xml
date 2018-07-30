@@ -6,6 +6,6 @@
        profile="highschool">
 
     <bean id="foodProviderService"
-          class="ch4.p8_profiles.highschool.FoodProviderServiceImpl"/>
+          class="ch4.p8_profiles.beans.highschool.FoodProviderServiceImpl"/>
 
 </beans>
