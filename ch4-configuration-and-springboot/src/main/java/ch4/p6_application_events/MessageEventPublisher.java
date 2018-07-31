@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContextAware;
  * Publishen von Events geht über den ApplicationContext.
  * Publisher bean braucht Zugang zum ApplicationContext, daher ApplicationContextAware
  */
-public class MessageEventPublisher implements ApplicationContextAware {
+class MessageEventPublisher implements ApplicationContextAware {
     private ApplicationContext ctx;
 
     @Override

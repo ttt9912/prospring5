@@ -1,8 +1,6 @@
 package ch4.p7_configuration_classes;
 
-import org.springframework.beans.factory.support.MethodReplacer;
-
-public interface MessageRenderer {
+interface MessageRenderer {
 
     void render();
 

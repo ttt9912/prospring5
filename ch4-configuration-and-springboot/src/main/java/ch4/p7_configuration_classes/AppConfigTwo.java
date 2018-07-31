@@ -15,7 +15,7 @@ import org.springframework.core.env.Environment;
 
 @Configuration
 @ComponentScan(basePackages = {"ch4.p7_configuration_classes"})
-public class AppConfigTwo {
+class AppConfigTwo {
 
     @Autowired
     MessageProvider messageProviderService;

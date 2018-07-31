@@ -1,6 +1,6 @@
 package ch4.p4_property_editors.custom;
 
-public class FullName {
+class FullName {
     private String firstName;
     private String lastName;
 

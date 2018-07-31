@@ -1,6 +1,6 @@
 package ch4.p7_configuration_classes;
 
-public class StandardOutMessageRenderer implements MessageRenderer {
+class StandardOutMessageRenderer implements MessageRenderer {
 
     private MessageProvider messageProvider;
 

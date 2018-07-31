@@ -11,7 +11,7 @@ import java.security.MessageDigest;
  * getObject() liefert das Bean, das die Factory produziert.
  *
  */
-public class MessageDigestFactoryBean implements FactoryBean<MessageDigest>, InitializingBean {
+class MessageDigestFactoryBean implements FactoryBean<MessageDigest>, InitializingBean {
 
     private String algorithmName = "MD5";
 

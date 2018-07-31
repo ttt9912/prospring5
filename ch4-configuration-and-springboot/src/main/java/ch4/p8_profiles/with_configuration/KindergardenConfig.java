@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @Profile("kindergarden")
-public class KindergardenConfig {
+class KindergardenConfig {
 
     @Bean
     public FoodProvierService foodProviderService(){

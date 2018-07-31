@@ -5,12 +5,12 @@ import ch4.p4_property_editors.custom.Person;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-/*
- * PropertyEditors: injecten von property values als String
- * PropertyEditor übernimmt die konvertierung von String zum Typ des Properties
- */
-class Demo {
+public class Demo {
 
+    /*
+     * PropertyEditors: injecten von property values als String
+     * PropertyEditor übernimmt die konvertierung von String zum Typ des Properties
+     */
     @Test
     void builtIn_propertyEditors() {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
@@ -35,5 +35,3 @@ class Demo {
         ctx.close();
     }
 }
-
-

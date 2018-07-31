@@ -5,5 +5,5 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = {"ch4.p7_configuration_classes"})
-public class AppConfigFour {
+class AppConfigFour {
 }

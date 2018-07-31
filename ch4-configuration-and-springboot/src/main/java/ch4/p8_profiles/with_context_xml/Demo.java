@@ -15,7 +15,7 @@ import java.util.List;
  * Profile is set via VM Argument -Dspring.profiles.active="highschool"
  * or programmatically via ctx.getEnvironment().setActiveProfiles("kindergarden");
  */
-public class Demo {
+class Demo {
 
     // run via run configuration! ('ch4_p8_ctx_profile=highschool' or 'ch4_p8_ctx_profile=kindergarden')
     public static void main(String[] args){

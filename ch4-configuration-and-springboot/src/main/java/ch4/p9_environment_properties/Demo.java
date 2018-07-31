@@ -1,4 +1,4 @@
-package ch4.p9_environment;
+package ch4.p9_environment_properties;
 
 
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,7 @@ import java.util.Map;
  *
  * PropertySource: store the applications environment configuration
  */
-public class Demo {
+class Demo {
 
     @Test
     void environment_properties_addFirst() {

@@ -1,11 +1,12 @@
 package ch4.p3_factory_beans;
 
 import java.security.MessageDigest;
+import java.util.Arrays;
 
 /*
  * Verschlüsselt einen String mithilfe von java.security.MessageDigest
  */
-public class MessageDigester {
+ class MessageDigester {
 
     private MessageDigest digest1;
     private MessageDigest digest2;

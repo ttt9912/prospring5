@@ -11,7 +11,7 @@ import java.util.List;
 /*
  * same as with context xml
  */
-public class Demo {
+class Demo {
 
     // run via run configuration! ('ch4_p8_cfg_profile=highschool' or 'ch4_p8_cfg_profile=kindergarden')
     public static void main(String[] args) {

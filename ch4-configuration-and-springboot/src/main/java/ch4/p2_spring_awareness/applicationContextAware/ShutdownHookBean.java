@@ -14,7 +14,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
  *
  * setApplicationContext()
  */
-public class ShutdownHookBean implements ApplicationContextAware{
+class ShutdownHookBean implements ApplicationContextAware{
     private ApplicationContext ctx;
 
     @Override

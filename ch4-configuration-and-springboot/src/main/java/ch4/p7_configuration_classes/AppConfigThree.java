@@ -16,7 +16,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 @Import(AppConfigFour.class)
 @ImportResource(value = "classpath:mixed_context.xml")
-public class AppConfigThree {
+class AppConfigThree {
 
     @Autowired // Componentscan is defined in AppConfigFour.class
     MessageProvider provider; // provider is defined in context.xml

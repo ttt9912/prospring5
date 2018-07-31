@@ -25,7 +25,7 @@ import org.springframework.core.env.Environment;
 @Configuration
 @ComponentScan
 @PropertySource(value = "classpath:message.properties")
-public class AppConfigOne {
+class AppConfigOne {
 
     @Autowired
     Environment env; // spring class
