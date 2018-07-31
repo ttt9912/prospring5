@@ -18,6 +18,7 @@ import org.springframework.core.env.Environment;
 class AppConfigTwo {
 
     @Autowired
+    private
     MessageProvider messageProviderService;
 
     @Bean(name = "messageRenderer")

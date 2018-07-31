@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch2-gettingstarted" />
         <module name="ch3-ioc-and-di" />
+        <module name="ch4-configuration-and-springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="ch2-gettingstarted" target="1.8" />
       <module name="ch3-ioc-and-di" target="1.8" />
+      <module name="ch4-configuration-and-springboot" target="1.8" />
       <module name="parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>

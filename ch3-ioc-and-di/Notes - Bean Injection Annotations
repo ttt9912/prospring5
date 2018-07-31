@@ -8,22 +8,20 @@ um die Beans zu instanziieren.
 - Klassen -
 
 ----------------------------------------------------------------------------------------
-Bean Annotations
+Injectable Beans
 ----------------------------------------------------------------------------------------
 - Components -
-Der Component Scan sucht injectable Beans, also @Component oder einer Spezifikation
+Der ComponentScan sucht injectable Beans, also @Component oder einer Spezifikation
 davon (@Service, @Controller, @Repository)
 @Component: (across application) generisch, auto-scan,  hat folgende Spezifikationen:
     @Service    (service layer) hat keinen gekapselten State
     @Controller (presentation layer) Handling von Requests
     @Repository (persistence layer) DB repositories
 
-http://www.baeldung.com/spring-bean-annotations
-
 @Lazy (auf Klassenlevel): Bean wird erst instanziiert, wenn es gebraucht wird.
 
 ----------------------------------------------------------------------------------------
-Injection Annotations
+Bean Injection
 ----------------------------------------------------------------------------------------
 Für setter injection, constructor injection und field injection:
     @Autowired  (spring)
@@ -34,3 +32,11 @@ Für setter injection, constructor injection und field injection:
     @Autowired + @Qualifier("name")     byName
 
 
+----------------------------------------------------------------------------------------
+JSR 330 Annotations
+----------------------------------------------------------------------------------------
+@Named: injectable bean
+
+@Inject: Constructor or setter injection
+
+Benötigen artifact ''
