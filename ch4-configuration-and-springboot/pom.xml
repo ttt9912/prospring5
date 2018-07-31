@@ -12,6 +12,13 @@
 
     <artifactId>ch4-configuration-and-springboot</artifactId>
     <dependencies>
+        <!-- Groovy Libary -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>3.0.0-alpha-3</version>
+            <type>pom</type>
+        </dependency>
 
         <!-- für JSR 330 Annotations @Named und @Inject -->
         <dependency>
