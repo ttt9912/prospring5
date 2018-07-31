@@ -12,12 +12,10 @@
 
     <artifactId>ch4-configuration-and-springboot</artifactId>
     <dependencies>
-        <!-- Groovy Libary -->
         <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>3.0.0-alpha-3</version>
-            <type>pom</type>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.4.RELEASE</version>
         </dependency>
 
         <!-- für JSR 330 Annotations @Named und @Inject -->
@@ -27,10 +25,26 @@
             <version>1</version>
         </dependency>
 
+        <!-- Groovy Libary -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.0.4.RELEASE</version>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>3.0.0-alpha-3</version>
+            <type>pom</type>
+        </dependency>
+
+        <!-- springboot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>2.0.4.RELEASE</version>
+        </dependency>
+
+        <!-- starter-web for web apps -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.0.4.RELEASE</version>
         </dependency>
     </dependencies>
 

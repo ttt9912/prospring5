@@ -1,0 +1,30 @@
+----------------------------------------------------------------------------------------
+@SpringBootApplication
+----------------------------------------------------------------------------------------
+
+@SpringBootApplication ist eine convenience Annotation für Klassenebene und
+umfasst @Configuration, @EnableAutoConfiguration sowie @ComponentScan.
+
+
+    - @Configuration:   markiert die Klasse als config Klasse, die Beans mit @Bean
+                        deklarieren kann.
+
+    - @EnableAutoConfiguration: Spring Boot spezifisch für autoconfig von Beans aus
+                                den Dependencies.
+                                Funktioniert vor allem gut mit starter dependencies.
+
+    - @ComponentScan
+
+----------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------
+Spring Web beans (@Controller)
+----------------------------------------------------------------------------------------
+
+@Controller ist eine Spezialisierung von @Component.
+
+@RestController, @RequestMapping
+
+----------------------------------------------------------------------------------------
