@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch2-gettingstarted/ch2-gettingstarted.iml" filepath="$PROJECT_DIR$/ch2-gettingstarted/ch2-gettingstarted.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch3-ioc-and-di/ch3-ioc-and-di.iml" filepath="$PROJECT_DIR$/ch3-ioc-and-di/ch3-ioc-and-di.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch4-configuration-and-springboot/ch4-configuration-and-springboot.iml" filepath="$PROJECT_DIR$/ch4-configuration-and-springboot/ch4-configuration-and-springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch5-aop/ch5-aop.iml" filepath="$PROJECT_DIR$/ch5-aop/ch5-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
     </modules>
   </component>

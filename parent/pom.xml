@@ -12,6 +12,7 @@
         <module>../ch2-gettingstarted</module>
         <module>../ch3-ioc-and-di</module>
         <module>../ch4-configuration-and-springboot</module>
+        <module>../ch5-aop</module>
     </modules>
 
     <dependencies>
