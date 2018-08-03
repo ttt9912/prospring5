@@ -1,0 +1,49 @@
+---------------------------------------------------------------------------
+Before Advice
+---------------------------------------------------------------------------
+    can:
+        - modify the methods arguments
+        - prevent the method from executing by throwing an exception.
+
+    Implements: MedhodBeforeAdvice (and overrides before() method)
+
+---------------------------------------------------------------------------
+After Advice
+---------------------------------------------------------------------------
+    can:
+        - adding processing
+        - throwing an Exception instead of returning a value
+
+    cannot:
+        - modify the methods arguments
+        - modify the methods return value
+        - prevent the method from executing.
+
+    Implements: AfterReturningAdvice (and overrides afterReturning() method)
+
+---------------------------------------------------------------------------
+Around Advice
+---------------------------------------------------------------------------
+    can:
+        - modify the methods arguments
+        - modify the methods return value
+        - substitute the entire method implementation
+        - prevent the method from executing by throwing an exception
+
+    Implements: MethodInterceptor: (and overrides invoke() method)
+
+---------------------------------------------------------------------------
+Throws Advice
+---------------------------------------------------------------------------
+Executes only when the method throws an exception.
+
+    can:
+        - change the type of Exception that is thrown
+
+    cannot:
+        - return a value instead of throwing an Exception
+        - modify the methods arguments
+        - modify the methods return value
+        - prevent the method from executing.
+
+    Implements: ThrowsAdvice and defines afterThrowing() method(s)

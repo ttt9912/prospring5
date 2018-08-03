@@ -4,6 +4,6 @@ class Guitarist implements Singer {
 
     @Override
     public void sing() {
-        System.out.println("you're gonna live forever.");
+        System.out.println("[Guitarist] you're gonna live forever.");
     }
 }

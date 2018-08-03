@@ -15,6 +15,6 @@ class SimpleBeforeAdvice implements MethodBeforeAdvice {
     @Override
     public void before(final Method method, final Object[] objects, final Object o) throws Throwable {
 
-        System.out.println("Before '" + method.getName() + "', tune guitar.");
+        System.out.println("[SimpleBeforeAdvice] Before '" + method.getName() + "', tune guitar.");
     }
 }
