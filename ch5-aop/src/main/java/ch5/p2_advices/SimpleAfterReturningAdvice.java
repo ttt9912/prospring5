@@ -1,4 +1,4 @@
-package p2_advices;
+package ch5.p2_advices;
 
 import org.springframework.aop.AfterReturningAdvice;
 
@@ -11,10 +11,10 @@ import java.lang.reflect.Method;
  *
  * AfterReturningAdvice: defines afterReturning() method
  */
-public class SimpleAfterReturningAdvice implements AfterReturningAdvice {
+class SimpleAfterReturningAdvice implements AfterReturningAdvice {
     @Override
-    public void afterReturning(final Object o, final Method method, final Object[] objects, final Object o1) throws Throwable {
+    public void afterReturning(final Object o, final Method method, final Object[] objects, final Object o1) {
 
-        System.out.println("[SimpleAfterReturningAdvice] After '" + method.getName() + "' put down guitar.");
+        System.out.println("[SimpleAfterReturningAdvice] >> After '" + method.getName() + "' put down guitar.");
     }
 }

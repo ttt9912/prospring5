@@ -1,4 +1,4 @@
-package p2_advices;
+package ch5.p2_advices;
 
 class Guitarist implements Singer {
 

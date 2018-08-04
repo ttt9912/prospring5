@@ -1,4 +1,4 @@
-package p2_advices;
+package ch5.p2_advices;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
@@ -15,7 +15,7 @@ import java.util.Arrays;
  *
  * MethodInvocation: has access to Method, method arguments, return value
  */
-public class SimpleAroundAdvice implements MethodInterceptor {
+class SimpleAroundAdvice implements MethodInterceptor {
 
     @Override
     public Object invoke(final MethodInvocation methodInvocation) throws Throwable {
@@ -23,14 +23,14 @@ public class SimpleAroundAdvice implements MethodInterceptor {
         // before advice
         StopWatch stopWatch = new StopWatch();
         stopWatch.start(methodInvocation.getMethod().getName());
-        System.out.println("[SimpleAroundAdvice] Stopwatch started.");
+        System.out.println("[SimpleAroundAdvice] >> Stopwatch started.");
 
         // method execution
         Object returnVal = methodInvocation.proceed();
 
         // after advice
         stopWatch.stop();
-        System.out.println("[SimpleAroundAdvice] Stopwatch stopped.");
+        System.out.println("[SimpleAroundAdvice] >> Stopwatch stopped.");
         printInfo(methodInvocation, stopWatch.getTotalTimeMillis());
 
         return returnVal;
@@ -41,9 +41,9 @@ public class SimpleAroundAdvice implements MethodInterceptor {
         Object target = invocation.getThis();
         Object[] arguments = invocation.getArguments();
 
-        System.out.println("[SimpleAroundAdvice] Executed Method: " + method);
-        System.out.println("[SimpleAroundAdvice] On object of type: " + target.getClass().getName());
-        System.out.println("[SimpleAroundAdvice] With arguments: " + Arrays.toString(arguments));
-        System.out.println("[SimpleAroundAdvice] Took time ms: " + totalTimeMillis);
+        System.out.println("[SimpleAroundAdvice] >> Executed Method: " + method);
+        System.out.println("[SimpleAroundAdvice] >> On object of type: " + target.getClass().getName());
+        System.out.println("[SimpleAroundAdvice] >> With arguments: " + Arrays.toString(arguments));
+        System.out.println("[SimpleAroundAdvice] >> Took time ms: " + totalTimeMillis);
     }
 }

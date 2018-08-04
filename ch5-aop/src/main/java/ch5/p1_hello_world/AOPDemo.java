@@ -1,4 +1,4 @@
-package p1_hello_world;
+package ch5.p1_hello_world;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.framework.ProxyFactory;

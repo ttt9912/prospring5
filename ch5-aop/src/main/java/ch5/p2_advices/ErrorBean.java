@@ -1,12 +1,12 @@
-package p2_advices;
+package ch5.p2_advices;
 
 class ErrorBean {
 
-    public void errorProneMethod() throws Exception {
+    void errorProneMethod() throws Exception {
         throw new Exception("Generic Exception");
     }
 
-    public void otherErrorProneMethod() throws IllegalArgumentException {
+    void otherErrorProneMethod() throws IllegalArgumentException {
         throw new IllegalArgumentException("Illegal Argument Exception");
     }
 }

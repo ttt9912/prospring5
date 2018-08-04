@@ -1,8 +1,8 @@
-package p1_hello_world;
+package ch5.p1_hello_world;
 
 class Agent {
 
-    public void speak() {
+    void speak() {
         System.out.print("Bond");
     }
 }
