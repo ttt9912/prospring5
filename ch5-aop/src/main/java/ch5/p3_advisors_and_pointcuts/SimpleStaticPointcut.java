@@ -1,4 +1,4 @@
-package ch5.p3_advisors_and_pointcuts.s1_static_pointcuts;
+package ch5.p3_advisors_and_pointcuts;
 
 import org.springframework.aop.ClassFilter;
 import org.springframework.aop.support.StaticMethodMatcherPointcut;
