@@ -1,0 +1,17 @@
+Core goal of a Proxy: intercept method invocations
+
+---------------------------------------------------------------------------
+JDK Dynamic Proxies
+---------------------------------------------------------------------------
+- most basic proxy type
+- can intercept only interfaces, not classes
+- an object to proxy must implement at least one interface
+- less performance: all method calls are intercepted and routed to invoke()
+
+
+---------------------------------------------------------------------------
+CGLIB Proxies
+---------------------------------------------------------------------------
+- dynamically generates bytecode for a new class for each proxy
+- resulting proxy will be a subclass of the target object class
+- more performance: unadvised methods are called directly
