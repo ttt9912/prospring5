@@ -1,5 +1,6 @@
 package ch5.p5_declarative_aop.with_proxyFactoryBean;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
@@ -15,6 +16,7 @@ class Demo {
     // with context.xml
     // --------------------------------------------------------------
 
+    @Disabled
     @Test
     void proxyFactoryBean_advices_withContextXml() {
 

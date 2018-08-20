@@ -4,7 +4,7 @@ import org.springframework.aop.support.DefaultIntroductionAdvisor;
 
 class IsModifiedAdvisor extends DefaultIntroductionAdvisor {
 
-    IsModifiedAdvisor() {
+    public IsModifiedAdvisor() {
         super(new IsModifiedMixin());
     }
 }

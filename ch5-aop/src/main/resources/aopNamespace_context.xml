@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--
+        execution(
+            * ch.ttt.ch5.p5_declarative_aop.with_aopNamespace..sing*(ch5.p5_declarative_aop.with_aopNamespace.Guitar)
+            |_________________class filter__________________||__________________method matcher______________________|
+
+
+            => 'advise all sing-Methods that take an argument of type Guitarist'
+    -->
+
+    <aop:config proxy-target-class="true"> <!-- use cglib -->
+        <aop:pointcut id="singExecution"
+                      expression="execution(* ch5.p5_declarative_aop.with_aopNamespace..sing*(ch5.p5_declarative_aop.with_aopNamespace.Guitar))"/>
+
+        <aop:aspect ref="advice">
+            <aop:before pointcut-ref="singExecution"
+                        method="simpleBeforeAdvice"/>
+        </aop:aspect>
+    </aop:config>
+
+    <bean id="advice"
+          class="ch5.p5_declarative_aop.with_aopNamespace.SimpleAdvice"/>
+    <bean id="johnMayer"
+          class="ch5.p5_declarative_aop.with_aopNamespace.GrammyGuitarist"/>
+    <bean id="documentarist"
+          class="ch5.p5_declarative_aop.with_aopNamespace.NewDocumentarist"
+          p:guitarist-ref="johnMayer"/>
+
+
+</beans>

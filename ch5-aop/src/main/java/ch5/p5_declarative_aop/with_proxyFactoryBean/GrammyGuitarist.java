@@ -12,11 +12,11 @@ class GrammyGuitarist implements Singer {
         System.out.println("play: " + guitar.play());
     }
 
-    void rest() {
+    public void rest() {
         System.out.println("zzz");
     }
 
-    void talk() {
+    public void talk() {
         System.out.println("talk");
     }
 }

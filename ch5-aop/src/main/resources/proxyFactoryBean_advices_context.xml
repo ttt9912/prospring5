@@ -3,10 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/util
-       http://www.springframework.org/schema/util/spring-util.xsd">
+       http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- use CGLIB -> why does this shit still not work?? -->
+    <aop:config proxy-target-class="true"/>
 
     <!-- target -->
     <bean id="johnMayer" class="ch5.p5_declarative_aop.with_proxyFactoryBean.GrammyGuitarist"/>
@@ -14,30 +20,17 @@
     <!-- advice (without pointcut: advice all target methods) -->
     <bean id="advice" class="ch5.p5_declarative_aop.with_proxyFactoryBean.AuditAdvice"/>
 
-    <bean id="documentaristOne" class="ch5.p5_declarative_aop.with_proxyFactoryBean.Documentarist"
-          p:guitarist-ref="proxyOne"/>
+    <util:list id="interceptorAdviceNames">
+        <value>advice</value>
+    </util:list>
 
     <!-- proxy with advice -->
     <bean id="proxyOne" class="org.springframework.aop.framework.ProxyFactoryBean"
           p:target-ref="johnMayer"
           p:interceptorNames-ref="interceptorAdviceNames"/>
 
-    <util:list id="interceptorAdviceNames">
-        <value>advice</value>
-    </util:list>
-
-
-    <bean id="documentaristTwo" class="ch5.p5_declarative_aop.with_proxyFactoryBean.Documentarist"
-          p:guitarist-ref="proxyTwo"/>
-
-    <!-- proxy with advisor -->
-    <bean id="proxyTwo" class="org.springframework.aop.framework.ProxyFactoryBean"
-          p:target-ref="johnMayer"
-          p:interceptorNames-ref="interceptorAdvisorNames"/>
-
-    <util:list id="interceptorAdvisorNames">
-        <value>advisor</value>
-    </util:list>
+    <bean id="documentaristOne" class="ch5.p5_declarative_aop.with_proxyFactoryBean.Documentarist"
+          p:guitarist-ref="proxyOne"/>
 
     <!-- advisor with pointcut: advice only specific target methods -->
     <bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"
@@ -47,4 +40,18 @@
                   p:expression="execution(* sing*(..))"/>
         </property>
     </bean>
+
+    <util:list id="interceptorAdvisorNames">
+        <value>advisor</value>
+    </util:list>
+
+    <!-- proxy with advisor -->
+    <bean id="proxyTwo" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:target-ref="johnMayer"
+          p:interceptorNames-ref="interceptorAdvisorNames"/>
+
+    <bean id="documentaristTwo" class="ch5.p5_declarative_aop.with_proxyFactoryBean.Documentarist"
+          p:guitarist-ref="proxyTwo"/>
+
+
 </beans>

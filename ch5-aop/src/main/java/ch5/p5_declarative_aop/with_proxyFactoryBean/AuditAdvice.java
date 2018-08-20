@@ -1,19 +1,15 @@
 package ch5.p5_declarative_aop.with_proxyFactoryBean;
 
 
-import org.springframework.aop.MethodBeforeAdvice;
-
-import java.lang.reflect.Method;
+import org.aspectj.lang.JoinPoint;
 
 /*
- * JoinPoint: AspectJ
+ * JoinPoint: optional. Automatically passed in by spring
  */
-class AuditAdvice implements MethodBeforeAdvice {
+class AuditAdvice {
 
-    // TODO: extends MethodBeforeAdvice instead of AspectJ JoinPoint? (p.278)
-
-    @Override
-    public void before(final Method method, final Object[] args, final Object target) throws Throwable {
-        System.out.println("Executing: " + method.getName());
+    public void simpleBeforeAdvice(JoinPoint joinPoint) {
+        System.out.println("Executing arg");
     }
+
 }

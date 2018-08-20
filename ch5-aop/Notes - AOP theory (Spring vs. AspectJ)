@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------------------
+Spring AOP
+----------------------------------------------------------------------------------------
+Spring AOP works by using proxies, and as such can be configured to use either
+JDK interface proxies (target class requires to implement an interface which is then
+proxied) OR CGLIB class proxies (target class is proxied, bad performance)
+- Default = JDK.
+- Set CGLIB with <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+----------------------------------------------------------------------------------------
+AspectJ
+----------------------------------------------------------------------------------------
+AspectJ is an own AOP Framework and has a different way to work.
+Specifically, it doesn't use proxies to work. It weaves directly the aspects code into
+the advised classes, either at compile time (compile time weaving) or when the class is
+loaded by the class loader (load time weaving).
+
+----------------------------------------------------------------------------------------
+Spring AOP vs. AspectJ
+----------------------------------------------------------------------------------------
+Spring AOP is NOT AspectJ and it has some strong limitations:
+- non-Spring beans aren't advised;
+- only method execution pointcuts are accepted;
+- only external method calls (calls made from another class to the method that is to be
+    advised) are intercepted, internal calls aren't;
+- static method execution obviously can't be advised;
+- same for non-public methods.

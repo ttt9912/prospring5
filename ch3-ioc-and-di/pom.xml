@@ -12,11 +12,4 @@
 
     <artifactId>ch3-ioc-and-di</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.0.4.RELEASE</version>
-        </dependency>
-    </dependencies>
 </project>

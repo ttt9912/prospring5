@@ -9,7 +9,7 @@ class Documentarist {
         guitarist.talk();
     }
 
-    public void setDep(GrammyGuitarist guitarist) {
+    public void setGuitarist(final GrammyGuitarist guitarist) {
         this.guitarist = guitarist;
     }
 }
