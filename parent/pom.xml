@@ -13,23 +13,24 @@
         <module>../ch3-ioc-and-di</module>
         <module>../ch4-configuration-and-springboot</module>
         <module>../ch5-aop</module>
+        <module>../ch6-jdbc</module>
     </modules>
 
     <properties>
-        <spring.context.version>5.0.8.RELEASE</spring.context.version>
-        <spring.core.version>5.0.8.RELEASE</spring.core.version>
+        <springframework.version>5.0.8.RELEASE</springframework.version>
+        <springboot.version>2.0.4.RELEASE</springboot.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${spring.context.version}</version>
+            <version>${springframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>${spring.core.version}</version>
+            <version>${springframework.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
