@@ -1,3 +1,6 @@
+drop table if exists album;
+drop table if exists singer;
+
 create table singer (
     id              int             not null    auto_increment,
     first_name      varchar(60)     not null,

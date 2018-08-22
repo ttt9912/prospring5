@@ -24,7 +24,7 @@ class EmbeddedH2Config {
 
         return builder
                 .setType(EmbeddedDatabaseType.H2)
-                .addScripts("classpath:h2/schema.sql", "classpath:h2/test-data.sql")
+                .addScripts("classpath:sql/schema.sql", "classpath:sql/test-data.sql")
                 .build();
     }
 }

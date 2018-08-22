@@ -1,10 +1,7 @@
 package ch6.p1_connections_and_datasources;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
@@ -13,6 +10,8 @@ import java.sql.Driver;
 
 @Configuration
 @PropertySource("classpath:mysql/jdbc.properties")
+@ImportResource(value = "classpath:config_init_db_context.xml")
+        // load sql sql
 class MysqlDBConfig {
     @Value("${jdbc.driverClassName}")
     private String driverClassName;

@@ -13,7 +13,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class Demo {
@@ -25,7 +24,7 @@ class Demo {
     // ---------------------------------------------------------------------------
 
     @Test
-    void connect_mysqlDocker_withContextXml() {
+    void mysqlDocker_withContextXml() {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("connect_mysql_context.xml");
         ctx.refresh();
@@ -38,7 +37,7 @@ class Demo {
     }
 
     @Test
-    void connect_mysqlDocker_withConfiguration() {
+    void mysqlDocker_withConfiguration() {
         GenericApplicationContext ctx =
                 new AnnotationConfigApplicationContext(MysqlDBConfig.class);
 
@@ -85,12 +84,12 @@ class Demo {
         try {
             connection = dataSource.getConnection();
 
-            PreparedStatement statement = connection.prepareStatement("select 1");
+            PreparedStatement statement = connection.prepareStatement("select * from singer");
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-                int mockVal = resultSet.getInt("1");
-                assertEquals(1, mockVal);
+                String val = resultSet.getString("first_name");
+                logger.info(val);
             }
 
             statement.close();
