@@ -20,10 +20,14 @@ class Demo {
 
     private static Logger logger = LoggerFactory.getLogger(Demo.class);
 
+    // ---------------------------------------------------------------------------
+    // Connect to a remote Mysql (run in a Docker Container)
+    // ---------------------------------------------------------------------------
+
     @Test
     void connect_mysqlDocker_withContextXml() {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
-        ctx.load("connection_context.xml");
+        ctx.load("connect_mysql_context.xml");
         ctx.refresh();
 
         DataSource dataSource = ctx.getBean("dataSource", DataSource.class);
@@ -36,7 +40,36 @@ class Demo {
     @Test
     void connect_mysqlDocker_withConfiguration() {
         GenericApplicationContext ctx =
-                new AnnotationConfigApplicationContext(DbConfig.class);
+                new AnnotationConfigApplicationContext(MysqlDBConfig.class);
+
+        DataSource dataSource = ctx.getBean("dataSource", DataSource.class);
+        assertNotNull(dataSource);
+        testDataSource(dataSource);
+
+        ctx.close();
+    }
+
+    // ---------------------------------------------------------------------------
+    // Connect to embedded H2
+    // ---------------------------------------------------------------------------
+
+    @Test
+    void embeddedH2_withContextXml() {
+        GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
+        ctx.load("connect_h2_context.xml");
+        ctx.refresh();
+
+        DataSource dataSource = ctx.getBean("dataSource", DataSource.class);
+        assertNotNull(dataSource);
+        testDataSource(dataSource);
+
+        ctx.close();
+    }
+
+    @Test
+    void embeddedH2_withConfiguration() {
+        GenericApplicationContext ctx =
+                new AnnotationConfigApplicationContext(EmbeddedH2Config.class);
 
         DataSource dataSource = ctx.getBean("dataSource", DataSource.class);
         assertNotNull(dataSource);

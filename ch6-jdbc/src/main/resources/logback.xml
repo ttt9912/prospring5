@@ -16,8 +16,6 @@
     <logger name="org.springframework" level="info"/>
     <logger name="org.springframework.jdbc" level="debug"/>
 
-    <logger name="ch6" level="debug"/>
-
     <root level="debug">
         <appender-ref ref="console"/>
     </root>

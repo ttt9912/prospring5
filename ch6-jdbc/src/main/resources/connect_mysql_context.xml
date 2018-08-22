@@ -15,5 +15,5 @@
           p:username="${jdbc.username}"
           p:password="${jdbc.password}"/>
 
-    <context:property-placeholder location="classpath:db/jdbc.properties"/>
+    <context:property-placeholder location="classpath:mysql/jdbc.properties"/>
 </beans>

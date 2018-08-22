@@ -12,8 +12,8 @@ import javax.sql.DataSource;
 import java.sql.Driver;
 
 @Configuration
-@PropertySource("classpath:db/jdbc.properties")
-class DbConfig {
+@PropertySource("classpath:mysql/jdbc.properties")
+class MysqlDBConfig {
     @Value("${jdbc.driverClassName}")
     private String driverClassName;
     @Value("${jdbc.url}")
