@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 import java.sql.Driver;
 
 @Configuration
-@PropertySource("classpath:mysql/jdbc.properties")
+@PropertySource("classpath:db/jdbc.properties")
 @ImportResource(value = "classpath:config_init_db_context.xml")
         // load sql sql
 class MysqlDBConfig {

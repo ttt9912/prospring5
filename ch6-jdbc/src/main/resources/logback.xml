@@ -13,8 +13,8 @@
         </encoder>
     </appender>
 
-    <logger name="org.springframework" level="info"/>
-    <logger name="org.springframework.jdbc" level="debug"/>
+    <logger name="org.springframework" level="error"/>
+    <logger name="org.springframework.jdbc" level="error"/>
 
     <root level="debug">
         <appender-ref ref="console"/>

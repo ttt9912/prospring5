@@ -23,5 +23,5 @@
         <jdbc:script location="classpath:sql/test-data.sql"/>
     </jdbc:initialize-database>
 
-    <context:property-placeholder location="classpath:mysql/jdbc.properties"/>
+    <context:property-placeholder location="classpath:db/jdbc.properties"/>
 </beans>
