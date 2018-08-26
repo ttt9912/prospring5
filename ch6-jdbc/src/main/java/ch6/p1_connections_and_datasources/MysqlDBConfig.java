@@ -13,6 +13,7 @@ import java.sql.Driver;
 @ImportResource(value = "classpath:config_init_db_context.xml")
         // load sql sql
 class MysqlDBConfig {
+
     @Value("${jdbc.driverClassName}")
     private String driverClassName;
     @Value("${jdbc.url}")

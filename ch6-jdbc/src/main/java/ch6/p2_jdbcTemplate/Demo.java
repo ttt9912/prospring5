@@ -37,9 +37,10 @@ class Demo {
     // Map DB Rows to POJOs
     // ---------------------------------------------------------------------------
 
-    // map db rows to simple POJOS. Relationships are ignored
     @Test
     void rowMapper() {
+        // map db rows to simple POJOS. Relationships are ignored
+
         GenericApplicationContext ctx =
                 new AnnotationConfigApplicationContext(EmbeddedJdbcConfig.class);
 
@@ -49,9 +50,10 @@ class Demo {
         all.forEach(System.out::println);
     }
 
-    // mapping Relationships
     @Test
     void resultSetExtractor() {
+        // mapping Relationships
+
         GenericApplicationContext ctx =
                 new AnnotationConfigApplicationContext(EmbeddedJdbcConfig.class);
 
