@@ -11,4 +11,8 @@ interface SingerDAO {
     List<Singer> findByFirstName(String firstName);
 
     void update(Singer singer);
+
+    void insert(Singer singer);
+
+    void insertWithAlbum(Singer singer);
 }

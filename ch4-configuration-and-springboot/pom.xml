@@ -27,20 +27,6 @@
             <version>3.0.0-alpha-3</version>
             <type>pom</type>
         </dependency>
-
-        <!-- springboot -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>${springboot.version}</version>
-        </dependency>
-
-        <!-- starter-web for web apps -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>${springboot.version}</version>
-        </dependency>
     </dependencies>
 
 
