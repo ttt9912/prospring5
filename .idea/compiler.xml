@@ -11,6 +11,7 @@
         <module name="ch4-configuration-and-springboot" />
         <module name="ch5-aop" />
         <module name="ch6-jdbc" />
+        <module name="ch7-hibernate" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -19,6 +20,7 @@
       <module name="ch4-configuration-and-springboot" target="1.8" />
       <module name="ch5-aop" target="1.8" />
       <module name="ch6-jdbc" target="1.8" />
+      <module name="ch7-hibernate" target="1.8" />
       <module name="parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -9,3 +9,17 @@ insert into album (singer_id, title, release_date)
     (1, 'The Search For Everything', '2017-01-20'),
     (1, 'Battle Studies', '2009-11-17'),
     (2, 'From The Cradle', '1994-09-13');
+
+insert into instrument (instrument_id)
+    values
+    ('Guitar'),
+    ('Piano'),
+    ('Voice'),
+    ('Drums'),
+    ('Synthesizer');
+
+insert into singer_instrument (singer_id, instrument_id)
+    values
+    (1, 'Guitar'),
+    (1, 'Piano'),
+    (2, 'Guitar');

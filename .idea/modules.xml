@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch4-configuration-and-springboot/ch4-configuration-and-springboot.iml" filepath="$PROJECT_DIR$/ch4-configuration-and-springboot/ch4-configuration-and-springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch5-aop/ch5-aop.iml" filepath="$PROJECT_DIR$/ch5-aop/ch5-aop.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch6-jdbc/ch6-jdbc.iml" filepath="$PROJECT_DIR$/ch6-jdbc/ch6-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch7-hibernate/ch7-hibernate.iml" filepath="$PROJECT_DIR$/ch7-hibernate/ch7-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
     </modules>
   </component>
