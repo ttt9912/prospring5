@@ -14,8 +14,24 @@ import java.util.Set;
  *
  * orphanRemoval: after albums are updated, those entries that no longer
  *                exist in the Set should be deleted from the database.
+ *
+ * select distinct: avoid duplicates; without distinct, a Singer is returned
+ *                  twice if he has two albums
+ *
+ * left join fetch: eager loading: loads relationships
  */
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "Singer.findAllWithAlbums",
+                query = "select distinct s from Singer s " +
+                        "left join fetch s.albums a " +
+                        "left join fetch s.instruments i"),
+        @NamedQuery(name = "Singer.findById",
+                query = "select distinct s from Singer s " +
+                        "left join fetch s.albums a " +
+                        "left join fetch s.instruments i " +
+                        "where s.id = :id")
+})
 public class Singer implements Serializable {
     // leave public
 
@@ -117,7 +133,18 @@ public class Singer implements Serializable {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", birthDate=" + birthDate +
+                '}';
+    }
+
+    public String withRelationships() {
+        return "Singer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
                 ", version=" + version +
+                ", \n\talbums=" + albums +
+                ", \n\tinstruments=" + instruments +
                 '}';
     }
 }

@@ -73,7 +73,8 @@ public class Album implements Serializable {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", releaseDate=" + releaseDate +
-                ", version=" + version +
                 '}';
     }
+
+
 }

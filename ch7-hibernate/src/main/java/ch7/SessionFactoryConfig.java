@@ -50,7 +50,7 @@ class SessionFactoryConfig {
     private Properties hibernateProperties() {
         final Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-        hibernateProperties.put("hibernate.format_sql", true);
+        hibernateProperties.put("hibernate.format_sql", false);
         hibernateProperties.put("hibernate.use_sql_comments", true);
         hibernateProperties.put("hibernate.show_sql", true);
         hibernateProperties.put("hibernate.max_fetch_depth", 3);
