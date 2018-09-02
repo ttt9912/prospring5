@@ -12,6 +12,7 @@
         <module name="ch5-aop" />
         <module name="ch6-jdbc" />
         <module name="ch7-hibernate" />
+        <module name="ch8-jpa2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -21,6 +22,7 @@
       <module name="ch5-aop" target="1.8" />
       <module name="ch6-jdbc" target="1.8" />
       <module name="ch7-hibernate" target="1.8" />
+      <module name="ch8-jpa2" target="1.8" />
       <module name="parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>

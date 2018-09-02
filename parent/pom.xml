@@ -15,6 +15,7 @@
         <module>../ch5-aop</module>
         <module>../ch6-jdbc</module>
         <module>../ch7-hibernate</module>
+        <module>../ch8-jpa2</module>
     </modules>
 
     <properties>
