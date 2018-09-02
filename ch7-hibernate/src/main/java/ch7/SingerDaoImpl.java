@@ -13,6 +13,9 @@ import java.util.List;
  *
  * SQL: query against database
  * HQL: query against domain model
+ *
+ * Entities are not joined by default (= lazy loading). Use
+ * 'join fetch' for eager loading.
  */
 
 @Transactional
@@ -47,11 +50,20 @@ class SingerDaoImpl implements SingerDao {
                 .list();
     }
 
-    @Override
+    @Transactional(readOnly = true)
     public Singer findById(final Long id) {
         return (Singer) sessionFactory.getCurrentSession()
                 .getNamedQuery("Singer.findById")
                 .setParameter("id", id)
                 .uniqueResult();
     }
+
+    @Override
+    public Singer save(final Singer singer) {
+        sessionFactory.getCurrentSession()
+                .saveOrUpdate(singer);
+        return singer;
+    }
+
+
 }

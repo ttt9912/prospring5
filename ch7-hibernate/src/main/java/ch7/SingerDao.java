@@ -7,8 +7,8 @@ import java.util.List;
 interface SingerDao {
 
     List<Singer> findAll();
-
     List<Singer> findAllWithAlbums();
-
     Singer findById(Long id);
+
+    Singer save(Singer singer);
 }

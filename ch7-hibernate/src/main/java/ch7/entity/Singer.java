@@ -101,15 +101,6 @@ public class Singer implements Serializable {
         this.albums = albums;
     }
 
-    public boolean addAlbum(final Album album) {
-        album.setSinger(this);
-        return getAlbums().add(album);
-    }
-
-    public void removeAlbum(final Album album) {
-        getAlbums().remove(album);
-    }
-
     public Set<Instrument> getInstruments() {
         return instruments;
     }
@@ -126,6 +117,7 @@ public class Singer implements Serializable {
         this.version = version;
     }
 
+
     @Override
     public String toString() {
         return "Singer{" +
@@ -133,6 +125,7 @@ public class Singer implements Serializable {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", birthDate=" + birthDate +
+                ", version=" + version +
                 '}';
     }
 
@@ -143,8 +136,10 @@ public class Singer implements Serializable {
                 ", lastName='" + lastName + '\'' +
                 ", birthDate=" + birthDate +
                 ", version=" + version +
-                ", \n\talbums=" + albums +
-                ", \n\tinstruments=" + instruments +
+                ", \n\t albums=" + albums +
+                ", \n\t instruments=" + instruments +
                 '}';
     }
+
+
 }
