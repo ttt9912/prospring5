@@ -2,6 +2,8 @@ package ch7;
 
 import ch7.entity.Singer;
 import org.hibernate.SessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +23,7 @@ import java.util.List;
 @Transactional
 @Repository("singerDao")
 class SingerDaoImpl implements SingerDao {
+    private static final Logger logger = LoggerFactory.getLogger(SingerDaoImpl.class);
 
     private SessionFactory sessionFactory;
 
@@ -65,5 +68,9 @@ class SingerDaoImpl implements SingerDao {
         return singer;
     }
 
-
+    @Override
+    public void delete(final Singer singer) {
+        sessionFactory.getCurrentSession().delete(singer);
+        logger.info("Deleted singer with id {}", singer.getId());
+    }
 }

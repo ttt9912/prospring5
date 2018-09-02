@@ -11,4 +11,6 @@ interface SingerDao {
     Singer findById(Long id);
 
     Singer save(Singer singer);
+
+    void delete(Singer singer);
 }
