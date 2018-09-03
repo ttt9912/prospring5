@@ -1,6 +1,5 @@
-package ch7;
+package ch8;
 
-import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
@@ -8,26 +7,22 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.JpaVendorAdapter;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
-import java.io.IOException;
 import java.util.Properties;
 
-/*
- * packagesToScan:  Instructs the entity factory to scan for objects
- *                  with ORM annotations.
- *
- * META-INF/persistence.xml can be omitted thanks to packagesToScan.
- */
 @Configuration
-@ComponentScan(basePackages = "ch7")
 @EnableTransactionManagement
-class SessionFactoryConfig {
-    private static final Logger logger = LoggerFactory.getLogger(SessionFactoryConfig.class);
+@ComponentScan(basePackages = {"ch8.service"})
+class JpaConfig {
+    private static Logger logger = LoggerFactory.getLogger(JpaConfig.class);
 
     @Bean
     public DataSource dataSource() {
@@ -39,21 +34,29 @@ class SessionFactoryConfig {
     }
 
     @Bean
-    public SessionFactory sessionFactory() throws IOException {
-        final LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
-        sessionFactoryBean.setDataSource(dataSource());
-        sessionFactoryBean.setPackagesToScan("ch7.entity"); // entity classes
-        sessionFactoryBean.setHibernateProperties(hibernateProperties());
-        sessionFactoryBean.afterPropertiesSet();
-        return sessionFactoryBean.getObject();
+    public PlatformTransactionManager transactionManager() {
+        return new JpaTransactionManager(entityManagerFactory());
     }
 
     @Bean
-    public PlatformTransactionManager transactionManager() throws IOException {
-        return new HibernateTransactionManager(sessionFactory());
+    public JpaVendorAdapter jpaVendorAdapter() {
+        return new HibernateJpaVendorAdapter();
     }
 
-    private Properties hibernateProperties() {
+    @Bean
+    public EntityManagerFactory entityManagerFactory() {
+        LocalContainerEntityManagerFactoryBean factoryBean =
+                new LocalContainerEntityManagerFactoryBean();
+        factoryBean.setPackagesToScan("ch8.entity");
+        factoryBean.setDataSource(dataSource());
+        factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
+        factoryBean.setJpaProperties(hibernateProperties());
+        factoryBean.afterPropertiesSet();
+        return factoryBean.getNativeEntityManagerFactory();
+    }
+
+    @Bean
+    public Properties hibernateProperties() {
         final Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
         hibernateProperties.put("hibernate.format_sql", false);

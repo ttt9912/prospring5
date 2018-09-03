@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------
+Use Hibernate directly vs. via JPA
+---------------------------------------------------------------------------
+
+1.) Use Hibernate
+
+    Spring app ---> Hibernate
+
+2.) Use JPA with Hibernate as implementation
+
+    Spring app ---> JPA <-impl- Hibernate (or EclipseLinkk, OpenJPA, ...)
+
+
+
+---------------------------------------------------------------------------
+Differences
+---------------------------------------------------------------------------
+
+	            | Hibernate	        | JPA
+-----------------------------------------------------------
+Core concept	| Session	        | EntityManager
+Created by	    | SessionFactory    | EntityManagerFactory
+Entities are    | Session	        | Persistence context
+stored in…	    |                   |
+Query language	| HQL	            | JPQL
+-----------------------------------------------------------
