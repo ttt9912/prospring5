@@ -1,4 +1,4 @@
-package ch8.service;
+package ch8.p1_jpa.service;
 
 import ch8.entity.Singer;
 import org.slf4j.Logger;

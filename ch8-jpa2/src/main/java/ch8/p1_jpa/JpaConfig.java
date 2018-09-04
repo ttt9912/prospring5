@@ -1,4 +1,4 @@
-package ch8;
+package ch8.p1_jpa;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"ch8.service"})
+@ComponentScan(basePackages = {"ch8.p1_jpa.service"})
 class JpaConfig {
     private static Logger logger = LoggerFactory.getLogger(JpaConfig.class);
 

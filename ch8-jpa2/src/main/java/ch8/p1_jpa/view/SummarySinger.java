@@ -1,4 +1,4 @@
-package ch8.view;
+package ch8.p1_jpa.view;
 
 import java.io.Serializable;
 
