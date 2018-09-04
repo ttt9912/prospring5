@@ -16,5 +16,7 @@ public interface SingerService {
 
     void delete(Singer singer);
 
-    List<Singer> findAllByNativeQuery();
+    List findAllByNativeQuery();
+
+    List<Singer> findAllByNativeQuery_ResultSetMapping();
 }

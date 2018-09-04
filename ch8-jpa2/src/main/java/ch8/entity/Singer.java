@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Set;
 
 /*
- * @SqlResultSetMapping:
+ * @SqlResultSetMapping: result set mapping for jpa native queries
  */
 @Entity
 @NamedQueries({

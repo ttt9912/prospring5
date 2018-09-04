@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -25,11 +24,11 @@ import java.util.List;
 public class SingerServiceImpl implements SingerService {
     private static Logger logger = LoggerFactory.getLogger(SingerServiceImpl.class);
 
-    final static String ALL_SINGER_NATIVE_QUERY =
-            "select id, first_name, last_name, birth_date, version from singer";
+    private final String ALL_SINGERS_NATIVE_QUERY = "select id, first_name, last_name, birth_date, version from singer";
 
     @PersistenceContext
     private EntityManager em;
+
 
     @Transactional(readOnly = true)
     @Override
@@ -55,17 +54,46 @@ public class SingerServiceImpl implements SingerService {
 
     @Override
     public Singer save(final Singer singer) {
-        throw new NotImplementedException();
+
+        if (singer.getId() == null) {
+            logger.info("Inserting a new singer");
+            em.persist(singer); // makes singer a managed instance
+        } else {
+            logger.info("Updating an existing singer");
+            em.merge(singer);
+        }
+
+        logger.info("Saved singer with id={}", singer.getId());
+        return singer;
     }
 
     @Override
     public void delete(final Singer singer) {
-        throw new NotImplementedException();
+        // em.merge is invoked first to merge the state of the entity
+        // into the current persistence context.
+
+        Singer mergedSinger = em.merge(singer);
+        em.remove(mergedSinger);
+        logger.info("Deleted singer with id={}", singer.getId());
     }
 
     @Transactional(readOnly = true)
     @Override
     public List<Singer> findAllByNativeQuery() {
-        throw new NotImplementedException();
+        // map ResultSet back to the orm entity class
+
+        return em.createNativeQuery(
+                ALL_SINGERS_NATIVE_QUERY, Singer.class)
+                .getResultList();
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public List<Singer> findAllByNativeQuery_ResultSetMapping() {
+        // map result set with @SqlResultSetMapping name=singerResult (defined on entity)
+
+        return em.createNativeQuery(
+                ALL_SINGERS_NATIVE_QUERY, "singerResult")
+                .getResultList();
     }
 }
