@@ -1,6 +1,7 @@
 package ch8.p1_jpa.service;
 
 import ch8.entity.Singer;
+import ch8.entity.Singer_;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.*;
 import java.util.List;
 
 /*
@@ -29,6 +31,9 @@ public class SingerServiceImpl implements SingerService {
     @PersistenceContext
     private EntityManager em;
 
+    // --------------------------------------------------------------
+    // JPA Named Queries
+    // --------------------------------------------------------------
 
     @Transactional(readOnly = true)
     @Override
@@ -51,6 +56,10 @@ public class SingerServiceImpl implements SingerService {
         query.setParameter("id", id);
         return query.getSingleResult();
     }
+
+    // --------------------------------------------------------------
+    // persist, merge, delete
+    // --------------------------------------------------------------
 
     @Override
     public Singer save(final Singer singer) {
@@ -77,6 +86,11 @@ public class SingerServiceImpl implements SingerService {
         logger.info("Deleted singer with id={}", singer.getId());
     }
 
+
+    // --------------------------------------------------------------
+    // JPA Native Queries
+    // --------------------------------------------------------------
+
     @Transactional(readOnly = true)
     @Override
     public List<Singer> findAllByNativeQuery() {
@@ -96,4 +110,39 @@ public class SingerServiceImpl implements SingerService {
                 ALL_SINGERS_NATIVE_QUERY, "singerResult")
                 .getResultList();
     }
+
+
+    // --------------------------------------------------------------
+    // JPA Criteria API
+    // --------------------------------------------------------------
+
+    @Override
+    public List<Singer> findByCriteriaQuery(final String firstName, final String lastName) {
+        logger.info("Finding singer for firstName: {} and lastName: {}",
+                firstName, lastName);
+
+        CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+        CriteriaQuery<Singer> criteriaQuery = criteriaBuilder.createQuery(Singer.class);
+
+        Root<Singer> singerRoot = criteriaQuery.from(Singer.class);
+        singerRoot.fetch(Singer_.albums, JoinType.LEFT);
+        singerRoot.fetch(Singer_.instruments, JoinType.LEFT);
+        criteriaQuery.select(singerRoot).distinct(true);
+        Predicate criteria = criteriaBuilder.conjunction();
+
+        if (firstName != null) {
+            Predicate p = criteriaBuilder.equal(singerRoot.get(Singer_.firstName), firstName);
+            criteria = criteriaBuilder.and(criteria, p);
+        }
+
+        if (lastName != null) {
+            Predicate p = criteriaBuilder.equal(singerRoot.get(Singer_.lastName), lastName);
+            criteria = criteriaBuilder.and(criteria, p);
+        }
+
+        criteriaQuery.where(criteria);
+        return em.createQuery(criteriaQuery).getResultList();
+    }
+
+
 }
