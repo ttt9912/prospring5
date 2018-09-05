@@ -107,10 +107,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <compilerArguments>
-                        <!-- criteria API metamodel generation -->
-                        <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
-                    </compilerArguments>
                 </configuration>
             </plugin>
         </plugins>
