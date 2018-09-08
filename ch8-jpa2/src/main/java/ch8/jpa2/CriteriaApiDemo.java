@@ -1,7 +1,7 @@
-package ch8.p1_jpa;
+package ch8.jpa2;
 
-import ch8.entity.Singer;
-import ch8.p1_jpa.service.SingerService;
+import ch8.jpa2.entity.Singer;
+import ch8.jpa2.service.SingerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

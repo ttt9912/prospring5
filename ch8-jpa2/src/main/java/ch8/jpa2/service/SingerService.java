@@ -1,6 +1,6 @@
-package ch8.p1_jpa.service;
+package ch8.jpa2.service;
 
-import ch8.entity.Singer;
+import ch8.jpa2.entity.Singer;
 
 import java.util.List;
 

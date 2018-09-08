@@ -1,6 +1,6 @@
-package ch8.p1_jpa.service;
+package ch8.jpa2.service;
 
-import ch8.p1_jpa.view.SummarySinger;
+import ch8.jpa2.view.SummarySinger;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,7 +48,7 @@ public class SingerSummaryService {
     public List<SummarySinger> findAllView() {
 
         return em.createQuery(
-                "select new ch8.p1_jpa.view.SummarySinger(s.firstName, s.lastName, a.title) " +
+                "select new ch8.jpa2.view.SummarySinger(s.firstName, s.lastName, a.title) " +
                         "from Singer s left join s.albums a " +
                         "where a.releaseDate=(select max(a2.releaseDate) " +
                         "from Album a2 where a2.singer.id = s.id)", SummarySinger.class)

@@ -1,7 +1,7 @@
-package ch8.p1_jpa.service;
+package ch8.jpa2.service;
 
-import ch8.entity.Singer;
-import ch8.entity.Singer_;
+import ch8.jpa2.entity.Singer;
+import ch8.jpa2.entity.Singer_;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

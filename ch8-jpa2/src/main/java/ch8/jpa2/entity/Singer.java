@@ -1,4 +1,4 @@
-package ch8.entity;
+package ch8.jpa2.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;

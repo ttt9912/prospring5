@@ -16,6 +16,7 @@
         <module>../ch6-jdbc</module>
         <module>../ch7-hibernate</module>
         <module>../ch8-jpa2</module>
+        <module>../ch8-spring-data-jpa</module>
     </modules>
 
     <properties>
@@ -63,7 +64,6 @@
             <version>2.0.9.RELEASE</version>
         </dependency>
 
-
         <!-- springboot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -81,6 +81,7 @@
             <version>${springboot.version}</version>
         </dependency>
 
+        <!-- others -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -95,6 +96,12 @@
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
+        </dependency>
+        <!-- guava contains some sweet utils -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>26.0-jre</version>
         </dependency>
     </dependencies>
 
