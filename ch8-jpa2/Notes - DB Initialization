@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------
+Sql init files
+---------------------------------------------------------------------------
+used in projects:   ch6-jdbc, ch7-hibernate, ch8-jpa2,
+                    ch8-spring-data-jpa [p1]
+
+1.) create sql files for schema creation and test data insertion under
+    resources
+
+2.) load files via configuration by adding scripts to DataSource
+        .addScripts("classpath:sql/schema.sql", "classpath:sql/test-data.sql")
+
+---------------------------------------------------------------------------
+Generate DB from Entity classes
+---------------------------------------------------------------------------
+used in projects: ch8-spring-data-jpa [p2]
+
+1.) in configuration set Hibernate property
+        hibernateProp.put("hibernate.hbm2ddl.auto", "create-drop");
+
+2.) create DBinitializer class for test data insertion

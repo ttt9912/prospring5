@@ -1,6 +1,6 @@
-package ch8.spring_data_jpa.repository;
+package ch8.spring_data_jpa.p1_queries.repository;
 
-import ch8.spring_data_jpa.entity.Singer;
+import ch8.spring_data_jpa.p1_queries.entity.Singer;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package ch8.spring_data_jpa.entity;
+package ch8.spring_data_jpa.p1_queries.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;

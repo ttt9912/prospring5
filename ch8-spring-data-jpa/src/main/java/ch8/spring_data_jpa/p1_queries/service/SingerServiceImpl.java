@@ -1,7 +1,7 @@
-package ch8.spring_data_jpa.service;
+package ch8.spring_data_jpa.p1_queries.service;
 
-import ch8.spring_data_jpa.entity.Singer;
-import ch8.spring_data_jpa.repository.SingerRepository;
+import ch8.spring_data_jpa.p1_queries.entity.Singer;
+import ch8.spring_data_jpa.p1_queries.repository.SingerRepository;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

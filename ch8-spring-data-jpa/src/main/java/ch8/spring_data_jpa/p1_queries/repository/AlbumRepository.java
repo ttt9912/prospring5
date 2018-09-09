@@ -1,8 +1,8 @@
-package ch8.spring_data_jpa.repository;
+package ch8.spring_data_jpa.p1_queries.repository;
 
 
-import ch8.spring_data_jpa.entity.Album;
-import ch8.spring_data_jpa.entity.Singer;
+import ch8.spring_data_jpa.p1_queries.entity.Album;
+import ch8.spring_data_jpa.p1_queries.entity.Singer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

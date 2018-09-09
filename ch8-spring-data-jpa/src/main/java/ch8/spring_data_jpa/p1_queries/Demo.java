@@ -1,9 +1,9 @@
-package ch8.spring_data_jpa;
+package ch8.spring_data_jpa.p1_queries;
 
-import ch8.spring_data_jpa.entity.Album;
-import ch8.spring_data_jpa.entity.Singer;
-import ch8.spring_data_jpa.service.AlbumService;
-import ch8.spring_data_jpa.service.SingerService;
+import ch8.spring_data_jpa.p1_queries.entity.Album;
+import ch8.spring_data_jpa.p1_queries.entity.Singer;
+import ch8.spring_data_jpa.p1_queries.service.AlbumService;
+import ch8.spring_data_jpa.p1_queries.service.SingerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

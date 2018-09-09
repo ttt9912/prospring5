@@ -1,8 +1,8 @@
-package ch8.spring_data_jpa.service;
+package ch8.spring_data_jpa.p1_queries.service;
 
-import ch8.spring_data_jpa.entity.Album;
-import ch8.spring_data_jpa.entity.Singer;
-import ch8.spring_data_jpa.repository.AlbumRepository;
+import ch8.spring_data_jpa.p1_queries.entity.Album;
+import ch8.spring_data_jpa.p1_queries.entity.Singer;
+import ch8.spring_data_jpa.p1_queries.repository.AlbumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

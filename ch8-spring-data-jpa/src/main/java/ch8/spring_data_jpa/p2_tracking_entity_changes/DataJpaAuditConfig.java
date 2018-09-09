@@ -1,10 +1,11 @@
-package ch8.spring_data_jpa;
+package ch8.spring_data_jpa.p2_tracking_entity_changes;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
@@ -25,17 +26,18 @@ import java.util.Properties;
  */
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"ch8.spring_data_jpa"})
-@EnableJpaRepositories(basePackages = "ch8.spring_data_jpa.repository") //scan for Repositories
-public class DataJpaConfig {
-    private static Logger logger = LoggerFactory.getLogger(DataJpaConfig.class);
+@ComponentScan(basePackages = {"ch8.spring_data_jpa.p2_tracking_entity_changes"})
+@EnableJpaRepositories(basePackages = "ch8.spring_data_jpa.p2_tracking_entity_changes.repository")
+//scan for Repositories
+@EnableJpaAuditing(auditorAwareRef = "auditorAwareBean") // enable auditing
+public class DataJpaAuditConfig {
+    private static Logger logger = LoggerFactory.getLogger(DataJpaAuditConfig.class);
 
     @Bean
     public DataSource dataSource() {
         final EmbeddedDatabaseBuilder dbBuilder = new EmbeddedDatabaseBuilder();
 
         return dbBuilder.setType(EmbeddedDatabaseType.H2)
-                .addScripts("classpath:sql/schema.sql", "classpath:sql/test-data.sql")
                 .build();
     }
 
@@ -53,7 +55,7 @@ public class DataJpaConfig {
     public EntityManagerFactory entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean factoryBean =
                 new LocalContainerEntityManagerFactoryBean();
-        factoryBean.setPackagesToScan("ch8.spring_data_jpa.entity");
+        factoryBean.setPackagesToScan("ch8.spring_data_jpa.p2_tracking_entity_changes.entities");
         factoryBean.setDataSource(dataSource());
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter());
         factoryBean.setJpaProperties(hibernateProperties());
@@ -65,6 +67,7 @@ public class DataJpaConfig {
     public Properties hibernateProperties() {
         final Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+        hibernateProperties.put("hibernate.hbm2ddl.auto", "create-drop"); // generate DB from Entities
         hibernateProperties.put("hibernate.format_sql", false);
         hibernateProperties.put("hibernate.use_sql_comments", true);
         hibernateProperties.put("hibernate.show_sql", true);
