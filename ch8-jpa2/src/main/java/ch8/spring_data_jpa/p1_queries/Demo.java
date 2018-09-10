@@ -34,7 +34,7 @@ public class Demo {
 
     @Test
     void custom_queries() {
-        // custom queriey cannot be inferred, they must be defined using @Query
+        // custom query cannot be inferred, they must be defined using @Query
 
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(DataJpaConfig.class);

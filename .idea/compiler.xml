@@ -13,7 +13,6 @@
         <module name="ch6-jdbc" />
         <module name="ch7-hibernate" />
         <module name="ch8-jpa2" />
-        <module name="ch8-spring-data-jpa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

@@ -38,6 +38,7 @@ public class DataJpaAuditConfig {
         final EmbeddedDatabaseBuilder dbBuilder = new EmbeddedDatabaseBuilder();
 
         return dbBuilder.setType(EmbeddedDatabaseType.H2)
+                .addScripts("classpath:spring_data_jpa_sql/p2_sql/p2-schema.sql", "classpath:spring_data_jpa_sql/p2_sql/p2-test-data.sql")
                 .build();
     }
 
@@ -67,7 +68,6 @@ public class DataJpaAuditConfig {
     public Properties hibernateProperties() {
         final Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
-        hibernateProperties.put("hibernate.hbm2ddl.auto", "create-drop"); // generate DB from Entities
         hibernateProperties.put("hibernate.format_sql", false);
         hibernateProperties.put("hibernate.use_sql_comments", true);
         hibernateProperties.put("hibernate.show_sql", true);

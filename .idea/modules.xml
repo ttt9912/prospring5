@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/ch6-jdbc/ch6-jdbc.iml" filepath="$PROJECT_DIR$/ch6-jdbc/ch6-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch7-hibernate/ch7-hibernate.iml" filepath="$PROJECT_DIR$/ch7-hibernate/ch7-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch8-jpa2/ch8-jpa2.iml" filepath="$PROJECT_DIR$/ch8-jpa2/ch8-jpa2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch8-spring-data-jpa/ch8-spring-data-jpa.iml" filepath="$PROJECT_DIR$/ch8-spring-data-jpa/ch8-spring-data-jpa.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
     </modules>
   </component>

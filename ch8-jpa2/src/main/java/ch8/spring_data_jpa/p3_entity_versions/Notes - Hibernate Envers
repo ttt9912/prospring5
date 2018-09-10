@@ -1,0 +1,40 @@
+Envers: entity versioning system
+
+---------------------------------------------------------------------------
+Envers Auditing Strategies
+---------------------------------------------------------------------------
+- Default:          Envers maintains a revision column of the record. Every
+                    time a record is inserted or updated, a new record will
+                    be inserted into the history table.
+
+- Validity Audit:   Envers stores both start and end revisions of each
+                    history record. Every time a record is inserted or
+                    updated, a new record will be inserted into the history
+                    table with the start revision number and the previous
+                    record will be updated with the end revision number.
+                    Also possible with timestamps.
+
+---------------------------------------------------------------------------
+History tables (with Validity Audit)
+---------------------------------------------------------------------------
+
+1.) create history tables
+
+        Corresponding history tables have to be created, i.e.
+        for Table SINGER_AUDIT, also create Table SINGER_AUDIT_H
+
+2.) add required columns to each history table
+
+        requires colums:
+            - AUDIT_REVISION        (start version of history record)
+            - ACTION_TYPE           (0: add, 1: modify, 2: delete)
+            - AUDIT_REVISION_END    (end revision of history record)
+            - AUDIT_REVISION_END_TS (timestamp of end revision update)
+
+3.) set hibernate envers properties
+
+        (see JpaEnversConfig)
+
+4.) enable versioning by annotating entity with @Audited
+
+5.) retrieve history records via AuditReader
