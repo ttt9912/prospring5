@@ -1,4 +1,4 @@
-package ch7.entity;
+package ch8.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,22 +8,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 /*
- * @Version: used by Hibernate for optimistic locking
- *
- * @Table, @Column: obsolete if names are equal
- *
- * All the Field Annotations can also be placed on the Getters.
- *
- * orphanRemoval: after albums are updated, those entries that no longer
- *                exist in the Set should be deleted from the database.
- *
- * select distinct: avoid duplicates; without distinct, a Singer is returned
- *                  twice if he has two albums
- *
- * left join fetch: eager loading: loads relationships
+ * @SqlResultSetMapping: result set mapping for jpa native queries
  */
 @Entity
 @NamedQueries({
+        @NamedQuery(name = "Singer.findAll",
+                query = "select s from Singer s"),
         @NamedQuery(name = "Singer.findAllWithAlbums",
                 query = "select distinct s from Singer s " +
                         "left join fetch s.albums a " +
@@ -34,11 +24,15 @@ import java.util.Set;
                         "left join fetch s.instruments i " +
                         "where s.id = :id")
 })
+@SqlResultSetMapping(
+        name = "singerResult",
+        entities = @EntityResult(entityClass = Singer.class)
+)
 public class Singer implements Serializable {
-    // leave public
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "first_name")
@@ -62,6 +56,15 @@ public class Singer implements Serializable {
             joinColumns = @JoinColumn(name = "singer_id"),
             inverseJoinColumns = @JoinColumn(name = "instrument_id"))
     private Set<Instrument> instruments;
+
+
+    public void addInstruments(final Instrument... instruments) {
+        if (this.instruments == null) {
+            this.instruments = new HashSet<>();
+        }
+
+        this.instruments.addAll(Arrays.asList(instruments));
+    }
 
     public void addAlbums(final Album... albums) {
         if (this.albums == null) {
@@ -150,4 +153,6 @@ public class Singer implements Serializable {
                 ", \n\t instruments=" + instruments +
                 '}';
     }
+
+
 }

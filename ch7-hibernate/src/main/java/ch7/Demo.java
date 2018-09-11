@@ -7,8 +7,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.sql.Date;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 
 class Demo {
@@ -66,7 +64,7 @@ class Demo {
         album2.setTitle("A Heart full of Blues");
         album2.setReleaseDate(Date.valueOf("1962-03-20"));
         album2.setSinger(singer);
-        singer.setAlbums(new HashSet<>(Arrays.asList(album1, album2)));
+        singer.addAlbums(album1, album2);
 
         singerDao.save(singer);
 
@@ -92,7 +90,7 @@ class Demo {
         Singer singer = singerDao.findById(1L);
         Album album = singer.getAlbums().stream()
                 .filter(a -> a.getTitle().equals("The Search For Everything"))
-                .findFirst().get();
+                .findFirst().orElse(null);
 
         singer.setFirstName("Paul Clayton");
         singer.getAlbums().remove(album);
