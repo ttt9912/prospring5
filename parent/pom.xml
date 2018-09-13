@@ -16,6 +16,7 @@
         <module>../ch6-jdbc</module>
         <module>../ch7-hibernate</module>
         <module>../ch8-jpa2</module>
+        <module>../ch9-transactions</module>
     </modules>
 
     <properties>

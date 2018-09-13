@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------------------
+Container vs. Bean managed transactions
+----------------------------------------------------------------------------------------
+--- Container Managed Transactions (CMT) ---
+manage transactions declaratively
+
+--- Bean Managed Transactions (BMT) ---
+manage transactions programmatically
+
+----------------------------------------------------------------------------------------
+Transaction Management
+----------------------------------------------------------------------------------------
+--- Local vs. Global Transactions ---
+- local transactions: 1 resource
+- global transactions: >1 resources
+
+--- Declarative Transaction Management ---
+with xml configuration or annotations
+
+--- Programmatic Transaction Management ---
+- not used very often
+- springs TransactionTemplate class gives full control over the
+  transaction management code
+
+--- Global Transactions with JTA ---
+- transactions that span multiple backend resources
+- 2 Phase commit ensures, that all backend resources were updated or rolled back together

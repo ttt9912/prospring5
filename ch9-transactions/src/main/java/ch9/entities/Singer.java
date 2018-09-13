@@ -1,4 +1,4 @@
-package ch8.entity;
+package ch9.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -7,32 +7,17 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-/*
- * @SqlResultSetMapping: result set mapping for jpa native queries
- */
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Singer.findAll",
-                query = "select s from Singer s"),
-        @NamedQuery(name = "Singer.findAllWithAlbums",
-                query = "select distinct s from Singer s " +
-                        "left join fetch s.albums a " +
-                        "left join fetch s.instruments i"),
-        @NamedQuery(name = "Singer.findById",
-                query = "select distinct s from Singer s " +
-                        "left join fetch s.albums a " +
-                        "left join fetch s.instruments i " +
-                        "where s.id = :id")
+        @NamedQuery(name = Singer.FIND_ALL, query = "select s from Singer s"),
+        @NamedQuery(name = Singer.COUND_ALL, query = "select count(s) from Singer s")
 })
-@SqlResultSetMapping(
-        name = "singerResult",
-        entities = @EntityResult(entityClass = Singer.class)
-)
 public class Singer implements Serializable {
+    static final String FIND_ALL = "Singer.findAll";
+    static final String COUND_ALL = "Singer.countAll";
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
     @Column(name = "first_name")
@@ -50,12 +35,6 @@ public class Singer implements Serializable {
 
     @OneToMany(mappedBy = "singer", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Album> albums;
-
-    @ManyToMany
-    @JoinTable(name = "singer_instrument",
-            joinColumns = @JoinColumn(name = "singer_id"),
-            inverseJoinColumns = @JoinColumn(name = "instrument_id"))
-    private Set<Instrument> instruments;
 
     public Long getId() {
         return id;
@@ -89,22 +68,6 @@ public class Singer implements Serializable {
         this.birthDate = birthDate;
     }
 
-    public Set<Album> getAlbums() {
-        return albums;
-    }
-
-    public void setAlbums(final Set<Album> albums) {
-        this.albums = albums;
-    }
-
-    public Set<Instrument> getInstruments() {
-        return instruments;
-    }
-
-    public void setInstruments(final Set<Instrument> instruments) {
-        this.instruments = instruments;
-    }
-
     public int getVersion() {
         return version;
     }
@@ -113,12 +76,12 @@ public class Singer implements Serializable {
         this.version = version;
     }
 
-    public void addInstruments(final Instrument... instruments) {
-        if (this.instruments == null) {
-            this.instruments = new HashSet<>();
-        }
+    public Set<Album> getAlbums() {
+        return albums;
+    }
 
-        this.instruments.addAll(Arrays.asList(instruments));
+    public void setAlbums(final Set<Album> albums) {
+        this.albums = albums;
     }
 
     public void addAlbums(final Album... albums) {
@@ -148,9 +111,6 @@ public class Singer implements Serializable {
                 ", birthDate=" + birthDate +
                 ", version=" + version +
                 ", \n\t albums=" + albums +
-                ", \n\t instruments=" + instruments +
                 '}';
     }
-
-
 }

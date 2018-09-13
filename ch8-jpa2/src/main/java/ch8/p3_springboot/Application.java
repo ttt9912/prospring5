@@ -24,7 +24,7 @@ import java.util.List;
 @SpringBootApplication(scanBasePackages = "ch8.p3_springboot")
 @EntityScan(basePackages = {"ch8.entity"})
 class Application implements CommandLineRunner {
-    private static final Logger logger = LoggerFactory.getLogger(DbInitializer.class);
+    private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
     @Autowired
     private SingerRepository singerRepository;

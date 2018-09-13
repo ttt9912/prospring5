@@ -1,0 +1,56 @@
+----------------------------------------------------------------------------------------
+PlatformTransactionManager
+----------------------------------------------------------------------------------------
+- implementations: JpaTransactionManager, HibernateTransactionManager, etc.
+
+- uses TransactionDefinition and TransactionStatus to create and manage transactions
+
+
+----------------------------------------------------------------------------------------
+TransactionDefinition
+----------------------------------------------------------------------------------------
+controls the properties of a transaction
+
+- name
+- timeout
+- readOnly
+- isolationLevel
+    ISOLATION_DEFAULT
+    ISOLATION_READ_UNCOMMITTED
+    ISOLATION_READ_COMMITTED
+    ISOLATION_REPEATABLE_READ
+    ISOLATION_SERIALIZABLE
+
+- propagationBehaviour
+    PROPAGATION_REQUIRED
+    PROPAGATION_SUPPORTS
+    PROPAGATION_MANDATORY
+    PROPAGATION_REQUIRES_NEW
+    PROPAGATION_NOT_SUPPORTED
+    PROPAGATION_NEVER
+    PROPAGATION_NESTED
+
+----------------------------------------------------------------------------------------
+TransactionStatus
+----------------------------------------------------------------------------------------
+controls the transaction execution
+
+- isNewTransaction
+- hasSavepoint
+- setRollbackOnly
+- isRollbackOnly
+- flush
+- isCompleted
+
+----------------------------------------------------------------------------------------
+@Transactional properties
+----------------------------------------------------------------------------------------
+Attribute name:             Possible values:
+
+- propagation               Propagation.REQUIRED, etc. (see above)
+- isolation                 Isolation.DEFAULT, etc. (see above)
+- timeout                   integer
+- readOnly                  true/false
+- rollBackFor               N/A
+- rollBackForClassName      N/A
+- value                     N/A

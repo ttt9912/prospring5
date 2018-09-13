@@ -13,7 +13,7 @@ used in projects:   ch6-jdbc, ch7-hibernate, ch8-jpa2,
 ---------------------------------------------------------------------------
 Generate DB from Entity classes
 ---------------------------------------------------------------------------
-used in projects: none
+used in projects: ch9-transactions
 
 1.) in configuration set Hibernate property
         hibernateProp.put("hibernate.hbm2ddl.auto", "create-drop");
