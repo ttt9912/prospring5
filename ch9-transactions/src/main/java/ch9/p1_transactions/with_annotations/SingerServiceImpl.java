@@ -1,8 +1,8 @@
 package ch9.p1_transactions.with_annotations;
 
-import ch9.SingerRepository;
-import ch9.SingerService;
 import ch9.entities.Singer;
+import ch9.repository.SingerRepository;
+import ch9.services.SingerService;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,9 @@
-package ch9;
+package ch9.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
@@ -19,7 +20,8 @@ import java.util.Properties;
  * Data Access Beans Configuration
  */
 @Configuration
-@EnableJpaRepositories(basePackages = "ch9")
+@ComponentScan(basePackages = "ch9.config")
+@EnableJpaRepositories(basePackages = "ch9.repository")
 public class DataJpaConfig {
     private static Logger logger = LoggerFactory.getLogger(DataJpaConfig.class);
 

@@ -1,7 +1,8 @@
-package ch9;
+package ch9.config;
 
 import ch9.entities.Album;
 import ch9.entities.Singer;
+import ch9.repository.SingerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

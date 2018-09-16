@@ -1,9 +1,8 @@
 package ch9.p1_transactions.with_annotations;
 
-import ch9.DataJpaConfig;
-import ch9.ServicesConfig;
-import ch9.SingerService;
+import ch9.config.DataJpaConfig;
 import ch9.entities.Singer;
+import ch9.services.SingerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -16,7 +15,7 @@ class Demo {
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(ServicesConfig.class, DataJpaConfig.class);
 
-        SingerService singerService = ctx.getBean(SingerService.class);
+        SingerService singerService = ctx.getBean("singerService", SingerService.class);
 
         System.out.println("\n--- findById (readOnly Transaction) ---");
         final Singer singer = singerService.findById(1L);

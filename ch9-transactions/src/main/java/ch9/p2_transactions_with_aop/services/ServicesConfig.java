@@ -1,4 +1,4 @@
-package ch9;
+package ch9.p2_transactions_with_aop.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -15,8 +15,8 @@ import javax.persistence.EntityManagerFactory;
  */
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = "ch9")
-public class ServicesConfig {
+@ComponentScan(basePackages = "ch9.p2_transactions_with_aop")
+class ServicesConfig {
 
     @Autowired
     private EntityManagerFactory emf;

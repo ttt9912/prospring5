@@ -1,4 +1,4 @@
-package ch9;
+package ch9.services;
 
 import ch9.entities.Singer;
 
