@@ -42,6 +42,6 @@ class SingerServiceImpl implements SingerService {
 
     @Override
     public long countAll() {
-        return singerRepository.count();
+        return singerRepository.countAllSingers();
     }
 }

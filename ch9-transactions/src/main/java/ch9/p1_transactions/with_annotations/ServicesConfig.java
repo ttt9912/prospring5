@@ -15,7 +15,7 @@ import javax.persistence.EntityManagerFactory;
  */
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = "ch9.p1_transactions")
+@ComponentScan(basePackages = "ch9.p1_transactions.with_annotations")
 class ServicesConfig {
 
     @Autowired

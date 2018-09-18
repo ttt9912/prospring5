@@ -28,7 +28,8 @@ class Demo {
 
         System.out.println("\n--- save ---");
         final Singer singer = singerService.findById(1L);
-
+        singer.setFirstName("John Clayton");
+        singerService.save(singer);
 
         ctx.close();
     }

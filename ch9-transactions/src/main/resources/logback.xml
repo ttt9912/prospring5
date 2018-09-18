@@ -18,6 +18,7 @@
     <logger name="org.springframework.orm.jpa.JpaTransactionManager" level="debug"/>
     <logger name="org.springframework" level="off"/>
     <logger name="org.hibernate" level="off"/>
+    <logger name="com.atomikos" level="off"/>
 
     <root level="debug">
         <appender-ref ref="console"/>

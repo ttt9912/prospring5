@@ -78,6 +78,14 @@
     <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.1.0-RC1" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.7" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.7" level="project" />
+    <orderEntry type="library" name="Maven: com.atomikos:transactions-hibernate4:4.0.0M4" level="project" />
+    <orderEntry type="library" name="Maven: com.atomikos:transactions-jta:4.0.0M4" level="project" />
+    <orderEntry type="library" name="Maven: com.atomikos:transactions:4.0.0M4" level="project" />
+    <orderEntry type="library" name="Maven: com.atomikos:transactions-api:4.0.0M4" level="project" />
+    <orderEntry type="library" name="Maven: com.atomikos:atomikos-util:4.0.0M4" level="project" />
+    <orderEntry type="library" name="Maven: com.atomikos:transactions-jdbc:4.0.0M4" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.12" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:26.0-jre" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:2.5.2" level="project" />

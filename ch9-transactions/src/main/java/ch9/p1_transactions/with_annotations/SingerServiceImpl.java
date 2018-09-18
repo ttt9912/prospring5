@@ -50,6 +50,6 @@ class SingerServiceImpl implements SingerService {
     @Override
     @Transactional(propagation = Propagation.NEVER)
     public long countAll() {
-        return singerRepository.count();
+        return singerRepository.countAllSingers();
     }
 }
