@@ -12,6 +12,13 @@ import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Atomikos
+ * - creates a composite transaction
+ * - communicates with the XA DataSource (MySql)
+ * - performs synchronization
+ * - commits the transaction
+ */
 @Service("singerService")
 @Repository
 @Transactional
@@ -47,6 +54,7 @@ public class SingerServiceImpl implements SingerService {
         throw new NotImplementedException();
     }
 
+    // persist the same object to two databases
     @Override
     public Singer save(final Singer singer) {
         final Singer singerB = new Singer();
@@ -55,6 +63,12 @@ public class SingerServiceImpl implements SingerService {
 
         if (singer.getId() == null) {
             emA.persist(singer);
+
+            // rollback demo: emA will be rolled back
+            // if (true){
+            //    throw new JpaSystemException(new PersistenceException("Something went wrong"));
+            // }
+
             emB.persist(singerB);
         } else {
             emA.merge(singer);

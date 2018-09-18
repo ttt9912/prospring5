@@ -18,6 +18,12 @@ import javax.transaction.SystemException;
 import javax.transaction.UserTransaction;
 import java.util.Properties;
 
+/*
+ * Atomikos provides implementations for the standard PlatformTransactionManager (spring)
+ * and UserTransaction (javax)
+ *
+ * - UserTransactionManager (atomikos): implements TransactionManager (javax) and UserTransaction (javax)
+ */
 @Configuration
 @EnableTransactionManagement
 @ComponentScan(basePackages = "ch9.p4_global_transactions_jta")

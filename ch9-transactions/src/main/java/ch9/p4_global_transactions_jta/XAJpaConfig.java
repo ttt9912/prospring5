@@ -15,6 +15,15 @@ import java.util.Properties;
 
 import static org.hibernate.cfg.AvailableSettings.*;
 
+/*
+ * Two DB Users (prospring5_A, prospring5_B) with corresponding
+ * Schemas (musicdb_A, musicdb_B) were created.
+ * Each PersistenceUnit (EntityManagerFactory) connects to one via DataSource.
+ * Atomikos manages Transactions spanning both DataSources.
+ *
+ * - AtomikosDataSourceBean: supports XA-compliant DataSource
+ * - MysqlXADataSource: resource manager for MySQL
+ */
 @Configuration
 @EnableJpaRepositories
 class XAJpaConfig {
@@ -74,8 +83,10 @@ class XAJpaConfig {
     @Bean
     public Properties hibernateProperties() {
         Properties hibernateProp = new Properties();
+        // used by Hibernate to lookup the underlying UserTransaction an TransactionManager beans
         hibernateProp.put("hibernate.transaction.factory_class", "org.hibernate.transaction.JTATransactionFactory");
         hibernateProp.put(JTA_PLATFORM, "com.atomikos.icatch.jta.hibernate4.AtomikosPlatform");
+
         // required by Hibernate 5
         hibernateProp.put(TRANSACTION_COORDINATOR_STRATEGY, "jta");
         hibernateProp.put(CURRENT_SESSION_CONTEXT_CLASS, "jta");
