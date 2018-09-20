@@ -13,5 +13,19 @@
     <groupId>ch.ttt</groupId>
     <artifactId>ch9-transactions</artifactId>
 
+    <!-- atomikos causes troubles to all other springboot applications! -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jta-atomikos</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.atomikos</groupId>
+            <artifactId>transactions-hibernate4</artifactId>
+            <version>4.0.0M4</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

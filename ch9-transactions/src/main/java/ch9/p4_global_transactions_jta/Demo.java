@@ -10,16 +10,18 @@ import java.util.List;
 
 /*
  * Global transaction: atomicity over multiple backend resources (all or none are updated)
- *
  * JTA: standard for implementing global transactions
+ * Atomikos: JTA transaction manager for non-JEE environment
  *
  * H2 dosen't fully support XA, therefore MySQL (docker) is used
  *
- * Atomikos: JTA transaction manager for non-JEE environment
+ * this package does not use common config classes from 'ch9.config'
+ * everything is configured in ServicesConfig and XAJpaConfig
  */
 class Demo {
 
     @Test
+        // Start Docker Mysql!
     void main() {
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(ServicesConfig.class, XAJpaConfig.class);

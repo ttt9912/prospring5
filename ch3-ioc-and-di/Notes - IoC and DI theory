@@ -2,7 +2,7 @@
 DI
 ----------------------------------------------------------------------------------------
 DI = Passing the service to the client, rather than allowing a client to build or find
-the service, is the fundamental requirement of the pattern.
+the service, is the fundamental requirement of the datePattern.
 The service is made part of the client's state.
 
 The intent behind dependency injection is to decouple objects to the extent that
@@ -14,7 +14,7 @@ Dependency injection is one form of the broader technique of inversion of contro
 ----------------------------------------------------------------------------------------
 DI vs. Service Locator
 ----------------------------------------------------------------------------------------
-DI directly contrasts with the service locator pattern, which allows clients to know
+DI directly contrasts with the service locator datePattern, which allows clients to know
 about the system they use to find dependencies.
 
 ----------------------------------------------------------------------------------------
@@ -22,9 +22,9 @@ IoC
 ----------------------------------------------------------------------------------------
 Inversion of control (IoC) is more general than DI. Put simply, IoC means letting other
 code call you rather than insisting on doing the calling. An example of IoC without DI
-is the template method pattern. Here, polymorphism is achieved through subclassing,
+is the template method datePattern. Here, polymorphism is achieved through subclassing,
 that is, inheritance.
 
 Dependency injection implements IoC through composition so is often identical to that of
-the strategy pattern.
+the strategy datePattern.
 This still achieves polymorphism, but through delegation and composition.

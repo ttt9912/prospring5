@@ -17,6 +17,7 @@
         <module>../ch7-hibernate</module>
         <module>../ch8-jpa2</module>
         <module>../ch9-transactions</module>
+        <module>../ch10-validation-formatting</module>
     </modules>
 
     <properties>
@@ -96,6 +97,12 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>${springboot.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-artemis</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
 
         <!-- others -->
         <dependency>
@@ -114,16 +121,15 @@
             <version>1.1.7</version>
         </dependency>
         <dependency>
-            <groupId>com.atomikos</groupId>
-            <artifactId>transactions-hibernate4</artifactId>
-            <version>4.0.0M4</version>
-        </dependency>
-        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.12</version>
         </dependency>
-
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.10</version>
+        </dependency>
         <!-- guava contains some sweet utils -->
         <dependency>
             <groupId>com.google.guava</groupId>

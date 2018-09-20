@@ -8,15 +8,15 @@
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <datePattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{5} - %msg%n
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{5}[%L] - %msg%n
             </datePattern>
         </encoder>
     </appender>
 
-    <logger name="org.springframework" level="error"/>
-    <logger name="org.hibernate" level="error"/>
+    <logger name="ch10" level="debug"/>
+    <logger name="org.springframework" level="off"/>
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="console"/>
     </root>
 

@@ -1,0 +1,12 @@
+----------------------------------------------------------------------------------------
+PropertyEditor vs. Type Conversion
+----------------------------------------------------------------------------------------
+
+--- PropertyEditor ---
+- String => POJO
+
+
+--- Type Conversion ---
+- Any type => POJO
+
+replaces PropertyEditor

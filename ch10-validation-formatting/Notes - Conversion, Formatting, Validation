@@ -1,0 +1,31 @@
+Before data can be VALIDATED it should be CONVERTED to the desired POJO
+according to the FORMATTING rules
+
+----------------------------------------------------------------------------------------
+Type Conversion and Field Formatting implementations
+----------------------------------------------------------------------------------------
+--- Conversion ---
+built in:
+    - spring provides built in Converter implementations (StringToArrayConverter etc.)
+
+custom:
+    - implement Converter<S, T>
+    - add custom converter to ConversionServiceFactoryBean
+
+
+--- Formatting ---
+built in:
+    - spring provides Formatter<T> implementations (DateFormatter,  etc.)
+
+custom:
+    - extend FormattingConversionServiceFactoryBean
+    - implement a Formatter<T>
+    - add custom formatter(s) to FormattingConversionServiceFactoryBean
+
+
+--- Validation ---
+build in:
+    - JSR-349
+
+custom:
+    - implement Validator interface
