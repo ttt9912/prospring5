@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ch10-validation-formatting" />
+        <module name="ch11-task-scheduling" />
         <module name="ch2-gettingstarted" />
         <module name="ch3-ioc-and-di" />
         <module name="ch4-configuration-and-springboot" />
@@ -19,6 +20,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="ch10-validation-formatting" target="1.8" />
+      <module name="ch11-task-scheduling" target="1.8" />
       <module name="ch2-gettingstarted" target="1.8" />
       <module name="ch3-ioc-and-di" target="1.8" />
       <module name="ch4-configuration-and-springboot" target="1.8" />

@@ -18,6 +18,7 @@
         <module>../ch8-jpa2</module>
         <module>../ch9-transactions</module>
         <module>../ch10-validation-formatting</module>
+        <module>../ch11-task-scheduling</module>
     </modules>
 
     <properties>
