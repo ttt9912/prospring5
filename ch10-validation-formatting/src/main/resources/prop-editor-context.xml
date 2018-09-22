@@ -26,14 +26,14 @@
     </util:list>
 
     <!-- source: config file (here) -->
-    <bean id="eric" class="ch10.p1_type_conversion.Singer"
+    <bean id="eric" class="ch10.Singer"
           p:firstName="Eric"
           p:lastName="Clapton"
           p:birthDate="1945-03-30"
           p:personalSite="http://www.ericclapton.com"/>
 
     <!-- source: application.properties file -->
-    <bean id="countrySinger" class="ch10.p1_type_conversion.Singer"
+    <bean id="countrySinger" class="ch10.Singer"
           p:firstName="${countrySinger.firstName}"
           p:lastName="${countrySinger.lastName}"
           p:birthDate="${countrySinger.birthDate}"

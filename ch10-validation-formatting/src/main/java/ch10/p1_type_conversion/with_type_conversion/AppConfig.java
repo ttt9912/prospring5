@@ -1,6 +1,6 @@
 package ch10.p1_type_conversion.with_type_conversion;
 
-import ch10.p1_type_conversion.Singer;
+import ch10.Singer;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

@@ -1,7 +1,7 @@
 package ch10.p1_type_conversion.with_type_conversion;
 
-import ch10.p1_type_conversion.AnotherSinger;
-import ch10.p1_type_conversion.Singer;
+import ch10.AnotherSinger;
+import ch10.Singer;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.convert.ConversionService;

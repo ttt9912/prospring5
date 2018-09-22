@@ -1,6 +1,6 @@
 package ch10.p2_filed_formatting;
 
-import ch10.p1_type_conversion.Singer;
+import ch10.Singer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;

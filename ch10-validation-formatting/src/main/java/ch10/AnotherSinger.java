@@ -1,4 +1,4 @@
-package ch10.p1_type_conversion;
+package ch10;
 
 import org.joda.time.DateTime;
 

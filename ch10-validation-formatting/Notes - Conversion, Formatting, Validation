@@ -1,6 +1,9 @@
 Before data can be VALIDATED it should be CONVERTED to the desired POJO
 according to the FORMATTING rules
 
+Validation rules are applied to domain objects to ensure that all business
+data is well structured and fulfills the business definitions.
+
 ----------------------------------------------------------------------------------------
 Type Conversion and Field Formatting implementations
 ----------------------------------------------------------------------------------------
@@ -24,8 +27,5 @@ custom:
 
 
 --- Validation ---
-build in:
-    - JSR-349
-
-custom:
-    - implement Validator interface
+    - JSR-349 (way to go)
+    - implement spring Validator interface

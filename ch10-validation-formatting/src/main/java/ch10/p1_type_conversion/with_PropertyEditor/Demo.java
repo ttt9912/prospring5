@@ -1,6 +1,6 @@
 package ch10.p1_type_conversion.with_PropertyEditor;
 
-import ch10.p1_type_conversion.Singer;
+import ch10.Singer;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 

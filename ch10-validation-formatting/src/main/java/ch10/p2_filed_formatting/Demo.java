@@ -1,6 +1,6 @@
 package ch10.p2_filed_formatting;
 
-import ch10.p1_type_conversion.Singer;
+import ch10.Singer;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.convert.ConversionService;
