@@ -17,7 +17,7 @@ class Demo {
         /*
          * Execute query & map ResultSet to domain object
          *
-         * only for mapping single entities, for relationships, use
+         * only for mapping single entity, for relationships, use
          * JdbcTemplate with ResultSetExtractor
          */
         GenericApplicationContext ctx =

@@ -1,0 +1,13 @@
+Task scheduling consists of three parts:
+
+    1.) task:       piece of business logic
+
+    2.) trigger:    condition for execution, e.g. cron (
+                    - TaskScheduler (spring)
+                    - JDK Timer (JDK)
+                    - Quartz Scheduler
+
+    3.) scheduler:  executes the task (TaskExecutor)
+
+
+

@@ -14,9 +14,9 @@ import java.util.List;
 /*
  * 'readOnly = true' should generally be applied to all finder-methods
  *
- * - finder-methods, that return managed entities: readOnly
+ * - finder-methods, that return managed entity: readOnly
  * - save/update methods: readWrite (= default)
- * - finder-methods, that do not return managed entities (i.e. count()): non-transactional (Propagation.NEVER)
+ * - finder-methods, that do not return managed entity (i.e. count()): non-transactional (Propagation.NEVER)
  */
 @Service("singerService")
 @Transactional

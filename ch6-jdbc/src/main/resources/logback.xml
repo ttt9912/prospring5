@@ -7,17 +7,14 @@
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <datePattern>
-                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{5} - %msg%n
-            </datePattern>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <logger name="org.springframework" level="error"/>
-    <logger name="org.springframework.jdbc" level="error"/>
+    <logger name="ch6" level="debug"/>
+    <logger name="org.springframework" level="off"/>
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="console"/>
     </root>
-
 </configuration>

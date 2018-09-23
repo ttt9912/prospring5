@@ -20,7 +20,7 @@ import java.sql.Date;
  * DOES NOT WORK!!! (Error in getting XA resource)
  */
 @SpringBootApplication(scanBasePackages = "ch9.p5_springboot")
-@EntityScan(basePackages = {"ch9.entities"})
+@EntityScan(basePackages = {"ch9.entity"})
 class Application implements CommandLineRunner {
     private static Logger logger = LoggerFactory.getLogger(Application.class);
 
