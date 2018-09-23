@@ -19,6 +19,7 @@
         <module>../ch9-transactions</module>
         <module>../ch10-validation-formatting</module>
         <module>../ch11-task-scheduling</module>
+        <module>../ch12-remoting</module>
     </modules>
 
     <properties>
