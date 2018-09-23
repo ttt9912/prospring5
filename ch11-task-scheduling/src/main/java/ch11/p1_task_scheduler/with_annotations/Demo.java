@@ -12,13 +12,13 @@ import java.io.IOException;
 class Demo {
 
     @Test
-    void with_annotations() throws IOException {
+    void with_annotations() throws IOException, InterruptedException {
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(AnnotationAppConfig.class);
 
 
-        System.in.read(); // let the app run...
-
+        Thread.sleep(15000); // let the app run a while...
+        System.out.println("app terminated automatically");
         ctx.close();
     }
 }
