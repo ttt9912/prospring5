@@ -10,6 +10,4 @@ public interface CarService {
     Car save(Car car);
 
     void updateCarAgeJob();
-
-    boolean isDone();
 }

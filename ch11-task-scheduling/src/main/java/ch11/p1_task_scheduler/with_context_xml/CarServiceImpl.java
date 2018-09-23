@@ -1,4 +1,4 @@
-package ch11.p1_simple_task;
+package ch11.p1_task_scheduler.with_context_xml;
 
 import ch11.entity.Car;
 import ch11.repository.CarRepository;
@@ -11,15 +11,15 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 @Service("carService")
 @Repository
 @Transactional
-public class CarServiceImpl implements CarService {
+class CarServiceImpl implements CarService {
     private final static Logger logger = LoggerFactory.getLogger(CarServiceImpl.class);
-
-    private boolean done;
 
     @Autowired
     private CarRepository carRepository;
@@ -34,13 +34,21 @@ public class CarServiceImpl implements CarService {
         return carRepository.save(car);
     }
 
-    @Override
+    @Override // scheduled in context xml
     public void updateCarAgeJob() {
+        final List<Car> cars = findAll();
+        final LocalDate now = LocalDate.now();
 
-    }
+        logger.info("Car age update job started");
 
-    @Override
-    public boolean isDone() {
-        return done;
+        cars.forEach(car -> {
+            int years = Period.between(car.getManufactureDate(), now)
+                    .getYears();
+            car.setAge(years);
+            save(car);
+            logger.info("Car age updated {}", car);
+        });
+
+        logger.info("Car age update job completed successfully");
     }
 }

@@ -1,24 +1,20 @@
-package ch11.p1_simple_task;
+package ch11.p1_task_scheduler.with_context_xml;
 
-import ch11.entity.Car;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.List;
+import java.io.IOException;
 
 class Demo {
 
     @Test
-    void demo() {
+    void with_context_xml() throws IOException {
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
         CarServiceImpl carService = ctx.getBean("carService", CarServiceImpl.class);
 
-        System.out.println("\n--- cars ---");
-        List<Car> cars = carService.findAll();
-        cars.forEach(System.out::println);
-
+        System.in.read(); // let the application run
         ctx.close();
     }
 }

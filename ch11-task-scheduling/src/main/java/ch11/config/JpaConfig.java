@@ -21,8 +21,8 @@ import java.util.Properties;
 @Configuration
 @ComponentScan
 @EnableJpaRepositories(basePackages = "ch11.repository")
-public class DataServiceConfig {
-    private final static Logger logger = LoggerFactory.getLogger(DataServiceConfig.class);
+public class JpaConfig {
+    private final static Logger logger = LoggerFactory.getLogger(JpaConfig.class);
 
     @Bean
     public DataSource dataSource() {
@@ -63,7 +63,7 @@ public class DataServiceConfig {
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
         hibernateProperties.put("hibernate.hbm2ddl.auto", "create");
         // hibernateProperties.put("hibernate.format_sql", true);
-        hibernateProperties.put("hibernate.show_sql", true);
+        // hibernateProperties.put("hibernate.show_sql", true);
         hibernateProperties.put("hibernate.max_fetch_depth", 3);
         hibernateProperties.put("hibernate.jdbc.batch_size", 10);
         hibernateProperties.put("hibernate.jdbc.fetch_size", 50);
