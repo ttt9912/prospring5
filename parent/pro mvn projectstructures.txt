@@ -24,6 +24,16 @@ ___Pro Spring 5____
 - Classes -
     Main: @Test zum Ausführen verwenden, so können alle Demos aufs mal ausgeführt werden
 
+- Modules within another Module -
+    outer module:
+        ch12-remoting
+    inner module:
+        groupId: 	    ch.ttt
+        artifactId:	    spring-invoker
+        module name:	spring-invoker
+        content root:	D:\dev\workspace\prospring5\ch12-remoting\spring-invoker
+        parent:         ch12-remoting
+
 ____Pro JPA 2____
 
 - Parent Module -

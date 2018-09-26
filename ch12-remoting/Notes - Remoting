@@ -1,0 +1,25 @@
+communicate with other applications
+
+--- RMI ---
+early days, Java 1.x
+
+--- EJB, JMS ---
+server communication in J2EE
+- JMS: asynchronous, loosely coupled way for exchanging messages
+
+--- JAX-RPC, JAX-WS ---
+xml over http
+
+--- Hessian, Burlap ---
+http based technologies
+
+--- Spring HTTP invoker ---
+springs http based remoting support
+- expose services and invoke them from remote applications
+
+--- JAX-RS (Rest) ---
+more lightweight and efficient for
+responsive web application requirements
+
+--- Other Protocols ---
+Comet, HTML5 WebSocket
