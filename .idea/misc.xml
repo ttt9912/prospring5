@@ -8,6 +8,8 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/ch12-remoting/spring-http-invoker/pom.xml" />
+        <option value="$PROJECT_DIR$/ch12-remoting/spring-httpinvoker/pom.xml" />
         <option value="$PROJECT_DIR$/ch8-spring-data-jpa/pom.xml" />
       </set>
     </option>

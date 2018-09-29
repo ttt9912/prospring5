@@ -18,7 +18,8 @@
         <module name="ch8-jpa2" />
         <module name="ch9-transactions" />
         <module name="jms-activemq" />
-        <module name="spring-http-invoker" />
+        <module name="springboot-http-invoker" />
+        <module name="springboot-http-invoker-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -38,6 +39,9 @@
       <module name="jms-activemq" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="spring-http-invoker" target="1.8" />
+      <module name="spring-httpinvoker" target="1.8" />
+      <module name="springboot-http-invoker" target="1.8" />
+      <module name="springboot-http-invoker-client" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

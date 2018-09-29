@@ -29,7 +29,7 @@ public class DbInitializer {
         singer = new Singer();
         singer.setFirstName("Eric");
         singer.setLastName("Clapton");
-        singer.setBirthDate(LocalDate.of(1945, 2, 30));
+        singer.setBirthDate(LocalDate.of(1945, 2, 13));
         singerRepository.save(singer);
 
         singer = new Singer();

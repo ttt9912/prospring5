@@ -16,7 +16,8 @@
       <module fileurl="file://$PROJECT_DIR$/ch9-transactions/ch9-transactions.iml" filepath="$PROJECT_DIR$/ch9-transactions/ch9-transactions.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/jms-activemq/jms-activemq.iml" filepath="$PROJECT_DIR$/ch12-remoting/jms-activemq/jms-activemq.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch12-remoting/spring-http-invoker/spring-http-invoker.iml" filepath="$PROJECT_DIR$/ch12-remoting/spring-http-invoker/spring-http-invoker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-http-invoker/springboot-http-invoker.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-http-invoker/springboot-http-invoker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-http-invoker-client/springboot-http-invoker-client.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-http-invoker-client/springboot-http-invoker-client.iml" />
     </modules>
   </component>
 </project>

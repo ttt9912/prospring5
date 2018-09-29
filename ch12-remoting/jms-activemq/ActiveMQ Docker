@@ -1,7 +1,0 @@
-Run ActiveMQ by Docker
-
-Using Docker to run ActiveMQ with command:
- docker run -p 61616:61616 -p 8161:8161 -t webcenter/activemq Open
-
-Browser, enter address below with username: admin and password: 
-admin localhost:8161/admin/
