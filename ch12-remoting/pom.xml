@@ -16,7 +16,5 @@
     <modules>
         <module>base-beans</module>
         <module>jms-activemq</module>
-        <module>springboot-http-invoker</module>
-        <module>springboot-http-invoker-client</module>
     </modules>
 </project>

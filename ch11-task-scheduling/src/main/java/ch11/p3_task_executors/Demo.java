@@ -1,6 +1,6 @@
 package ch11.p3_task_executors;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.SyncTaskExecutor;

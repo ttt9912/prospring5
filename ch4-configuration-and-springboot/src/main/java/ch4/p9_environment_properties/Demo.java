@@ -1,7 +1,7 @@
 package ch4.p9_environment_properties;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MapPropertySource;
@@ -12,7 +12,7 @@ import java.util.Map;
 
 /*
  * Environment: all system properties, environment variables and
- * application properties of the running app
+ * application properties of the running ch12.server
  *
  * PropertySource: store the applications environment configuration
  */

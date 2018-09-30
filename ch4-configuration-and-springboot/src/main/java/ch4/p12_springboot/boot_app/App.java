@@ -24,7 +24,7 @@ class App {
         HelloWorld bean = ctx.getBean(HelloWorld.class);
         bean.sayHi();
 
-        System.in.read(); // sodass die app nicht gleich terminiert
+        System.in.read(); // sodass die ch12.server nicht gleich terminiert
         ctx.close();
     }
 }

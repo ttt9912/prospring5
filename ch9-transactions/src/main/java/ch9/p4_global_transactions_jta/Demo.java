@@ -2,7 +2,7 @@ package ch9.p4_global_transactions_jta;
 
 import ch9.entities.Singer;
 import ch9.services.SingerService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Date;

@@ -1,7 +1,7 @@
 package ch5.p3_advisors_and_pointcuts;
 
 import org.aopalliance.aop.Advice;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.aop.Advisor;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.framework.ProxyFactory;

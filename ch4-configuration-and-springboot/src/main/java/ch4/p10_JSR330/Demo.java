@@ -1,9 +1,7 @@
 package ch4.p10_JSR330;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
-
-import java.util.Arrays;
 
 /*
  * Spring supports the JavaEE JSR 330 Annotations

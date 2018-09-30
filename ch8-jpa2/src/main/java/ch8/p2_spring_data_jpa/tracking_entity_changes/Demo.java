@@ -2,7 +2,7 @@ package ch8.p2_spring_data_jpa.tracking_entity_changes;
 
 import ch8.p2_spring_data_jpa.tracking_entity_changes.entities.SingerAudit;
 import ch8.p2_spring_data_jpa.tracking_entity_changes.service.SingerAuditService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Date;

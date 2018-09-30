@@ -1,6 +1,6 @@
 package ch11.p2_async_tasks;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;

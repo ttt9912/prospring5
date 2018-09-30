@@ -1,6 +1,6 @@
 package ch4.p6_application_events;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 /*

@@ -1,7 +1,7 @@
 Core goal of a Proxy: intercept method invocations
 
     proxyBean = proxyFactory.setTarget(bean)
-Proxy of the bean should be used in the app instead of the bean itself.
+Proxy of the bean should be used in the ch12.server instead of the bean itself.
 The bean itself should only be used, if one want to bypass the aop.
 
 ---------------------------------------------------------------------------

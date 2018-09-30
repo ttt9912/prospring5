@@ -1,7 +1,7 @@
 package ch6.p2_jdbcTemplate;
 
 import ch6.entity.Singer;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 

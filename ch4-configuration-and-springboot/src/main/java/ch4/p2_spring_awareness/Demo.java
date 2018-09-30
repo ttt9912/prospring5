@@ -2,7 +2,7 @@ package ch4.p2_spring_awareness;
 
 import ch4.p2_spring_awareness.applicationContextAware.DestructiveBeanWithInterface;
 import ch4.p2_spring_awareness.beanNameAware.NamedSinger;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 class Demo {

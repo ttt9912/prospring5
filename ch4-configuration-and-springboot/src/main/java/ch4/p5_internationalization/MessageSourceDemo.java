@@ -1,6 +1,6 @@
 package ch4.p5_internationalization;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.util.Locale;

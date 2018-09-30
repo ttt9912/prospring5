@@ -1,6 +1,6 @@
 package ch12.jms.p1_active_mq;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 class Demo {

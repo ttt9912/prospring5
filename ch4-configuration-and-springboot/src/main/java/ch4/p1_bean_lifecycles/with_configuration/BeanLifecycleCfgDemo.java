@@ -1,6 +1,6 @@
 package ch4.p1_bean_lifecycles.with_configuration;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /*

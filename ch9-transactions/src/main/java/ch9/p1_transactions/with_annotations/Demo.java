@@ -3,7 +3,7 @@ package ch9.p1_transactions.with_annotations;
 import ch9.config.DataJpaConfig;
 import ch9.entities.Singer;
 import ch9.services.SingerService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;

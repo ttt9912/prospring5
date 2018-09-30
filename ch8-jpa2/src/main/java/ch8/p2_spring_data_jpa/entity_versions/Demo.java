@@ -1,6 +1,6 @@
 package ch8.p2_spring_data_jpa.entity_versions;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Date;

@@ -4,7 +4,7 @@ import ch8.entity.Album;
 import ch8.entity.Singer;
 import ch8.p2_spring_data_jpa.simple_queries.service.AlbumService;
 import ch8.p2_spring_data_jpa.simple_queries.service.SingerService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;

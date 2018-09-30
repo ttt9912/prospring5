@@ -9,6 +9,6 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @ComponentScan // detect CarServiceImpl
 @Import({JpaConfig.class}) // combine data & task configs
-@ImportResource("classpath:task-app-context.xml")
+@ImportResource("classpath:task-ch12.server-context.xml")
 class AppConfig {
 }

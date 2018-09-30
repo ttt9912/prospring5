@@ -1,6 +1,6 @@
 package ch5.p3_advisors_and_pointcuts;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.aop.ClassFilter;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.ComposablePointcut;

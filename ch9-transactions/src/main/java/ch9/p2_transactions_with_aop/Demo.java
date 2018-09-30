@@ -2,7 +2,7 @@ package ch9.p2_transactions_with_aop;
 
 import ch9.entities.Singer;
 import ch9.services.SingerService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import java.util.List;

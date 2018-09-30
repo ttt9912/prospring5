@@ -1,7 +1,7 @@
 package ch10.p3_validation.with_spring_validator;
 
 import ch10.Singer;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.ObjectError;

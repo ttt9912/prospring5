@@ -1,6 +1,6 @@
 package ch11.p1_task_scheduler.with_annotations;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.IOException;
@@ -17,8 +17,8 @@ class Demo {
                 new AnnotationConfigApplicationContext(AnnotationAppConfig.class);
 
 
-        Thread.sleep(15000); // let the app run a while...
-        System.out.println("app terminated automatically");
+        Thread.sleep(15000); // let the ch12.server run a while...
+        System.out.println("ch12.server terminated automatically");
         ctx.close();
     }
 }

@@ -1,6 +1,6 @@
 package ch4.p7_configuration_classes;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

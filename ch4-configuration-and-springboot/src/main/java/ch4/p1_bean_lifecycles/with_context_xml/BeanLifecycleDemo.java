@@ -1,6 +1,6 @@
 package ch4.p1_bean_lifecycles.with_context_xml;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 /*

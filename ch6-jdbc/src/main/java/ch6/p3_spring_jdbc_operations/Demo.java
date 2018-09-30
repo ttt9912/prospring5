@@ -2,7 +2,7 @@ package ch6.p3_spring_jdbc_operations;
 
 import ch6.entity.Album;
 import ch6.entity.Singer;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 

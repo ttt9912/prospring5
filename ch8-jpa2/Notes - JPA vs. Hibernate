@@ -4,11 +4,11 @@ Use Hibernate directly vs. via JPA
 
 1.) Use Hibernate
 
-    Spring app ---> Hibernate
+    Spring ch12.server ---> Hibernate
 
 2.) Use JPA with Hibernate as implementation
 
-    Spring app ---> JPA <-impl- Hibernate (or EclipseLinkk, OpenJPA, ...)
+    Spring ch12.server ---> JPA <-impl- Hibernate (or EclipseLinkk, OpenJPA, ...)
 
 
 

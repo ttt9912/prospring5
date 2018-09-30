@@ -1,7 +1,7 @@
 package ch10.p3_validation.with_jsr349_bean_validation.custom;
 
 import ch10.p3_validation.with_jsr349_bean_validation.Genre;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.validation.ConstraintViolation;

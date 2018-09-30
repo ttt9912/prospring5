@@ -1,6 +1,6 @@
 package ch5.p5_declarative_aop.with_aspectJ;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 class Demo {

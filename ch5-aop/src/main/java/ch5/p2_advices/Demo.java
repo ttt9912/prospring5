@@ -1,6 +1,6 @@
 package ch5.p2_advices;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.aop.framework.ProxyFactory;
 
 class Demo {

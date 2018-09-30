@@ -2,7 +2,7 @@ package ch4.p4_property_editors;
 
 import ch4.p4_property_editors.built_in.DataBean;
 import ch4.p4_property_editors.custom.Person;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class Demo {

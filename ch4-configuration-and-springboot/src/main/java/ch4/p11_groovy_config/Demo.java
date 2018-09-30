@@ -1,6 +1,6 @@
 package ch4.p11_groovy_config;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.support.GenericGroovyApplicationContext;
 
 class Demo {

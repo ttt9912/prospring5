@@ -5,7 +5,7 @@ import ch8.entity.Singer;
 import ch8.p1_jpa2.service.SingerService;
 import ch8.p1_jpa2.service.SingerSummaryService;
 import ch8.p1_jpa2.view.SummarySinger;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.Date;

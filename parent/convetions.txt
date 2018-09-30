@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------------
 System.in.read()
 -----------------------------------------------------------------------------
-lets the app run
+lets the ch12.server run
 
 - don't use in @Tests (not ideal when running 'All Tests')
   use Thread.sleep instead

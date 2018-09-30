@@ -1,7 +1,7 @@
 package ch5.p4_introductions;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.aop.IntroductionAdvisor;
 import org.springframework.aop.framework.ProxyFactory;
 
