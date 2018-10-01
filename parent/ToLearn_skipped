@@ -1,0 +1,20 @@
+Themen zum Vertiefen
+Themen, die nicht auf Anhieb funktioniert haben
+
+-----------------------------------------------------------------------------
+Messaging (Ch13)
+-----------------------------------------------------------------------------
+JMS
+  - ActiveMQ, Artemis
+
+Status:
+- AciveMQ funktioniert mit Docker, aber ist noch vertiefbar
+- Spring Boot + Artemis funktioniert nicht, insbesondere nicht wie gewünscht
+  mit Embedded JMS-Server
+
+
+-----------------------------------------------------------------------------
+WebMvc (Ch13)
+-----------------------------------------------------------------------------
+Tomcat funktioniert nicht. Bringe tomcat-maven-plugin nicht zum laufen
+in diesem Workspace

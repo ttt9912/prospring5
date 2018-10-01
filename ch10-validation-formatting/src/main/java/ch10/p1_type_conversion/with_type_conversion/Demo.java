@@ -16,10 +16,10 @@ import java.util.Set;
  *
  * convert any type to POJO
  */
-class Demo {
+public class Demo {
 
     @Test
-    void custom_converter() {
+    public void custom_converter() {
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
@@ -30,7 +30,7 @@ class Demo {
     }
 
     @Test
-    void converting_arbitrary_types() {
+    public void converting_arbitrary_types() {
         // convert any instance of Singer to AnotherSinger with firstName and lastName swapped
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(AppConfig.class);
@@ -54,7 +54,7 @@ class Demo {
      * under: org.springframework.core.convert.support
      */
     @Test
-    void built_in_converters() {
+    public void built_in_converters() {
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
