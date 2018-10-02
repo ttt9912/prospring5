@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
+// no need to import ConverterConfig because ServiceConfig already does
 @Import({DataConfig.class, ServiceConfig.class})
 public class ServerAppConfig {
 }

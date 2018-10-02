@@ -11,14 +11,17 @@ import org.springframework.jms.core.JmsTemplate;
 
 import javax.jms.ConnectionFactory;
 
+/*
+ * Connect to ActiveMQ Server
+ *
+ * @EnableJms:
+ */
 @Configuration
 @EnableJms
 @ComponentScan
 class AppConfig {
 
-    /*
-     * Initial ConnectionFactory
-     */
+    // create connection with Jms Provider (ActiveMQ Server)
     @Bean
     public ConnectionFactory connectionFactory() {
         ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory();
@@ -28,9 +31,7 @@ class AppConfig {
         return connectionFactory;
     }
 
-    /*
-     * Used for Receiving Message
-     */
+    // Consumer
     @Bean
     public JmsListenerContainerFactory<?> jsaFactory() {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
@@ -38,9 +39,7 @@ class AppConfig {
         return factory;
     }
 
-    /*
-     * Used for Sending Messages.
-     */
+    // Producer
     @Bean
     public JmsTemplate jmsTemplate() {
         JmsTemplate template = new JmsTemplate();

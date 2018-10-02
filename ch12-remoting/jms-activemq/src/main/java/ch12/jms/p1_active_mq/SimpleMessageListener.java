@@ -9,6 +9,12 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.TextMessage;
 
+/*
+ * @JmsListener: - target of a Jms message listener
+ *               - replaces the need to implement MessageListener interface
+ *
+ * destination: topic or queue
+ */
 @Component("messageListener")
 class SimpleMessageListener {
     private static final Logger logger = LoggerFactory.getLogger(SimpleMessageListener.class);
@@ -17,7 +23,6 @@ class SimpleMessageListener {
      * Annotated JMS listener methods are allowed to have flexible signatures similar
      * to what provides: Message, etc. (See @JmsListener javadoc for details)
      */
-
     @JmsListener(destination = "DEMO-JMS-QUEUE", containerFactory = "jsaFactory")
     public void onMessage(Message message) {
         TextMessage textMessage = (TextMessage) message;

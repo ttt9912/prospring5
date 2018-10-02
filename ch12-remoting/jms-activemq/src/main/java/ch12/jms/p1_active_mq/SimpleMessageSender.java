@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 
 import javax.jms.TextMessage;
 
+/*
+ * JmsTemplate.send(): creates an ad-hoc implementation of MessageCreator (lambda)
+ *                     MessageCreator is implemented to create a new instance of TextMessage
+ */
 @Component("messageSender")
 class SimpleMessageSender implements MessageSender {
     private static final Logger logger = LoggerFactory.getLogger(SimpleMessageSender.class);

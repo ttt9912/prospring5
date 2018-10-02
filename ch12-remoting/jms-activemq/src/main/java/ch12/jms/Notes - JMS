@@ -1,0 +1,14 @@
+-----------------------------------------------------------------------------
+MQ Server = message oriented middleware
+
+- Queue: point-to-point; delivers to exactly one consumer
+- Topic: publish-subscribe; delivers to all subscribers
+
+- Producer: connects to MQ Server and sends messages to a queue or topic
+- Consumer: connects to MQ Server and listens to a queue or topic
+
+JMS Implementations:
+    - ActiveMQ
+    - HornetQ
+    - Artemis?
+    - Kafka?

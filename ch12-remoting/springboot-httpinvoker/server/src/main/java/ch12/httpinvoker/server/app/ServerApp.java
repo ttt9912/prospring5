@@ -27,5 +27,7 @@ public class ServerApp {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(ServerApp.class, args);
         // ctx.close();
+
+        // Context Tests unter src/test/
     }
 }

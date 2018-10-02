@@ -3,6 +3,9 @@ package ch12.jms.p1_active_mq;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+/*
+ * ActiveMQ: JMS 2.0 implementation
+ */
 class Demo {
 
     /*

@@ -35,7 +35,8 @@ public class ClientApp {
     public CommandLineRunner run(final ApplicationContext ctx) {
         return args -> {
             SingerService rmiSingerService = ctx.getBean(SingerService.class);
-            rmiSingerService.findAll().forEach(System.out::println);
+            rmiSingerService.findAll()
+                    .forEach(System.out::println);
         };
     }
 }

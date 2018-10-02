@@ -14,6 +14,15 @@ Status:
 
 
 -----------------------------------------------------------------------------
+Spring HTTP Invoker (Ch13)
+-----------------------------------------------------------------------------
+Status:
+- Funktioniert mit Springboot
+- könnte noch mit WebMvc umgesetzt werden, Unterschied wird jedoch
+  klein sein. Http Invoker an sich wird kaum anders sein.
+
+
+-----------------------------------------------------------------------------
 WebMvc (Ch13)
 -----------------------------------------------------------------------------
 Tomcat funktioniert nicht. Bringe tomcat-maven-plugin nicht zum laufen
