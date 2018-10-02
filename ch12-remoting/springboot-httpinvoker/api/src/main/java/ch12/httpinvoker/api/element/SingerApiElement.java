@@ -26,4 +26,13 @@ public class SingerApiElement implements Serializable {
     public LocalDate getBirthDate() {
         return birthDate;
     }
+
+    @Override
+    public String toString() {
+        return "SingerApiElement{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthDate=" + birthDate +
+                '}';
+    }
 }

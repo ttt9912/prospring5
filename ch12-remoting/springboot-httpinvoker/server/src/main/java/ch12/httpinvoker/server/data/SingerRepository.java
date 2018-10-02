@@ -1,4 +1,4 @@
-package ch12.httpinvoker.data;
+package ch12.httpinvoker.server.data;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,6 +1,6 @@
-package ch12.httpinvoker.service;
+package ch12.httpinvoker.server.service;
 
-import ch12.httpinvoker.converter.ConverterConfig;
+import ch12.httpinvoker.server.converter.ConverterConfig;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

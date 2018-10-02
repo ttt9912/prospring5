@@ -17,6 +17,7 @@
         <module name="ch7-hibernate" />
         <module name="ch8-jpa2" />
         <module name="ch9-transactions" />
+        <module name="client" />
         <module name="jms-activemq" />
         <module name="server" />
         <module name="springboot-configs" />
@@ -38,6 +39,7 @@
       <module name="ch8-spring-data-jpa" target="1.8" />
       <module name="ch9-transactions" target="1.8" />
       <module name="ch99-scratches" target="1.8" />
+      <module name="client" target="1.8" />
       <module name="jms-activemq" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="server" target="1.8" />

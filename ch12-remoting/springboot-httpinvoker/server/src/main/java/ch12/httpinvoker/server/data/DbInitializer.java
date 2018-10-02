@@ -1,4 +1,4 @@
-package ch12.httpinvoker.data;
+package ch12.httpinvoker.server.data;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

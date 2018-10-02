@@ -1,4 +1,4 @@
-package ch12.httpinvoker.converter;
+package ch12.httpinvoker.server.converter;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

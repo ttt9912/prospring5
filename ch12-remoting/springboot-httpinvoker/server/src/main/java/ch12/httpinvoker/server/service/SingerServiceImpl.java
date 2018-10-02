@@ -1,9 +1,10 @@
-package ch12.httpinvoker.service;
+package ch12.httpinvoker.server.service;
 
 import ch12.httpinvoker.api.element.SingerApiElement;
 import ch12.httpinvoker.api.service.SingerService;
-import ch12.httpinvoker.data.Singer;
-import ch12.httpinvoker.data.SingerRepository;
+import ch12.httpinvoker.server.data.Singer;
+import ch12.httpinvoker.server.data.SingerRepository;
+import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.core.convert.ConversionService;
@@ -13,7 +14,6 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @DependsOn("conversionService")
 @Service("singerService")
@@ -29,7 +29,7 @@ public class SingerServiceImpl implements SingerService {
     @Override
     @Transactional(readOnly = true)
     public List<SingerApiElement> findAll() {
-        return Stream.of(singerRepository.findAll())
+        return Lists.newArrayList(singerRepository.findAll()).stream()
                 .map(entity -> conversionService.convert(entity, SingerApiElement.class))
                 .collect(Collectors.toList());
     }
@@ -37,7 +37,7 @@ public class SingerServiceImpl implements SingerService {
     @Override
     @Transactional(readOnly = true)
     public List<SingerApiElement> findByFirstName(String firstName) {
-        return Stream.of(singerRepository.findByFirstName(firstName))
+        return singerRepository.findByFirstName(firstName).stream()
                 .map(entity -> conversionService.convert(entity, SingerApiElement.class))
                 .collect(Collectors.toList());
     }

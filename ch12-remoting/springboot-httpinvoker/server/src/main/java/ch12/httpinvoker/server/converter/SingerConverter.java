@@ -1,7 +1,7 @@
-package ch12.httpinvoker.converter;
+package ch12.httpinvoker.server.converter;
 
 import ch12.httpinvoker.api.element.SingerApiElement;
-import ch12.httpinvoker.data.Singer;
+import ch12.httpinvoker.server.data.Singer;
 import org.springframework.core.convert.converter.Converter;
 
 // Entity -> ApiElement
