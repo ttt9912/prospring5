@@ -13,7 +13,7 @@ import static ch.util.Util.printBeansOfType;
 /*
  * @SpringBootApplication combines @Configuration, @EnableAutoConfiguration, @ComponentScan
  *
- * Automatically detects:
+ * @SpringBootApplication Automatically detects:
  * - @Bean & @Configuration in the same class
  * - @Configuration classes in the same package
  * - @Component classes in the same package

@@ -21,6 +21,7 @@
         <module name="jms-activemq" />
         <module name="server" />
         <module name="springboot-configs" />
+        <module name="springboot-rest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -49,6 +50,7 @@
       <module name="springboot-http-invoker" target="1.8" />
       <module name="springboot-http-invoker-client" target="1.8" />
       <module name="springboot-httpinvoker" target="1.8" />
+      <module name="springboot-rest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

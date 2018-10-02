@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/server/server.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" filepath="$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/springboot-httpinvoker.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/springboot-httpinvoker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-rest/springboot-rest.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-rest/springboot-rest.iml" />
     </modules>
   </component>
 </project>
