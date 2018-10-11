@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="amqp-rabbitmq" />
         <module name="api" />
         <module name="ch10-validation-formatting" />
         <module name="ch11-task-scheduling" />
@@ -25,6 +26,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="amqp" target="1.8" />
+      <module name="amqp-rabbitmq" target="1.8" />
       <module name="api" target="1.8" />
       <module name="base-beans" target="1.8" />
       <module name="ch10-validation-formatting" target="1.8" />

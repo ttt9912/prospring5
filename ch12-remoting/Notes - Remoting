@@ -5,7 +5,18 @@ early days, Java 1.x
 
 --- EJB, JMS ---
 server communication in J2EE
-- JMS: asynchronous, loosely coupled way for exchanging messages
+- asynchronous, loosely coupled way for exchanging messages
+- uses a message broker for message exchange
+- works on any OS but only supports Java platform
+- implementations: MQ, ActiveMQ, Artemis Active MQ
+
+--- AMQP ---
+- Advanced Message Queueing Protocol
+- Open standard for implementing Message oriented Middleware
+- uses a message broker for message exchange (like JMS)
+- can be used in multiple languages (unlike JMS)
+- implementations: RabbitMQ
+- Spring AMQP provides a base abstraction using RabbiMQ
 
 --- JAX-RPC, JAX-WS ---
 xml over http
@@ -14,12 +25,12 @@ xml over http
 http based technologies
 
 --- Spring HTTP invoker ---
-springs http based remoting support
+- springs http based remoting support
 - expose services and invoke them from remote applications
 
 --- JAX-RS (Rest) ---
-more lightweight and efficient for
-responsive web application requirements
+- more lightweight and efficient for
+- responsive web application requirements
 
 --- Other Protocols ---
 Comet, HTML5 WebSocket

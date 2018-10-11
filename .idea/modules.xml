@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ch12-remoting/amqp-rabbitmq/amqp-rabbitmq.iml" filepath="$PROJECT_DIR$/ch12-remoting/amqp-rabbitmq/amqp-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/api/api.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/api/api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch10-validation-formatting/ch10-validation-formatting.iml" filepath="$PROJECT_DIR$/ch10-validation-formatting/ch10-validation-formatting.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch11-task-scheduling/ch11-task-scheduling.iml" filepath="$PROJECT_DIR$/ch11-task-scheduling/ch11-task-scheduling.iml" />

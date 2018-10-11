@@ -8,6 +8,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/ch12-remoting/amqp/pom.xml" />
         <option value="$PROJECT_DIR$/ch12-remoting/base-beans/pom.xml" />
         <option value="$PROJECT_DIR$/ch12-remoting/spring-http-invoker/pom.xml" />
         <option value="$PROJECT_DIR$/ch12-remoting/spring-httpinvoker/pom.xml" />
