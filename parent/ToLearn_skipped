@@ -2,7 +2,7 @@ Themen zum Vertiefen
 Themen, die nicht auf Anhieb funktioniert haben
 
 -----------------------------------------------------------------------------
-Messaging (Ch13)
+JMS (Ch13)
 -----------------------------------------------------------------------------
 JMS
   - ActiveMQ, Artemis
@@ -23,7 +23,6 @@ Status:
 
 
 -----------------------------------------------------------------------------
-WebMvc (Ch13)
+Security (Ch13)
 -----------------------------------------------------------------------------
-Tomcat funktioniert nicht. Bringe tomcat-maven-plugin nicht zum laufen
-in diesem Workspace
+Funktioniert nicht. URL wird nicht secured
