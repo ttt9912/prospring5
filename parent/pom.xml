@@ -21,6 +21,7 @@
         <module>../ch11-task-scheduling</module>
         <module>../ch12-remoting</module>
         <module>../ch99-scratches</module>
+        <module>../ch13-testing</module>
     </modules>
 
     <properties>
