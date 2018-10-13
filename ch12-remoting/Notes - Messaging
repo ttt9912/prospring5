@@ -1,0 +1,13 @@
+-----------------------------------------------------------------------------
+
+--- Messaging ---
+Messaging relies on asynchronous message-passing instead of synchronous
+request response-based architecture.
+Producer and consumer of messages are decoupled by an intermediate
+messaging layer known as the message broker.
+
+--- JMS vs. AMQP ---
+JMS commonly used for sending and receiving messages.
+For interoperability between different vendors and platforms,
+we won’t be able to use JMS clients and brokers.
+This is where AMQP comes in handy.

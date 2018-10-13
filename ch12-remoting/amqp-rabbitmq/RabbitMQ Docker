@@ -1,12 +1,13 @@
-RabbitMQ stores data based on what it calls the "Node Name",
+-----------------------------------------------------------------------------
+RabbitMQ stores ch13.sut.data based on what it calls the "Node Name",
 which defaults to the hostname.
 Specify --hostname explicitly for each daemon so that we don't get a
-random hostname and can keep track of our data.
+random hostname and can keep track of our ch13.sut.data.
 
-$ docker run -p 5672:5672 -d --hostname my-rabbit --name some-rabbit rabbitmq:3
+docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672 rabbitmq:3-management
 
 will start a RabbitMQ container listening on the default port of 5672.
-
+Management Console: localhost:8070, login: guest/guest
 
 
 docker run builds the container. For rerun use:

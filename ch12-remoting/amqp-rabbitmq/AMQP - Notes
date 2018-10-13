@@ -1,0 +1,29 @@
+-----------------------------------------------------------------------------
+amqp entities
+-----------------------------------------------------------------------------
+- Exchanges: are like post offices or mailboxes and clients always
+             publish a message to an AMQP exchange
+
+- Queues: bind to exchange using the binding key. A binding is “link”
+          that you set up to bind a queue to an exchange
+
+- Messages: are sent to message broker/exchange with a routing key.
+
+-----------------------------------------------------------------------------
+Exchange Types
+-----------------------------------------------------------------------------
+Exchanges are AMQP entities where messages are sent. Exchanges take a message
+and route it into zero or more queues. There are four built in exchange types:
+
+- Direct Exchange
+- Fanout Exchange
+- Topic Exchange
+- Headers Exchange
+
+-----------------------------------------------------------------------------
+callback & container
+-----------------------------------------------------------------------------
+For asynchronous message consumption, two key concepts are a callback and a
+container.
+
+- callback: where application code is integrated with the messaging system
