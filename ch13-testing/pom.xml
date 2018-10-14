@@ -12,10 +12,5 @@
 
     <groupId>ch.ttt</groupId>
     <artifactId>ch13-testing</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>system-under-test</module>
-    </modules>
-
 
 </project>

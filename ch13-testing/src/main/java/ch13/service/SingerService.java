@@ -1,6 +1,6 @@
 package ch13.service;
 
-import ch13.data.Singer;
+import ch13.entities.Singer;
 
 import java.util.List;
 

@@ -1,5 +1,7 @@
-package ch13.data;
+package ch13.init;
 
+import ch13.entities.Singer;
+import ch13.repositories.SingerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
