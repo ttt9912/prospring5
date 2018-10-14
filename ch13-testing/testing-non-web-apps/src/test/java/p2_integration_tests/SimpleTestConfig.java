@@ -1,4 +1,4 @@
-package p2_integration_test;
+package p2_integration_tests;
 
 import ch13.init.DbInitializer;
 import org.slf4j.Logger;

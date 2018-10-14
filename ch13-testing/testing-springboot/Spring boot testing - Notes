@@ -1,0 +1,25 @@
+-----------------------------------------------------------------------------
+Unit Tests with MockMvc
+-----------------------------------------------------------------------------
+- Testing one Service
+- mocking Services dependencies
+- No Springboot container is started
+
+-----------------------------------------------------------------------------
+Data JPA Integration Tests
+-----------------------------------------------------------------------------
+- Spring context is loaded
+- Springboot container is started
+
+-----------------------------------------------------------------------------
+Web Mvc Integration Tests
+-----------------------------------------------------------------------------
+- Spring context is loaded
+- WebMvc components are configured
+- Other components are mocked automatically
+
+-----------------------------------------------------------------------------
+SpringBootTest Integration Tests
+-----------------------------------------------------------------------------
+- entire container is started
+- nothing is mocked

@@ -24,6 +24,8 @@
       <module fileurl="file://$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" filepath="$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/springboot-httpinvoker.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/springboot-httpinvoker.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-rest/springboot-rest.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-rest/springboot-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch13-testing/testing-non-web-apps/testing-non-web-apps.iml" filepath="$PROJECT_DIR$/ch13-testing/testing-non-web-apps/testing-non-web-apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch13-testing/testing-springboot/testing-springboot.iml" filepath="$PROJECT_DIR$/ch13-testing/testing-springboot/testing-springboot.iml" />
     </modules>
   </component>
 </project>

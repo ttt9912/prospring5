@@ -10,7 +10,6 @@
         <module name="api" />
         <module name="ch10-validation-formatting" />
         <module name="ch11-task-scheduling" />
-        <module name="ch13-testing" />
         <module name="ch2-gettingstarted" />
         <module name="ch3-ioc-and-di" />
         <module name="ch4-configuration-and-springboot" />
@@ -24,6 +23,8 @@
         <module name="server" />
         <module name="springboot-configs" />
         <module name="springboot-rest" />
+        <module name="testing-non-web-apps" />
+        <module name="testing-springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -57,6 +58,8 @@
       <module name="springboot-httpinvoker" target="1.8" />
       <module name="springboot-rest" target="1.8" />
       <module name="system-under-test" target="1.8" />
+      <module name="testing-non-web-apps" target="1.8" />
+      <module name="testing-springboot" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

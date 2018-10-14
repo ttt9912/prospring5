@@ -1,4 +1,4 @@
-package p1_unit_tests_mocks;
+package p1_unit_tests_mocking;
 
 import ch13.entities.Singer;
 import ch13.repositories.SingerRepository;

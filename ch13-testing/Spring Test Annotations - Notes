@@ -1,5 +1,0 @@
------------------------------------------------------------------------------
-
-@ContextConfiguration: load and configure ApplicationContext
-@WebAppConfiguration
-@...todo
