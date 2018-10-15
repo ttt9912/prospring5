@@ -1,4 +1,4 @@
-package ch.springboot.app.integration.springboottest;
+package ch.springboot.app.integration.springboottest.with_mock_mvc;
 
 import ch.springboot.app.App;
 import ch.springboot.data.SingerRepository;
@@ -14,18 +14,22 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasSize;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /*
- * nothing is mocked
+ * Does not start the server (WebEnvironment.MOCK).
+ * Spring handles incoming HTTP request and hands it off to the controller.
  *
- * @SpringBootTest: starts the entire container
+ * @SpringBootTest: tells Spring Boot to look for a main configuration class
+ * (one with @SpringBootApplication for instance), and use that to start a
+ * Spring application context
  *
  * WebEnvironment.MOCK: container will operate in a mock servlet environment
  *
- * @AutoConfigureMockMvc:
+ * @AutoConfigureMockMvc: configures and injects MockMvc
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = WebEnvironment.MOCK,
@@ -39,6 +43,11 @@ public class SingerControllerIT {
 
     @Autowired
     private SingerRepository repository;
+
+    @Test
+    public void contextLoads() {
+        assertThat(repository).isNotNull();
+    }
 
     @Test
     public void listdata()

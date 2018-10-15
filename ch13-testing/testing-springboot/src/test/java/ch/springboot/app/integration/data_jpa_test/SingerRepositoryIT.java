@@ -17,10 +17,8 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /*
- * @RunWith(SpringRunner.class): provides a bridge between Spring Boot
- *                               test features and JUnit
- *
- * @DataJpaTest: provides some standard setup (H2, hibernate, etc.)
+ * @DataJpaTest: provides some standard setup (configuring H2, Hibernate,
+ * Spring Data, DataSource, etc., @EntityScan, turning on SQL logging)
  *
  * Libraries used: Junit4 (SpringRunner requires junit4) & AssertJ
  */

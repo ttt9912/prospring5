@@ -1,0 +1,2 @@
+rest-assured dependency includes json-path (parse JSON documents)
+and xml-path (parse XML documents) as transitive dependencies.

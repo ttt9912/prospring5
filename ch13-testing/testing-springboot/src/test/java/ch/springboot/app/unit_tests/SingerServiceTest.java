@@ -21,12 +21,10 @@ import static org.mockito.Mockito.when;
 /*
  * Test the Service layer, mock the Repository
  *
- * @MockBean: spring support for Mockito
+ * @MockBean: spring support for Mockito, creates a mock
  *
  * @TestConfiguration: beans defined inside should only
  * be created for test and not picked up by other component scannings
- *
- * @MockBean: creates a mock
  */
 @RunWith(SpringRunner.class)
 public class SingerServiceTest {

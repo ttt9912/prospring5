@@ -1,4 +1,10 @@
 -----------------------------------------------------------------------------
+Spring Runner
+-----------------------------------------------------------------------------
+@RunWith(SpringRunner.class): provides a bridge between Spring Boot test
+features and JUnit
+
+-----------------------------------------------------------------------------
 Unit Tests with @MockMvc
 -----------------------------------------------------------------------------
 - Testing one Service
@@ -22,4 +28,12 @@ Unit Tests with @MockMvc
 @SpringBootTest Integration Tests
 -----------------------------------------------------------------------------
 - entire container is started
-- nothing is mocked
+
+-- WebEnvironment.MOCK --
+Does not start the server. Spring handles incoming
+HTTP request and hands it off to the controller.
+
+-- WebEnvironment.RANDOM_PORT --
+Starts server on a random port
+
+

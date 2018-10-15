@@ -2,6 +2,7 @@ package ch.springboot.data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Collection;
 
 @Entity
 @Table(name = "singer")
@@ -23,6 +24,10 @@ public class Singer {
 
     @Column(name = "birth_date")
     private LocalDate birthDate;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @Column(name = "instruments")
+    private Collection<String> instruments;
 
     public Long getId() {
         return id;
@@ -64,6 +69,14 @@ public class Singer {
         this.birthDate = birthDate;
     }
 
+    public Collection<String> getInstruments() {
+        return instruments;
+    }
+
+    public void setInstruments(final Collection<String> instruments) {
+        this.instruments = instruments;
+    }
+
     @Override
     public String toString() {
         return "Singer{" +
@@ -72,6 +85,7 @@ public class Singer {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", birthDate=" + birthDate +
+                ", instruments=" + instruments +
                 '}';
     }
 }

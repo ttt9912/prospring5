@@ -26,7 +26,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * only Controller code is tested, Service layer is mocked
  *
  * @WebMvcTest: auto-configures the Spring MVC infrastructure and
- *              mocks a http server
+ * mocks a http server
+ * - creates a (partial) application context
+ * - disables full auto-configuration
+ * - only configures relevant to MVC tests (i.e. @Controller, @ControllerAdvice,
+ *   @JsonComponent, Converter/GenericConverter, Filter, WebMvcConfigurer
+ *   and HandlerMethodArgumentResolver beans
+ * - does NOT configure @Component, @Service or @Repository beans
+ * - is used along with @MockBean to provide mock implementations for required dependencies.
+ * - auto-configures MockMvc which offers a powerful way of easy testing
+ *   MVC controllers without starting a full HTTP server.
  *
  * MockMvc: testing MVC controllers without starting a full HTTP server
  */

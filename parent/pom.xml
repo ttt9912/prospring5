@@ -191,18 +191,30 @@
             <artifactId>guava</artifactId>
             <version>26.0-jre</version>
         </dependency>
+        <!-- rest assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- rest assured with mock mvc -->
+        <dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>spring-mock-mvc</artifactId>
+            <version>2.9.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- json schema validation with rest assured-->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>3.1.1</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -211,14 +223,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <url>http://localhost:8080/manager/text</url>
                 </configuration>
             </plugin>
         </plugins>
