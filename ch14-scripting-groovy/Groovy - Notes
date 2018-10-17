@@ -1,0 +1,23 @@
+-----------------------------------------------------------------------------
+ Groovy
+-----------------------------------------------------------------------------
+- is built on top of java, extends java.
+- groovy can be executed directly (groovy command line tool) or compiled to
+  bytecode
+- supports domain specific languages (DSL) for more readability
+- dynamic typing: variables are defined via keyword 'def'
+
+-----------------------------------------------------------------------------
+ dynamic typing
+-----------------------------------------------------------------------------
+- provides greater flexibility for manipulating class properties and
+  variables
+
+-----------------------------------------------------------------------------
+ closure
+-----------------------------------------------------------------------------
+- piece of code wrapped into an object
+- can be passed around with a reference
+- is executable
+- can receive parameters and return value
+
