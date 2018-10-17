@@ -10,5 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ch4-configuration-and-springboot</artifactId>
+    <groupId>ch.ttt</groupId>
+    <artifactId>ch14-scripting-groovy</artifactId>
+
+
 </project>

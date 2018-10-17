@@ -22,6 +22,7 @@
         <module>../ch12-remoting</module>
         <module>../ch99-scratches</module>
         <module>../ch13-testing</module>
+        <module>../ch14-scripting-groovy</module>
     </modules>
 
     <properties>
@@ -169,6 +170,19 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.12</version>
         </dependency>
+        <!-- für JSR 330 Annotations @Named und @Inject -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+        <!-- Groovy Libary -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>3.0.0-alpha-3</version>
+            <type>pom</type>
+        </dependency>
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
@@ -178,12 +192,6 @@
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-spring</artifactId>
             <version>5.10.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.dbunit</groupId>
-            <artifactId>dbunit</artifactId>
-            <version>2.5.1</version>
-            <scope>test</scope>
         </dependency>
         <!-- guava contains some sweet utils -->
         <dependency>

@@ -1,0 +1,8 @@
+-----------------------------------------------------------------------------
+ Groovy synthax
+-----------------------------------------------------------------------------
+- semicolon is not required for ending statements
+- return keyword is optional
+- all methods an classes are public by default
+- getters/setter are generated automatucally
+- properties can be accessed automatically
