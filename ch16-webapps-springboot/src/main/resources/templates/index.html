@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+
+    <title>Singer Boot App</title>
+</head>
 
 <!--
     Three ways of using a fragment:
@@ -7,13 +19,6 @@
         th:insert   - inserts fragment as body of its host tag
         th:include  - inserts the contents of the fragment (not recommended)
 -->
-<head>
-    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8"/>
-    <link href="../../public/css/general.css"
-          th:href="@{css/general.css}" rel="stylesheet" media="screen"/>
-    <title>Singer Boot App</title>
-</head>
-
 <body>
 <div th:replace="~{fragments/header :: header}">Header</div>
 
@@ -27,7 +32,7 @@
             but time spending reading this book and analysing the examples will surely be time well spent.
         </div>
 
-        <div th:insert="~{fragments/footer :: footer}">&copy; 2017 Iuliana Cosmina & Apress</div>
+        <div th:insert="~{fragments/footer :: footer}"> 2017 Iuliana Cosmina & Apress</div>
     </div>
 </div>
 </body>

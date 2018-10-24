@@ -152,6 +152,13 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
             <version>${springboot.version}</version>
         </dependency>
+        <!-- thymeleaf spring security -->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+            <version>3.0.3.RELEASE</version>
+        </dependency>
+
 
         <!-- others -->
         <dependency>
