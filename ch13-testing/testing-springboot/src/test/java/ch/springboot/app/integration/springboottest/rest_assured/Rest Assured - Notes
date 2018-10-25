@@ -1,2 +1,23 @@
 rest-assured dependency includes json-path (parse JSON documents)
 and xml-path (parse XML documents) as transitive dependencies.
+
+Jayway JsonPath: A Java DSL for reading JSON documents
+https://github.com/json-path/JsonPath
+
+-----------------------------------------------------------------------------
+Simple GET Methods
+-----------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------
+Post
+-----------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------
+Response evaluation
+-----------------------------------------------------------------------------
+ValidatableResponseOptions
+                .body(String jsonpath, Matcher hamcrestMatcher);

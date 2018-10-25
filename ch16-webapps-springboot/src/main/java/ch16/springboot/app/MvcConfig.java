@@ -7,7 +7,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class MvcConfig implements WebMvcConfigurer {
 
-    // todo
+    // matcher view names (used in controller) with html files
+    // under /templates
     @Override
     public void addViewControllers(final ViewControllerRegistry registry) {
         registry.addViewController("/index").setViewName("index");

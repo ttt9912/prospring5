@@ -1,6 +1,12 @@
 package ch.springboot.app.integration.springboottest.rest_assured;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.response.ResponseBody;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSender;
+import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -54,6 +60,33 @@ public class RestAssured1_SpringBootTest {
         when().get("/singer/listdata")
                 .then()
                 .time(lessThan(5L), TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void synthax_stuff() {
+
+        // DSL
+        RequestSpecification given = RestAssured.given();
+        RequestSender when = RestAssured.when();
+
+        // HTTP verbs
+        Response response = RestAssured.get("/api");
+        Response post = RestAssured.post("/api");
+
+        // Response: get response values
+        String json = response.asString();
+        ResponseBody body = response.body();
+
+        // ValidatableResponse: evaluate with jsonpath & hamcrest
+        ValidatableResponse then = response.then();
+
+        ValidatableResponse eval = then.body("id", equalTo(1));
+        ValidatableResponse assertThat = then.assertThat();
+        ValidatableResponse contentType = then.contentType(ContentType.JSON);
+
+        // synhactic sugar
+        ValidatableResponse and = eval.and();
+
     }
 
 }
