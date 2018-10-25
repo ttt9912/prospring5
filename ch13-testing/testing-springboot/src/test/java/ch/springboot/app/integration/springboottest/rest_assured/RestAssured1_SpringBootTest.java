@@ -2,6 +2,7 @@ package ch.springboot.app.integration.springboottest.rest_assured;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.response.ValidatableResponse;
@@ -18,6 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertThat;
 
 /*
  * container is started
@@ -60,6 +62,20 @@ public class RestAssured1_SpringBootTest {
         when().get("/singer/listdata")
                 .then()
                 .time(lessThan(5L), TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void withJsonPath() {
+
+        Response response = RestAssured.get("/singer/1");
+
+        assertThat(response.getStatusCode(), equalTo(200));
+
+        JsonPath jsonPath = response.jsonPath();
+        System.out.println(jsonPath.prettyPrint());
+
+        assertThat(jsonPath.get("firstName"), equalTo("John"));
+        assertThat(jsonPath.getList("instruments"), hasItems("Guitar", "Piano"));
     }
 
     @Test

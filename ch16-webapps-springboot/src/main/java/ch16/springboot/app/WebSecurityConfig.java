@@ -11,6 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 /*
  * Spring boot automatically secures all http endpoints with basic authentication
+ * (if there is spring security in the dependencies)
  */
 @Configuration
 @EnableWebSecurity
