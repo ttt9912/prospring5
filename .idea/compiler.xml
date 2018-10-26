@@ -23,6 +23,7 @@
         <module name="ch9-transactions" />
         <module name="client" />
         <module name="jms-activemq" />
+        <module name="p1-basic" />
         <module name="server" />
         <module name="springboot-configs" />
         <module name="springboot-rest" />
@@ -42,6 +43,7 @@
       <module name="ch14-scripting-groovy" target="1.8" />
       <module name="ch15-monitoring" target="1.8" />
       <module name="ch16-webapps-springboot" target="1.8" />
+      <module name="ch17-websocket" target="1.8" />
       <module name="ch2-gettingstarted" target="1.8" />
       <module name="ch3-ioc-and-di" target="1.8" />
       <module name="ch4-configuration-and-springboot" target="1.8" />
@@ -54,6 +56,7 @@
       <module name="ch99-scratches" target="1.8" />
       <module name="client" target="1.8" />
       <module name="jms-activemq" target="1.8" />
+      <module name="p1-basic" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="server" target="1.8" />
       <module name="spring-http-invoker" target="1.8" />

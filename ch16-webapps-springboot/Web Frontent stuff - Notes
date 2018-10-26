@@ -1,0 +1,20 @@
+-----------------------------------------------------------------------------
+ Thymeleaf
+-----------------------------------------------------------------------------
+spring boot configures the Thymeleaf engine to read template files from the
+/resources/template directory
+
+- Fragments -
+common parts of all pages like header, footer, menus
+
+
+-----------------------------------------------------------------------------
+ Static resources
+-----------------------------------------------------------------------------
+Spring Boot will automatically add static web resources located within any of
+the following directories:
+    /META-INF/resources/
+    /resources/
+    /static/
+    /public/
+
