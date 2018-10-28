@@ -4,8 +4,19 @@ web browser and a server.
 Once a WebSocket connection is established the connection stays open until
 the client or server decides to close this connection.
 
+
 -----------------------------------------------------------------------------
-@EnableWebSocket vs. @EnableWebSocketMessageBroker
+SockJS (optional) [p2]
+-----------------------------------------------------------------------------
+SockJS: fallback behaviour if browser does not support Websocket.
+It will try in this order:
+    1.) Websocket
+    2.) Http Streaming
+    3.) Http Long polling
+
+
+-----------------------------------------------------------------------------
+@EnableWebSocket vs. @EnableWebSocketMessageBroker [p3]
 -----------------------------------------------------------------------------
 @EnableWebSocket:
 

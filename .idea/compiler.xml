@@ -25,6 +25,7 @@
         <module name="jasypt" />
         <module name="jms-activemq" />
         <module name="p1-basic" />
+        <module name="p2-sock-js" />
         <module name="server" />
         <module name="springboot-configs" />
         <module name="springboot-rest" />
@@ -59,6 +60,7 @@
       <module name="jasypt" target="1.8" />
       <module name="jms-activemq" target="1.8" />
       <module name="p1-basic" target="1.8" />
+      <module name="p2-sock-js" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="server" target="1.8" />
       <module name="spring-http-invoker" target="1.8" />

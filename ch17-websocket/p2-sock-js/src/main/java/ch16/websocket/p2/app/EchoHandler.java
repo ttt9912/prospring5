@@ -1,4 +1,4 @@
-package ch16.websocket.p1.app;
+package ch16.websocket.p2.app;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
