@@ -3,21 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>prospring5</artifactId>
+        <artifactId>ch17-websocket</artifactId>
         <groupId>ch.ttt</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.ttt</groupId>
-    <artifactId>ch17-websocket</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>p1-basic</module>
-        <module>p2-sock-js</module>
-        <module>p3-stomp</module>
-    </modules>
+    <artifactId>p3-stomp</artifactId>
 
 
 </project>

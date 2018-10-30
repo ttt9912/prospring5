@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket with SockJS Tester</title>
+    <script src="https://d1fxtkz8shb9d2.cloudfront.net/sockjs-0.3.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.2/stomp.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script src="stomp-impl.js"></script>
+</head>
+
+<body>
+<h1><b>Stock Ticker</b></h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Code</th>
+        <th>Price</th>
+        <th>Time</th>
+    </tr>
+    </thead>
+    <tbody id="price"></tbody>
+</table>
+<p class="addStock">
+    Code: <input class="code"/><br/>
+    Price: <input class="price"/><br/>
+    <button class="addStockButton">Add Stock</button>
+</p>
+</body>
+</html>

@@ -1,6 +1,9 @@
 -----------------------------------------------------------------------------
-WebSockets is a bi-directional, full-duplex, persistent connection between a
-web browser and a server.
+Websocket
+-----------------------------------------------------------------------------
+WebSocket is a bi-directional, full-duplex, persistent connection between a
+web browser and a server (bidirectional streaming protocol).
+
 Once a WebSocket connection is established the connection stays open until
 the client or server decides to close this connection.
 
@@ -16,8 +19,21 @@ It will try in this order:
 
 
 -----------------------------------------------------------------------------
+STOMP [p3]
+-----------------------------------------------------------------------------
+Common format between client and server. Simple messaging protocol that can
+be used with brokers like RabbitMQ or ActiveMQ.
+
+Spring supports a simple Broker (@EnableWebSocketMessageBroker) that handles
+    - subscription requests and
+    - message broadcasting to connected clients
+in memory.
+
+
+-----------------------------------------------------------------------------
 @EnableWebSocket vs. @EnableWebSocketMessageBroker [p3]
 -----------------------------------------------------------------------------
-@EnableWebSocket:
+@EnableWebSocket: process websocket requests
 
-@EnableWebSocketMessageBroker:
+@EnableWebSocketMessageBroker: configure message broker for subprotocols
+                               (like STOMP)
