@@ -1,12 +1,43 @@
 -----------------------------------------------------------------------------
 Websocket
 -----------------------------------------------------------------------------
-WebSocket is a bi-directional, full-duplex, persistent connection between a
-web browser and a server (bidirectional streaming protocol).
+Client -> server
+- http requests
+- Websocket protocol
 
-Once a WebSocket connection is established the connection stays open until
-the client or server decides to close this connection.
+Server -> client
+- http long polling
+- Websocket protocol
 
+Http long polling:
+The client polls the server requesting new information.  The server holds the
+request open until new data is available. Once available, the server responds
+and sends the new information. When the client receives the new information,
+it immediately sends another request, and the operation is repeated. This
+effectively emulates a server push feature
+
+WebSocket Protocol:
+- is a bi-directional streaming protocol, that supports full-duplex,
+  persistent connection.
+- Once a WebSocket connection is established the connection stays open until
+  the client or server decides to close this connection.
+
+(Wikipedia):
+- Das WebSocket-Protokoll ist ein auf TCP basierendes Netzwerkprotokoll, das
+  entworfen wurde, um eine bidirektionale Verbindung zwischen einer
+  Webanwendung und einem WebSocket-Server bzw. einem Webserver, der auch
+  WebSockets unterstützt, herzustellen.
+- Während bei einer reinen HTTP-Verbindung jede Aktion des Servers eine
+  vorhergehende Anfrage des Clients erfordert, reicht es beim WebSocket-
+  Protokoll, wenn der Client die Verbindung öffnet.
+- Technisch betrachtet startet bei WebSocket, wie bei HTTP, der Client eine
+  Anfrage, mit dem Unterschied, dass nach der Übertragung der Daten zum
+  Verbindungsaufbau die zugrundeliegende TCP-Verbindung bestehen bleibt und
+  asynchrone Übertragungen in beide Richtungen ermöglicht
+
+Websocket handshake:
+Wie im HTTP-Protokoll gibt der Client an, auf welche Ressource (z.B.: /chat)
+und auf welchen Host (z.B.: server.example.com) er zugreifen möchte
 
 -----------------------------------------------------------------------------
 SockJS (optional) [p2]

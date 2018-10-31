@@ -25,8 +25,10 @@
         <module name="jasypt" />
         <module name="jms-activemq" />
         <module name="p1-basic" />
+        <module name="p1-spring-batch" />
         <module name="p2-sock-js" />
         <module name="p3-stomp" />
+        <module name="p4-websocket-chat" />
         <module name="server" />
         <module name="springboot-configs" />
         <module name="springboot-rest" />
@@ -47,6 +49,7 @@
       <module name="ch15-monitoring" target="1.8" />
       <module name="ch16-webapps-springboot" target="1.8" />
       <module name="ch17-websocket" target="1.8" />
+      <module name="ch18-spring-projects" target="1.8" />
       <module name="ch2-gettingstarted" target="1.8" />
       <module name="ch3-ioc-and-di" target="1.8" />
       <module name="ch4-configuration-and-springboot" target="1.8" />
@@ -61,8 +64,10 @@
       <module name="jasypt" target="1.8" />
       <module name="jms-activemq" target="1.8" />
       <module name="p1-basic" target="1.8" />
+      <module name="p1-spring-batch" target="1.8" />
       <module name="p2-sock-js" target="1.8" />
       <module name="p3-stomp" target="1.8" />
+      <module name="p4-websocket-chat" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="server" target="1.8" />
       <module name="spring-http-invoker" target="1.8" />

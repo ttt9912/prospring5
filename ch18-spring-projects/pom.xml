@@ -11,13 +11,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.ttt</groupId>
-    <artifactId>ch17-websocket</artifactId>
+    <artifactId>ch18-spring-projects</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>p1-basic</module>
-        <module>p2-sock-js</module>
-        <module>p3-stomp</module>
-        <module>p4-websocket-chat</module>
+        <module>p1-spring-batch</module>
     </modules>
 
 
