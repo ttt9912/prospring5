@@ -6,7 +6,50 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.2/stomp.min.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-    <script src="stomp-impl.js"></script>
+    <script type="text/javascript">
+        var stomp = null;
+
+        $(document).ready(function() {
+                var socket = new SockJS("http://localhost:8080/ws");
+                stomp = Stomp.over(socket);
+                stomp.connect({}, function(frame) {
+                    console.log('Connected: ' + frame);
+                    stomp.subscribe('/topic/price', function(message) {
+                        displayStockPrice(JSON.parse(message.body));
+                    });
+                });
+        });
+
+        function sendMessage() {
+                var code = $('.addStock .code').val();
+                var price = Number($('.addStock .price').val());
+
+                var jsonstr = JSON.stringify({ 'code': code, 'price':price });
+
+                stomp.send("/app/addStock", {}, jsonstr);
+        }
+
+        function displayStockPrice(messageBody) {
+            var prices = messageBody;
+
+            $('#price').empty();
+
+            for (var i in prices) {
+                var price = prices[i];
+
+                $('#price').append(
+                    $('<tr>').append(
+                        $('<td>').html(price.code),
+                        $('<td>').html(price.price.toFixed(2)),
+                        $('<td>').html(price.dateTimeFormatted)
+                    )
+                );
+            }
+        }
+
+
+
+    </script>
 </head>
 
 <body>
@@ -24,7 +67,7 @@
 <p class="addStock">
     Code: <input class="code"/><br/>
     Price: <input class="price"/><br/>
-    <button class="addStockButton">Add Stock</button>
+    <button class="addStockButton" onclick="sendMessage();">Add Stock</button>
 </p>
 </body>
 </html>

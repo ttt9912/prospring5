@@ -11,8 +11,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 public class App {
 
-    // TODO does not work
-
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
     }

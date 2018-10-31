@@ -7,7 +7,7 @@ import org.springframework.scheduling.TaskScheduler;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.PostConstruct;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -47,7 +47,7 @@ public class StockController {
     private void broadcastUpdatedPrices() {
         for (Stock stock : stocks) {
             stock.setPrice(updateStockPrice(stock.getPrice()));
-            stock.setDate(LocalDate.now());
+            stock.setDateTime(LocalDateTime.now());
         }
 
         // send stocks to all subscribers of /topic/price
@@ -63,7 +63,7 @@ public class StockController {
     @PostConstruct
     private void broadcastPeriodically() {
         taskScheduler.scheduleAtFixedRate(
-                this::broadcastUpdatedPrices, 1000
+                this::broadcastUpdatedPrices, 2000
         );
     }
 }

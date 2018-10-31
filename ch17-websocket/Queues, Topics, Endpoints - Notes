@@ -1,0 +1,11 @@
+-----------------------------------------------------------------------------
+Queues, Topics, Endpoints
+-----------------------------------------------------------------------------
+There are three main ways to say where messages are sent and how they are
+subscribed to using Spring WebSockets and STOMP:
+
+- Topics – common conversations or chat topics open to any client or user (p4)
+- Queues – reserved for specific users and their current sessions         (p5)
+- Endpoints – generic endpoints
+
+(https://www.baeldung.com/spring-websockets-send-message-to-user)

@@ -28,7 +28,8 @@
         <module name="p1-spring-batch" />
         <module name="p2-sock-js" />
         <module name="p3-stomp" />
-        <module name="p4-websocket-chat" />
+        <module name="p4-websocket-chatroom" />
+        <module name="p5-websocket-userchat" />
         <module name="server" />
         <module name="springboot-configs" />
         <module name="springboot-rest" />
@@ -67,7 +68,8 @@
       <module name="p1-spring-batch" target="1.8" />
       <module name="p2-sock-js" target="1.8" />
       <module name="p3-stomp" target="1.8" />
-      <module name="p4-websocket-chat" target="1.8" />
+      <module name="p4-websocket-chatroom" target="1.8" />
+      <module name="p5-websocket-userchat" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="server" target="1.8" />
       <module name="spring-http-invoker" target="1.8" />

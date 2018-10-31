@@ -29,7 +29,8 @@
       <module fileurl="file://$PROJECT_DIR$/ch18-spring-projects/p1-spring-batch/p1-spring-batch.iml" filepath="$PROJECT_DIR$/ch18-spring-projects/p1-spring-batch/p1-spring-batch.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p2-sock-js/p2-sock-js.iml" filepath="$PROJECT_DIR$/ch17-websocket/p2-sock-js/p2-sock-js.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p3-stomp/p3-stomp.iml" filepath="$PROJECT_DIR$/ch17-websocket/p3-stomp/p3-stomp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p4-websocket-chat/p4-websocket-chat.iml" filepath="$PROJECT_DIR$/ch17-websocket/p4-websocket-chat/p4-websocket-chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p4-websocket-chatroom/p4-websocket-chatroom.iml" filepath="$PROJECT_DIR$/ch17-websocket/p4-websocket-chatroom/p4-websocket-chatroom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p5-websocket-userchat/p5-websocket-userchat.iml" filepath="$PROJECT_DIR$/ch17-websocket/p5-websocket-userchat/p5-websocket-userchat.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/server/server.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" filepath="$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" />

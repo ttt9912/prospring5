@@ -1,7 +1,8 @@
 package ch16.websocket.p3.app;
 
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Stock implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -9,7 +10,7 @@ public class Stock implements Serializable {
 
     private String code;
     private double price;
-    private LocalDate date;
+    private LocalDateTime dateTime;
 
     public Stock() {
     }
@@ -17,6 +18,11 @@ public class Stock implements Serializable {
     public Stock(final String code, final double price) {
         this.code = code;
         this.price = price;
+    }
+
+    public String getDateTimeFormatted() {
+        return dateTime.format(
+                DateTimeFormatter.ofPattern(DATE_FORMAT));
     }
 
     public String getCode() {
@@ -35,11 +41,11 @@ public class Stock implements Serializable {
         this.price = price;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
-    public void setDate(final LocalDate date) {
-        this.date = date;
+    public void setDateTime(final LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 }

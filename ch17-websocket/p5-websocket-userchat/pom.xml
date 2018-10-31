@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ch.ttt</groupId>
-    <artifactId>p4-websocket-chat</artifactId>
+    <artifactId>p5-websocket-userchat</artifactId>
 
 
 </project>
