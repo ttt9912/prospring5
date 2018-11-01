@@ -23,6 +23,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch9-transactions/ch9-transactions.iml" filepath="$PROJECT_DIR$/ch9-transactions/ch9-transactions.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch99-scratches/ch99-scratches.iml" filepath="$PROJECT_DIR$/ch99-scratches/ch99-scratches.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/client/client.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch99-scratches/jackson-json/jackson-json.iml" filepath="$PROJECT_DIR$/ch99-scratches/jackson-json/jackson-json.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch99-scratches/jasypt/jasypt.iml" filepath="$PROJECT_DIR$/ch99-scratches/jasypt/jasypt.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/jms-activemq/jms-activemq.iml" filepath="$PROJECT_DIR$/ch12-remoting/jms-activemq/jms-activemq.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p1-basic/p1-basic.iml" filepath="$PROJECT_DIR$/ch17-websocket/p1-basic/p1-basic.iml" />
@@ -30,7 +31,6 @@
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p2-sock-js/p2-sock-js.iml" filepath="$PROJECT_DIR$/ch17-websocket/p2-sock-js/p2-sock-js.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p3-stomp/p3-stomp.iml" filepath="$PROJECT_DIR$/ch17-websocket/p3-stomp/p3-stomp.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p4-websocket-chatroom/p4-websocket-chatroom.iml" filepath="$PROJECT_DIR$/ch17-websocket/p4-websocket-chatroom/p4-websocket-chatroom.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p5-websocket-userchat/p5-websocket-userchat.iml" filepath="$PROJECT_DIR$/ch17-websocket/p5-websocket-userchat/p5-websocket-userchat.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/server/server.iml" filepath="$PROJECT_DIR$/ch12-remoting/springboot-httpinvoker/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" filepath="$PROJECT_DIR$/ch99-scratches/springboot-configs/springboot-configs.iml" />

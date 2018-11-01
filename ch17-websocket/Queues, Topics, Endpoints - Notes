@@ -8,4 +8,7 @@ subscribed to using Spring WebSockets and STOMP:
 - Queues – reserved for specific users and their current sessions         (p5)
 - Endpoints – generic endpoints
 
+Send to a single client: queue
+Send to all clients: topic
+
 (https://www.baeldung.com/spring-websockets-send-message-to-user)

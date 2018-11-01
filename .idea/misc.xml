@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/ch12-remoting/springboot-http-invoker-client/pom.xml" />
         <option value="$PROJECT_DIR$/ch12-remoting/springboot-http-invoker/pom.xml" />
         <option value="$PROJECT_DIR$/ch13-testing/system-under-test/pom.xml" />
+        <option value="$PROJECT_DIR$/ch17-websocket/p5-websocket-userchat/pom.xml" />
         <option value="$PROJECT_DIR$/ch8-spring-data-jpa/pom.xml" />
         <option value="$PROJECT_DIR$/parent/ch16-web-applications-springboot/pom.xml" />
       </set>

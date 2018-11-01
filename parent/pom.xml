@@ -33,6 +33,7 @@
         <springframework.version>5.0.8.RELEASE</springframework.version>
         <springboot.version>2.0.4.RELEASE</springboot.version>
         <hibernate.version>5.3.6.Final</hibernate.version>
+        <spring.batch.version>4.1.0.RELEASE</spring.batch.version>
     </properties>
 
     <dependencies>
@@ -110,6 +111,17 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-websocket</artifactId>
             <version>${springframework.version}</version>
+        </dependency>
+        <!-- batch -->
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-core</artifactId>
+            <version>${spring.batch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-infrastructure</artifactId>
+            <version>${spring.batch.version}</version>
         </dependency>
 
 

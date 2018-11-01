@@ -22,6 +22,7 @@
         <module name="ch8-jpa2" />
         <module name="ch9-transactions" />
         <module name="client" />
+        <module name="jackson-json" />
         <module name="jasypt" />
         <module name="jms-activemq" />
         <module name="p1-basic" />
@@ -29,7 +30,6 @@
         <module name="p2-sock-js" />
         <module name="p3-stomp" />
         <module name="p4-websocket-chatroom" />
-        <module name="p5-websocket-userchat" />
         <module name="server" />
         <module name="springboot-configs" />
         <module name="springboot-rest" />
@@ -62,6 +62,7 @@
       <module name="ch9-transactions" target="1.8" />
       <module name="ch99-scratches" target="1.8" />
       <module name="client" target="1.8" />
+      <module name="jackson-json" target="1.8" />
       <module name="jasypt" target="1.8" />
       <module name="jms-activemq" target="1.8" />
       <module name="p1-basic" target="1.8" />
