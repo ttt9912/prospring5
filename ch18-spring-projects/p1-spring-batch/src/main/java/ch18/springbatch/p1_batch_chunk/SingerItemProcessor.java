@@ -1,4 +1,4 @@
-package ch18.springbatch.p1_batch;
+package ch18.springbatch.p1_batch_chunk;
 
 import ch18.springbatch.data.Singer;
 import org.slf4j.Logger;

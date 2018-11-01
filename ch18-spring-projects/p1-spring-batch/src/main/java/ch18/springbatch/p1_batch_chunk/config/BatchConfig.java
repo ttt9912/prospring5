@@ -1,7 +1,7 @@
-package ch18.springbatch.p1_batch.config;
+package ch18.springbatch.p1_batch_chunk.config;
 
 import ch18.springbatch.data.Singer;
-import ch18.springbatch.p1_batch.StepExecutionStatsListener;
+import ch18.springbatch.p1_batch_chunk.StepExecutionStatsListener;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

@@ -1,6 +1,6 @@
-package ch18.springbatch.p1_batch;
+package ch18.springbatch.p1_batch_chunk;
 
-import ch18.springbatch.p1_batch.config.BatchConfig;
+import ch18.springbatch.p1_batch_chunk.config.BatchConfig;
 import ch18.springbatch.util.JdbcUtil;
 import org.junit.Test;
 import org.springframework.batch.core.Job;

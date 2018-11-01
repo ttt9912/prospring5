@@ -1,4 +1,4 @@
-package ch18.springbatch.p1_batch;
+package ch18.springbatch.p1_batch_chunk;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
