@@ -20,13 +20,13 @@ import java.util.Date;
  *       or participate in Chunk-oriented-processing
  *
  * Chunk-oriented-processing: each Step utilizes an:
- *      - ItemReader: read data
- *      - ItemProcessor: transform (optional)
- *      - ItemWriter: write data
+ *      - ItemReader: read data from csv
+ *      - ItemProcessor: transform data (optional)
+ *      - ItemWriter: write data to db
  *
  * StepExecutionListener: resides at step level
  */
-public class DemoChunk {
+public class Demo {
 
     @Test
     public void with_configuration() throws Exception {

@@ -7,3 +7,22 @@ lets the ch12.server run
   use Thread.sleep instead
 
 - use in SpringBoot applications if necessary
+
+-----------------------------------------------------------------------------
+Domain objects
+-----------------------------------------------------------------------------
+- Entity -
+
+- DTO -
+    - used to transfer data
+    - implements Serializable
+
+-----------------------------------------------------------------------------
+Service Beans
+-----------------------------------------------------------------------------
+- DAO -
+    - crud operations
+    - communicates with spring Repositories or JdbcTemplate, etc.
+
+- Repositories -
+    - spring data
