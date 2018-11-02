@@ -1,21 +1,14 @@
-package ch18.springbatch.p2_batch_tasklet.config;
+package ch18.springbatch.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
 import javax.sql.DataSource;
 
 @Configuration
-public class DatasourceConfig {
-
-    @Bean
-    public NamedParameterJdbcTemplate jdbcTemplate() {
-        final NamedParameterJdbcTemplate jdbcTemplate = new NamedParameterJdbcTemplate(dataSource());
-        return jdbcTemplate;
-    }
+public class DataSourceConfig {
 
     @Bean
     public DataSource dataSource() {

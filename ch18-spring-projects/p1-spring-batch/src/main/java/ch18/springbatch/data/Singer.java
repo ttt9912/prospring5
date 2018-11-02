@@ -1,6 +1,8 @@
 package ch18.springbatch.data;
 
-public class Singer {
+import java.io.Serializable;
+
+public class Singer implements Serializable {
     private String firstName;
     private String lastName;
     private String song;
