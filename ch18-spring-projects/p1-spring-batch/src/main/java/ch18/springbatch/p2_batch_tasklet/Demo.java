@@ -17,6 +17,9 @@ import org.springframework.context.support.GenericApplicationContext;
 import javax.sql.DataSource;
 import java.util.Date;
 
+/*
+ * Testing Spring Batch: see /test/
+ */
 public class Demo {
 
     @Test

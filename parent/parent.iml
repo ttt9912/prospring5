@@ -64,6 +64,7 @@
     <orderEntry type="library" name="Maven: javax.batch:javax.batch-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jettison:jettison:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.batch:spring-batch-infrastructure:4.1.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.batch:spring-batch-test:4.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.0.4.RELEASE" level="project" />

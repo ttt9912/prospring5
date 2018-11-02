@@ -18,7 +18,6 @@
         <module>p2-sock-js</module>
         <module>p3-stomp</module>
         <module>p4-websocket-chatroom</module>
-        <module>p5-websocket-userchat</module>
     </modules>
 
 

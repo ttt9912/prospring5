@@ -37,7 +37,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableBatchProcessing
 @Import(DataSourceConfig.class)
-@ComponentScan("ch18.springbatch.p1_batch")
+@ComponentScan("ch18.springbatch.p1_batch_chunk")
 public class BatchConfig {
 
     @Autowired
