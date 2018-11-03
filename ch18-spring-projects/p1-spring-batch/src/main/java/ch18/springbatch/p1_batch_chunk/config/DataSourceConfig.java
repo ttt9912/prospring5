@@ -1,4 +1,4 @@
-package ch18.springbatch.config;
+package ch18.springbatch.p1_batch_chunk.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

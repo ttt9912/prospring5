@@ -1,6 +1,6 @@
 package ch18.springbatch.p2_batch_tasklet.tasklets;
 
-import ch18.springbatch.data.Singer;
+import ch18.springbatch.p2_batch_tasklet.Singer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.ExitStatus;

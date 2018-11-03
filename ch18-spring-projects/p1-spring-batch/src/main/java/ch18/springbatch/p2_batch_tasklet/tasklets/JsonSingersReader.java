@@ -1,6 +1,6 @@
 package ch18.springbatch.p2_batch_tasklet.tasklets;
 
-import ch18.springbatch.data.Singer;
+import ch18.springbatch.p2_batch_tasklet.Singer;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;

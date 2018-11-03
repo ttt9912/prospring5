@@ -1,6 +1,5 @@
 package ch18.springbatch.p2_batch_tasklet.config;
 
-import ch18.springbatch.config.DataSourceConfig;
 import ch18.springbatch.p2_batch_tasklet.tasklets.JsonSingersReader;
 import ch18.springbatch.p2_batch_tasklet.tasklets.SingersProcessor;
 import ch18.springbatch.p2_batch_tasklet.tasklets.SingersToDBWriter;

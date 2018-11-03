@@ -1,4 +1,4 @@
-package ch18.springbatch.data;
+package ch18.springbatch.p1_batch_chunk;
 
 import java.io.Serializable;
 
