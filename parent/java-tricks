@@ -1,0 +1,47 @@
+-----------------------------------------------------------------------------
+directly call methods on object while instantiating
+-----------------------------------------------------------------------------
+
+    DelimitedLineTokenizer tokenizer = new DelimitedLineTokenizer();
+    tokenizer.setNames("firstName", "lastName", "song");
+    tokenizer.setDelimiter(",");
+
+    vs.
+
+    DelimitedLineTokenizer tokenizer = new DelimitedLineTokenizer() {{
+        setNames("firstName", "lastName", "song");
+        setDelimiter(",");
+    }});
+
+    or simply use a Builder pattern ;-)
+
+- casual way -
+configure DelimitedLineTokenizer and BeanWrapperFieldSetMapper instances
+and finally provide them to lineMapper
+
+    DelimitedLineTokenizer tokenizer = new DelimitedLineTokenizer();
+    tokenizer.setNames("firstName", "lastName", "song");
+    tokenizer.setDelimiter(",");
+
+    BeanWrapperFieldSetMapper<Singer> fieldSetMapper = new BeanWrapperFieldSetMapper<>();
+    fieldSetMapper.setTargetType(Singer.class);
+
+    DefaultLineMapper lineMapper = new DefaultLineMapper();
+    lineMapper.setFieldSetMapper(fieldSetMapper);
+    lineMapper.setLineTokenizer(tokenizer);
+    itemReader.setLineMapper(lineMapper);
+
+
+- lambda way -
+directly instantiate instances inside setter and call their setters on the fly
+note: double bracket {{}} syntax in anonymous class implementations
+
+    itemReader.setLineMapper(new DefaultLineMapper<Singer>() {{
+        setLineTokenizer(new DelimitedLineTokenizer() {{
+            setNames("firstName", "lastName", "song");
+            setDelimiter(",");
+        }});
+        setFieldSetMapper(new BeanWrapperFieldSetMapper<Singer>() {{
+            setTargetType(Singer.class);
+        }});
+    }});

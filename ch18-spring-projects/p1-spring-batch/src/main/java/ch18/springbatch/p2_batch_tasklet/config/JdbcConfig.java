@@ -23,7 +23,7 @@ public class JdbcConfig {
         return dbBuilder.setType(EmbeddedDatabaseType.H2)
                 // schema-h2.sql provides DML for creating Spring Batchs utility tables
                 .addScripts("classpath:/org/springframework/batch/core/schema-h2.sql",
-                        "classpath:/sql/singer.sql")
+                        "classpath:/sql/schema.sql")
                 .build();
     }
 }
