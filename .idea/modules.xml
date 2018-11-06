@@ -29,6 +29,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p1-basic/p1-basic.iml" filepath="$PROJECT_DIR$/ch17-websocket/p1-basic/p1-basic.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch18-spring-projects/p1-spring-batch/p1-spring-batch.iml" filepath="$PROJECT_DIR$/ch18-spring-projects/p1-spring-batch/p1-spring-batch.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p2-sock-js/p2-sock-js.iml" filepath="$PROJECT_DIR$/ch17-websocket/p2-sock-js/p2-sock-js.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch18-spring-projects/p2-spring-integration/p2-spring-integration.iml" filepath="$PROJECT_DIR$/ch18-spring-projects/p2-spring-integration/p2-spring-integration.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p3-stomp/p3-stomp.iml" filepath="$PROJECT_DIR$/ch17-websocket/p3-stomp/p3-stomp.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch17-websocket/p4-websocket-chatroom/p4-websocket-chatroom.iml" filepath="$PROJECT_DIR$/ch17-websocket/p4-websocket-chatroom/p4-websocket-chatroom.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />

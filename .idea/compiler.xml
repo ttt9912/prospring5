@@ -28,6 +28,7 @@
         <module name="p1-basic" />
         <module name="p1-spring-batch" />
         <module name="p2-sock-js" />
+        <module name="p2-spring-integration" />
         <module name="p3-stomp" />
         <module name="p4-websocket-chatroom" />
         <module name="server" />
@@ -68,6 +69,7 @@
       <module name="p1-basic" target="1.8" />
       <module name="p1-spring-batch" target="1.8" />
       <module name="p2-sock-js" target="1.8" />
+      <module name="p2-spring-integration" target="1.8" />
       <module name="p3-stomp" target="1.8" />
       <module name="p4-websocket-chatroom" target="1.8" />
       <module name="p5-websocket-userchat" target="1.8" />
