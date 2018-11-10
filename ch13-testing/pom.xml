@@ -16,6 +16,7 @@
     <modules>
         <module>testing-non-web-apps</module>
         <module>testing-springboot</module>
+        <module>testcontext-framework</module>
     </modules>
 
 </project>

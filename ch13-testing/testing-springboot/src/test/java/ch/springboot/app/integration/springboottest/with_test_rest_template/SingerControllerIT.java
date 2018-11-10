@@ -30,6 +30,6 @@ public class SingerControllerIT {
     @Test
     public void listdata() throws Exception {
         assertThat(restTemplate.getForObject("http://localhost:" + port + "/singer/1", Singer.class))
-                .extracting(Singer::getFirstName).contains("John");
+                .extracting(Singer::getFirstName).isSameAs("John");
     }
 }

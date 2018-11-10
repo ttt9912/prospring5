@@ -1,0 +1,11 @@
+Spring Web MVC (spring-webmvc ):
+    - original web framework included in the Spring Framework
+    - purpose-built for the Servlet API and Servlet containers.
+
+Spring WebFlux (spring-webflux):
+    - the reactive-stack functional web framework
+    - reactive complement to spring-webmvc
+    - provides a web programming model designed for Asynchronous APIs
+    - requires Reactor as core dependency
+
+

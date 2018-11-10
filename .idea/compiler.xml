@@ -22,6 +22,7 @@
         <module name="ch8-jpa2" />
         <module name="ch9-transactions" />
         <module name="client" />
+        <module name="http-routes" />
         <module name="jackson-json" />
         <module name="jasypt" />
         <module name="jms-activemq" />
@@ -31,9 +32,13 @@
         <module name="p2-spring-integration" />
         <module name="p3-stomp" />
         <module name="p4-websocket-chatroom" />
+        <module name="reactive-webclient" />
+        <module name="rest-controller" />
+        <module name="rx-java" />
         <module name="server" />
         <module name="springboot-configs" />
         <module name="springboot-rest" />
+        <module name="testcontext-framework" />
         <module name="testing-non-web-apps" />
         <module name="testing-springboot" />
       </profile>
@@ -63,6 +68,7 @@
       <module name="ch9-transactions" target="1.8" />
       <module name="ch99-scratches" target="1.8" />
       <module name="client" target="1.8" />
+      <module name="http-routes" target="1.8" />
       <module name="jackson-json" target="1.8" />
       <module name="jasypt" target="1.8" />
       <module name="jms-activemq" target="1.8" />
@@ -70,10 +76,16 @@
       <module name="p1-spring-batch" target="1.8" />
       <module name="p2-sock-js" target="1.8" />
       <module name="p2-spring-integration" target="1.8" />
+      <module name="p3-functional-web" target="1.8" />
       <module name="p3-stomp" target="1.8" />
+      <module name="p4-junit5-jupiter" target="1.8" />
+      <module name="p4-rx-java" target="1.8" />
       <module name="p4-websocket-chatroom" target="1.8" />
       <module name="p5-websocket-userchat" target="1.8" />
       <module name="parent" target="1.8" />
+      <module name="reactive-webclient" target="1.8" />
+      <module name="rest-controller" target="1.8" />
+      <module name="rx-java" target="1.8" />
       <module name="server" target="1.8" />
       <module name="spring-http-invoker" target="1.8" />
       <module name="spring-httpinvoker" target="1.8" />
@@ -83,6 +95,7 @@
       <module name="springboot-httpinvoker" target="1.8" />
       <module name="springboot-rest" target="1.8" />
       <module name="system-under-test" target="1.8" />
+      <module name="testcontext-framework" target="1.8" />
       <module name="testing-non-web-apps" target="1.8" />
       <module name="testing-springboot" target="1.8" />
     </bytecodeTargetLevel>

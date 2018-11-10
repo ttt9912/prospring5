@@ -1,0 +1,43 @@
+-----------------------------------------------------------------------------
+Reactive programming
+-----------------------------------------------------------------------------
+    - programming with Reactive Streams
+    - Reactive Streams: support asynchronous processing of anything
+      (variables, user inputs, data structures, etc.)
+    - 'Reactive': Stream is an Observable object
+    - Observable: observed by a Component and will react to it
+      according to the objects emitted
+    - Stream can Emit 3 types of objects: (1) values, (2) errors,
+                                          (3) 'completed' signals
+-----------------------------------------------------------------------------
+Reactive Streams API (org.reactivestreams)
+-----------------------------------------------------------------------------
+defines 4 base interfaces:
+    - Publisher
+    - Subscriber
+    - Subscription
+    - Processor
+
+implementations:
+    - Spring Reactor (io.projectreactor)
+    - Reactivex RxJava2 (io.reactivex)
+
+Producer counterpart implementations:
+
+    Reactor | RxJava
+    --------+---------
+    Flux    | Flowable
+    Mono    | Single
+
+
+Java 9:
+    has built-in functionality, equivalent to reactive streams
+    (java.util.concurrent.Flow)
+
+-----------------------------------------------------------------------------
+Summary
+-----------------------------------------------------------------------------
+- Reactive Streams API is the specification
+- Spring Webflux includes Reactor as Reactive Streams implementation
+- RxJava2 another Reactive Streams implementation and is part of ReactiveX
+-----------------------------------------------------------------------------

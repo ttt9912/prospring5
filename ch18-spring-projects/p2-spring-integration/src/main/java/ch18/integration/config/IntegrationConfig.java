@@ -20,9 +20,13 @@ import org.springframework.messaging.MessageChannel;
 import java.io.File;
 
 /*
- * @EnableIntegration:
+ * Message channel: pipe in a pipes-and-filters architecture
+ * Producers send Messages to the channel and Consumers receive them
  *
- * @IntegrationComponentScan:
+ * @EnableIntegration: Registers some built-in beans
+ *
+ * @IntegrationComponentScan: Scans for MessagingGateway on interfaces
+ *                            to create GatewayProxyFactoryBean
  */
 @Configuration
 @EnableIntegration

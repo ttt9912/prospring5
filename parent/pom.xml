@@ -30,11 +30,21 @@
     </modules>
 
     <properties>
-        <springframework.version>5.0.8.RELEASE</springframework.version>
-        <springboot.version>2.0.4.RELEASE</springboot.version>
+        <springframework.version>5.1.2.RELEASE</springframework.version>
+        <springboot.version>2.1.0.RELEASE</springboot.version>
         <hibernate.version>5.3.6.Final</hibernate.version>
         <spring.batch.version>4.1.0.RELEASE</spring.batch.version>
     </properties>
+
+    <dependencyManagement> <!-- todo: manage versions here, define dependencies in the submodules -->
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-webflux</artifactId>
+                <version>${springboot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
 
@@ -137,7 +147,7 @@
         <dependency>
             <groupId>org.springframework.integration</groupId>
             <artifactId>spring-integration-file</artifactId>
-            <version>${springframework.version}</version>
+            <version>5.1.0.RELEASE</version>
         </dependency>
 
         <!-- springboot -->
@@ -261,13 +271,22 @@
             <version>2.9.0</version>
             <scope>test</scope>
         </dependency>
-        <!-- json schema validation with rest assured-->
+        <!-- json schema validation with rest assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>3.1.1</version>
         </dependency>
-
+        <!-- reactive -->
+        <dependency>
+            <groupId>io.reactivex.rxjava2</groupId>
+            <artifactId>rxjava</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

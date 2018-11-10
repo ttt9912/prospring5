@@ -16,7 +16,14 @@
     <modules>
         <module>p1-spring-batch</module>
         <module>p2-spring-integration</module>
+        <module>p3-functional-web</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
