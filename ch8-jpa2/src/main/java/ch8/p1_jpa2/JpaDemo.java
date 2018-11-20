@@ -11,10 +11,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.sql.Date;
 import java.util.List;
 
-class JpaDemo {
+public class JpaDemo {
 
     @Test
-    void named_queries() {
+    public void named_queries() {
         // same as with pure Hibernate (ch7)
 
         AnnotationConfigApplicationContext ctx =
@@ -37,7 +37,7 @@ class JpaDemo {
     }
 
     @Test
-    void non_orm_mapped_results() {
+    public void non_orm_mapped_results() {
         AnnotationConfigApplicationContext ctx =
                 new AnnotationConfigApplicationContext(JpaConfig.class);
         SingerSummaryService singerSummaryUntyped =
@@ -67,7 +67,7 @@ class JpaDemo {
     }
 
     @Test
-    void insert_and_update() {
+    public void insert_and_update() {
         // same as with pure Hibernate (difference: em.persist(E) and em.merge(E))
 
         AnnotationConfigApplicationContext ctx =
