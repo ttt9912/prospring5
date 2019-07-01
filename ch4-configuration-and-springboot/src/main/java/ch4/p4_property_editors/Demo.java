@@ -12,7 +12,7 @@ public class Demo {
      * PropertyEditor übernimmt die konvertierung von String zum Typ des Properties
      */
     @Test
-    void builtIn_propertyEditors() {
+    public void builtIn_propertyEditors() {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("propertyEditorBeans_context.xml");
         ctx.refresh();
@@ -24,7 +24,7 @@ public class Demo {
     }
 
     @Test
-    void custom_propertyEditors() {
+    public void custom_propertyEditors() {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("customPropertyEditorBeans_context.xml");
         ctx.refresh();

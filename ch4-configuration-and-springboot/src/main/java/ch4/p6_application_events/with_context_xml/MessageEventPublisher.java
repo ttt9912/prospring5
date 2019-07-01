@@ -1,4 +1,4 @@
-package ch4.p6_application_events;
+package ch4.p6_application_events.with_context_xml;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

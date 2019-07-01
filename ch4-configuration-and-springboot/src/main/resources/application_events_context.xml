@@ -5,9 +5,9 @@
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="eventPublisher"
-          class="ch4.p6_application_events.MessageEventPublisher"/>
+          class="ch4.p6_application_events.with_context_xml.MessageEventPublisher"/>
 
     <bean id="eventListener"
-          class="ch4.p6_application_events.MessageEventListener"/>
+          class="ch4.p6_application_events.with_context_xml.MessageEventListener"/>
 
 </beans>

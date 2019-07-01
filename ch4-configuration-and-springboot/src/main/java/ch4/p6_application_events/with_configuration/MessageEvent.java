@@ -1,4 +1,4 @@
-package ch4.p6_application_events;
+package ch4.p6_application_events.with_configuration;
 
 import org.springframework.context.ApplicationEvent;
 

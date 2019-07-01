@@ -18,7 +18,7 @@ Unit Tests with @MockMvc
 - Springboot container is started
 
 -----------------------------------------------------------------------------
-@WebMvc Integration Tests
+@WebMvcTest Integration Tests
 -----------------------------------------------------------------------------
 - Spring context is loaded
 - WebMvc components are configured

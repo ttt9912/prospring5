@@ -21,7 +21,7 @@
           p:date="05/03/13"
           p:file="#{systemProperties['java.io.tmpdir']}#{systemProperties['file.separator']}test.txt"
           p:locale="en_US"
-          p:datePattern="a*b"
+          p:pattern="a*b"
           p:properties="name=Chris age=32"
           p:url="http://spring.io/"
           p:cls="java.lang.String"

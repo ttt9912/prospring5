@@ -1,4 +1,4 @@
-package ch4.p8_profiles.with_configuration;
+package ch4.p8_profiles.with_configuration.profile_on_configuration;
 
 import ch4.p8_profiles.beans.FoodProvierService;
 import ch4.p8_profiles.beans.highschool.FoodProviderServiceImpl;

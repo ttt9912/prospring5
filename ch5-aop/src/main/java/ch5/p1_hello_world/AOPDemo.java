@@ -3,10 +3,10 @@ package ch5.p1_hello_world;
 import org.junit.Test;
 import org.springframework.aop.framework.ProxyFactory;
 
-class AOPDemo {
+public class AOPDemo {
 
     @Test
-    void helloWorld() {
+    public void helloWorld() {
 
         Agent target = new Agent();
 
@@ -16,8 +16,8 @@ class AOPDemo {
 
         Agent proxy = (Agent) proxyFactory.getProxy();
 
-        target.speak();
+        target.speak(); // Bond
         System.out.println();
-        proxy.speak();
+        proxy.speak(); // James Bond!
     }
 }

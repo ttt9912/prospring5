@@ -1,4 +1,4 @@
-package ch4.p6_application_events;
+package ch4.p6_application_events.with_context_xml;
 
 import org.junit.Test;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -7,10 +7,10 @@ import org.springframework.context.support.GenericXmlApplicationContext;
  * ApplicationContext kann als broker verwendet werden und events publizieren und erhalten.
  * Für kleine Events (z.B. Product details update) zweckmässiger als JMS.
  */
-class Demo {
+public class Demo {
 
     @Test
-    void applicationEvents() {
+    public void applicationEvents() {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("application_events_context.xml");
         ctx.refresh();

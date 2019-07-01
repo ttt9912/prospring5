@@ -13,11 +13,11 @@ import java.util.Locale;
  *
  * ApplicationContext als MessageSource koppelt Beans unnötig an den ApplicationContext.
  */
-class MessageSourceDemo {
+public class MessageSourceDemo {
 
     // ApplicationContext als MessageSource sollte nur in WebApplications verwendet werden.
     @Test
-    void i18n_withApplicationContextAsMessageSource() {
+    public void i18n_withApplicationContextAsMessageSource() {
         GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
         ctx.load("internationalization_context.xml");
         ctx.refresh();

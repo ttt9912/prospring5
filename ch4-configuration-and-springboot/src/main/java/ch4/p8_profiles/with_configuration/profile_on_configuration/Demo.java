@@ -1,4 +1,4 @@
-package ch4.p8_profiles.with_configuration;
+package ch4.p8_profiles.with_configuration.profile_on_configuration;
 
 
 import ch4.p8_profiles.beans.Food;
@@ -13,7 +13,7 @@ import java.util.List;
  */
 class Demo {
 
-    // run via run configuration! ('ch4_p8_cfg_profile=highschool' or 'ch4_p8_cfg_profile=kindergarden')
+    // run via run configuration! ('profile=highschool' or 'profile=kindergarden')
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(
                 HighschoolConfig.class,
